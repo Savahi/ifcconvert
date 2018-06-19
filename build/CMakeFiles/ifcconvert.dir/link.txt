@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o CMakeFiles/ifcconvert.dir/ifcconvert.cpp.o  -o ifcconvert  -L/home/user/Desktop/spider/ifcconvert/src/ifc2x3/build  -L/home/user/Desktop/spider/ifcconvert/src/Step/build -Wl,-rpath,/home/user/Desktop/spider/ifcconvert/src/ifc2x3/build:/home/user/Desktop/spider/ifcconvert/src/Step/build -lifc2x3 -lStep 

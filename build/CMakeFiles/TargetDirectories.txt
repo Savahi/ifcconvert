@@ -1,0 +1,3 @@
+/home/user/Desktop/spider/ifcconvert/build/CMakeFiles/rebuild_cache.dir
+/home/user/Desktop/spider/ifcconvert/build/CMakeFiles/edit_cache.dir
+/home/user/Desktop/spider/ifcconvert/build/CMakeFiles/ifcconvert.dir

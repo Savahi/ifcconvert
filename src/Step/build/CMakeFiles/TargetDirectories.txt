@@ -1,0 +1,3 @@
+/home/user/Desktop/spider/ifcconvert/src/Step/build/CMakeFiles/rebuild_cache.dir
+/home/user/Desktop/spider/ifcconvert/src/Step/build/CMakeFiles/edit_cache.dir
+/home/user/Desktop/spider/ifcconvert/src/Step/build/CMakeFiles/Step.dir
