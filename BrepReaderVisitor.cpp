@@ -2,35 +2,43 @@
 
 #include <ifc2x3/ExpressDataSet.h>
 
-
 BrepReaderVisitor::BrepReaderVisitor(BRepBuilder* brepBuilder) 
     : _brepBuilder(brepBuilder),
-      _fatherIsOpeningEl(false)
+      _fatherIsOpeningEl(false),
+      _hierarchy(0)
 {
 }
 
 bool BrepReaderVisitor::visitIfcObjectDefinition(ifc2x3::IfcObjectDefinition *value)
 {
+    this->printHierarchy( "BrepReaderVisitor.visitIfcObjectDefinition" );
+    this->_hierarchy++;
     ifc2x3::Inverse_Set_IfcRelDecomposes_0_n::iterator itDecomposedBy = value->getIsDecomposedBy().begin();
     while (itDecomposedBy != value->getIsDecomposedBy().end())
     {
         ifc2x3::IfcRelDecomposes* rd = const_cast<ifc2x3::IfcRelDecomposes*> (itDecomposedBy->get());
         rd->acceptVisitor(this);
         ++itDecomposedBy;
+        this->printHierarchy( "visitIfcObjectDefinition!" );
     }
-
+    this->_hierarchy--;
+    this->printHierarchy( "end of BrepReaderVisitor.visitIfcObjectDefinition" );
     return true;
 }
 
 bool BrepReaderVisitor::visitIfcRelAggregates(ifc2x3::IfcRelAggregates *value)
 {
+    this->printHierarchy( "BrepReaderVisitor.visitIfcRelAggregates" );
+    this->_hierarchy++;
     ifc2x3::Set_IfcObjectDefinition_1_n::iterator it = value->getRelatedObjects().begin();
     while (it != value->getRelatedObjects().end())
     {
         (*it)->acceptVisitor(this);
         ++it;
+        this->printHierarchy( "getRelatedObjects()!" );        
     }
-
+    this->_hierarchy--;
+    this->printHierarchy( "end of BrepReaderVisitor.visitIfcRelAggregates" );
     return true;
 }
 
@@ -159,29 +167,87 @@ bool BrepReaderVisitor::visitIfcRelContainedInSpatialStructure(ifc2x3::IfcRelCon
 
 bool BrepReaderVisitor::visitIfcProductRepresentation(ifc2x3::IfcProductRepresentation *value)
 {
+    this->printHierarchy( "BrepReaderVisitor.visitIfcProductRepresentation" );
+    this->_hierarchy++;
     ifc2x3::List_IfcRepresentation_1_n::iterator it = value->getRepresentations().begin();
     while (it != value->getRepresentations().end())
     {
         Step::String representationType = (*it)->getRepresentationType();
-        if (representationType == Step::String("Brep") )
+        std::stringstream ss;
+        ss << "representationtype: " << representationType;
+        this->printHierarchy( ss.str() );        
+        if (representationType == Step::String("Brep") || true )  // "|| true" is added by me.
         {
             (*it)->acceptVisitor(this);
         }
         ++it;
     }
+    this->_hierarchy--;
+    this->printHierarchy("end of visitIfcProductRepresentation");
 
     return true;
 }
 
 bool BrepReaderVisitor::visitIfcRepresentation(ifc2x3::IfcRepresentation *value)
 {
+    this->printHierarchy( "BrepReaderVisitor.visitIfcRepresentation");
+    this->_hierarchy++;
     ifc2x3::Set_IfcRepresentationItem_1_n::iterator it = value->getItems().begin();
     while (it != value->getItems().end())
+    {
+        std::stringstream ss;
+        ss << "key=" << (*it)->getKey();
+        this->printHierarchy( ss.str() );
+        (*it)->acceptVisitor(this);
+        ++it;
+    }
+    this->_hierarchy--;
+    this->printHierarchy( "end of visitIfcRepresentation" );
+    return true;
+}
+
+
+bool BrepReaderVisitor::visitIfcCurve(ifc2x3::IfcCurve *value)
+{
+    this->printHierarchy( "BrepReaderVisitor.visitIfcCurve" );
+    _brepBuilder->addRepresentation(value);
+ 
+    return true;
+}
+
+bool BrepReaderVisitor::visitIfcPolyline(ifc2x3::IfcPolyline *value)
+{
+    this->printHierarchy( "BrepReaderVisitor.visitIfcPolyline" );
+    ifc2x3::List_IfcCartesianPoint_3_n::iterator it = value->getPoints().begin();
+    while (it != value->getPoints().end())
     {
         (*it)->acceptVisitor(this);
         ++it;
     }
+    return true;
+}
 
+bool BrepReaderVisitor::visitIfcProfileDef(ifc2x3::IfcProfileDef *value) {
+    std::stringstream ss;
+    if( value->getType().getName() == "IfcRectangleProfileDef" ) {
+        ifc2x3::IfcRectangleProfileDef* profileDef = (ifc2x3::IfcRectangleProfileDef*)value;
+        double xDim = profileDef->getXDim();
+        double yDim = profileDef->getYDim();
+        ss << "BrepReaderVisitor.visitIfcProfileDef: " << value->type() << ", xdim=" << xDim << ", ydim=" << yDim; 
+        this->printHierarchy( ss.str() );
+    }
+    return true;
+}
+
+bool BrepReaderVisitor::visitIfcSweptAreaSolid(ifc2x3::IfcSweptAreaSolid *value) {
+    this->printHierarchy( "BrepReaderVisitor.visitIfcSweptAreaSolid->" );
+    return true;
+}
+
+bool BrepReaderVisitor::visitIfcExtrudedAreaSolid(ifc2x3::IfcExtrudedAreaSolid *value) {
+    this->printHierarchy( "BrepReaderVisitor.visitIfcExtrudedAreaSolid->" );
+    ifc2x3::IfcProfileDef *profileDef = value->getSweptArea();
+    profileDef->acceptVisitor(this);
     return true;
 }
 
@@ -271,4 +337,15 @@ bool BrepReaderVisitor::visitIfcAxis2Placement3D(ifc2x3::IfcAxis2Placement3D * v
     _brepBuilder->pushPlacement(value);
 
     return true;
+}
+
+void BrepReaderVisitor::printHierarchy( const std::string str, bool endOfLine ) 
+{
+    for( int i = 0 ; i < this->_hierarchy ; i++ ) {
+        std::cout << "  ";
+    }
+    std::cout << str;
+    if( endOfLine ) {
+        std::cout << std::endl;
+    }
 }

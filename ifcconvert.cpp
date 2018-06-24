@@ -33,9 +33,9 @@
 class ConsoleCallBack : public Step::CallBack
 {
 public:
-    ConsoleCallBack() : _max(1) {}
+    ConsoleCallBack() : _max(100) {}
     virtual void setMaximum(size_t max) { _max = max; }
-    virtual void setProgress(size_t progress) { std::cerr << double(progress)/double(_max)*100.0 << "%" << std::endl; }
+    virtual void setProgress(size_t progress) { std::cerr << int(double(progress)/double(_max)*100.0) << "%..."; }
     virtual bool stop() const {return false;}
 
 protected:
@@ -68,11 +68,11 @@ int main(int argc, char **argv)
     }
 
     // get length of file
-    //ifcFile.seekg (0, ifcFile.end);
-    //std::ifstream::pos_type length = ifcFile.tellg();
-    //ifcFile.seekg (0, ifcFile.beg);
+    ifcFile.seekg (0, ifcFile.end);
+    std::ifstream::pos_type length = ifcFile.tellg();
+    ifcFile.seekg (0, ifcFile.beg);
 
-    bool result = reader.read( ifcFile, (std::ifstream::pos_type)0 );
+    bool result = reader.read( ifcFile, (std::ifstream::pos_type)length );
     ifcFile.close();
 
     if (result) {
@@ -89,6 +89,8 @@ int main(int argc, char **argv)
         return 1;
     }
 
+    std::cout << "Reading the model...\n";
+
     // ** Getting the model
     ifc2x3::ExpressDataSet * expressDataSet = dynamic_cast<ifc2x3::ExpressDataSet*>(reader.getExpressDataSet());
 
@@ -96,6 +98,8 @@ int main(int argc, char **argv)
         std::cout << "There is no ExpressDataSet. Exiting..." << std::endl;
         return (2);
     }
+
+    std::cout << "Reading building elements...\n";
 
     // ** Reading building elements
     std::ofstream outputFile;
@@ -106,6 +110,8 @@ int main(int argc, char **argv)
 
 	BRepBuilder brepBuilder( &outputFile );
 	BrepReaderVisitor visitor( &brepBuilder );
+
+    std::cout << "Running visitors...\n";
 
     Step::RefLinkedList< ifc2x3::IfcProject >::iterator projIt = expressDataSet->getAllIfcProject().begin();
     for( ; projIt != expressDataSet->getAllIfcProject().end(); ++projIt ) {

@@ -52,13 +52,20 @@ public:
 
 	virtual void pushPlacement( ifc2x3::IfcAxis2Placement3D *value )
 	{
-		ifc2x3::List_Real_2_3 EZ = value->getAxis()->getDirectionRatios();
-		ifc2x3::List_Real_2_3 EX = value->getRefDirection()->getDirectionRatios();
-		ifc2x3::List_IfcLengthMeasure_1_3 loc = value->getLocation()->getCoordinates();
-
-		this->placements.push_back( BRepBuilderPlacement( EX[0], EX[1], EX[2], EZ[0], EZ[1], EZ[2], loc[0], loc[1], loc[2] ) );
-
-		std::cout << "PLACEMENT pushed : " << value->getKey() << ", iEX=" << EX[0] << ", jEX=" << EX[1] << ", kEX=" << EX[2] << ", iEZ=" << EZ[0] << ", jEZ=" << EZ[1] << ", kEZ=" << EZ[2] << ", iO" << loc[0] << ", jO" << loc[1] << ", kO" << loc[2] << std::endl;
+		ifc2x3::IfcDirection *axis = value->getAxis();
+		ifc2x3::IfcDirection *refDirection = value->getRefDirection();
+		ifc2x3::IfcCartesianPoint *location = value->getLocation();
+		if( axis != NULL && refDirection != NULL && location != NULL ) {
+			ifc2x3::List_Real_2_3 EZ, EX;
+			EZ = axis->getDirectionRatios(); 
+			EX = refDirection->getDirectionRatios(); // Here is the error!			
+			ifc2x3::List_IfcLengthMeasure_1_3 center = location->getCoordinates();
+			this->placements.push_back( BRepBuilderPlacement( EX[0], EX[1], EX[2], EZ[0], EZ[1], EZ[2], center[0], center[1], center[2] ) );
+			std::cout << "PLACEMENT pushed : " << value->getKey() << ", iEX=" << EX[0] << ", jEX=" << EX[1] << ", kEX=" << EX[2] << ", iEZ=" << EZ[0] << ", jEZ=" << EZ[1] << ", kEZ=" << EZ[2] << ", iO" << center[0] << ", jO" << center[1] << ", kO" << center[2] << std::endl;
+		} else {
+			this->placements.push_back( BRepBuilderPlacement( 1, 0, 0, 0, 0, 1, 0, 0, 0 ) );			
+			std::cout << "PLACEMENT pushed : " << value->getKey() << " <default>" << std::endl;
+		}
 	}
 
 	virtual void popPlacement()
@@ -71,7 +78,7 @@ public:
 
     virtual void addProduct( ifc2x3::IfcProduct *value )
 	{
-		std::cout << "PRODUCT: " << value->getKey() << ", GUID=" << value->getGlobalId() << std::endl;
+		std::cout << "PRODUCT: " << value->getKey() << ", GUID=" << value->getGlobalId() << ", NAME=" << value->getName() << ", Representation: " << value->getRepresentation() << std::endl;
 		this->closeFaceIfRequired();
 		if( this->nProductsOpened > this->nProductsClosed ) {
 			(*this->pOutputFile) << std::endl;	
@@ -93,7 +100,7 @@ public:
 
 	virtual void addFace( ifc2x3::IfcFace *value )
 	{
-		std::cout << "Face: " << value->getKey() << std::endl;
+		//std::cout << "Face: " << value->getKey() << std::endl;
 		if( !(this->nProductsOpened > this->nProductsClosed) ) {
 			std::cout << "A face cannot be placed outside a product!" << std::endl;
 			return;
@@ -106,7 +113,7 @@ public:
 	virtual void addPoint( ifc2x3::IfcCartesianPoint *value )
 	{
 		ifc2x3::List_IfcLengthMeasure_1_3 xyz = value->getCoordinates();
-		std::cout << "Point: " << value->getKey() << ", x=" << xyz[0] << ", y=" << xyz[1] << ", z=" << xyz[2] <<  std::endl;
+		// std::cout << "Point: " << value->getKey() << ", x=" << xyz[0] << ", y=" << xyz[1] << ", z=" << xyz[2] <<  std::endl;
 		if( !(this->nProductsOpened > this->nProductsClosed) ) {
 			std::cout << "A point cannot be placed outside a product!" << std::endl;
 			return;

@@ -75,6 +75,15 @@ public:
     ** \brief Visit "representationItems" items of an IfcRepresentation
     */
     virtual bool visitIfcRepresentation(ifc2x3::IfcRepresentation *value);
+    
+    /* Mine */
+    virtual bool visitIfcCurve(ifc2x3::IfcCurve *value);
+    virtual bool visitIfcPolyline(ifc2x3::IfcPolyline *value);
+    virtual bool visitIfcProfileDef(ifc2x3::IfcProfileDef *value);
+    virtual bool visitIfcSweptAreaSolid(ifc2x3::IfcSweptAreaSolid *value);
+    virtual bool visitIfcExtrudedAreaSolid(ifc2x3::IfcExtrudedAreaSolid *value);
+    /* The ned of "Mine" */
+
     /*!
     ** \brief Visit an IfcFacetedBrep
     ** Add the representation to the BRepBuilder
@@ -146,6 +155,9 @@ protected:
 protected:
 	BRepBuilder* _brepBuilder;
     bool _fatherIsOpeningEl;
+
+    int _hierarchy;
+    void printHierarchy( std::string str, bool endOfLine=true );
 };
 
 #endif // BREPREADERVISITOR_H
