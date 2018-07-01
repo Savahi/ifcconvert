@@ -1,0 +1,116 @@
+Reading Brep geometry of Ifc2x3...
+reading file ...
+OK!!
+Reading the model...
+Reading building elements...
+Running visitors...
+BrepReaderVisitor.visitIfcObjectDefinition
+  BrepReaderVisitor.visitIfcRelAggregates()
+    getRelatedObjects() item: IfcSite
+    BrepReaderVisitor.visitIfcSpatialStructureElement()
+PLACEMENT pushed : 310, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+PRODUCT: 312, GUID=1E4TBrWx93mRpLzhEIBOeZ, NAME=Default, Representation: 0
+      BrepReaderVisitor.visitIfcObjectDefinition
+        BrepReaderVisitor.visitIfcRelAggregates()
+          getRelatedObjects() item: IfcBuilding
+          BrepReaderVisitor.visitIfcSpatialStructureElement()
+PLACEMENT pushed : 31, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+PRODUCT: 111, GUID=1E4TBrWx93mRpLzhEIBOeW, NAME=, Representation: 0
+            BrepReaderVisitor.visitIfcObjectDefinition
+              BrepReaderVisitor.visitIfcRelAggregates()
+                getRelatedObjects() item: IfcBuildingStorey
+                BrepReaderVisitor.visitIfcSpatialStructureElement()
+PLACEMENT pushed : 117, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+PRODUCT: 120, GUID=1E4TBrWx93mRpLzhDjqaRU, NAME=Level 1, Representation: 0
+                  BrepReaderVisitor.visitIfcRelContainedInSpatialStructure()
+                    BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+PLACEMENT pushed : 130, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11856.4, jO=-7677.66, kO=0
+PRODUCT: 162, GUID=2JuXRljVH1lAVD85_X3iHh, NAME=Basic Wall:Generic - 200mm - Filled:199381, Representation: 0xb71630
+                    BrepReaderVisitor.visitIfcProductRepresentation
+                      representationtype: Curve2D
+                      BrepReaderVisitor.visitIfcRepresentation
+                        key=135
+                      end of visitIfcRepresentation
+                      representationtype: SweptSolid
+                      BrepReaderVisitor.visitIfcRepresentation
+                        key=145
+PLACEMENT pushed : 144, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                        BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=6500, i=0, j=0, k=1, xdim=20200, ydim200
+PLACEMENT poped
+                      end of visitIfcRepresentation
+                    end of visitIfcProductRepresentation
+                    BrepReaderVisitor.visitIfcObjectDefinition
+                    end of BrepReaderVisitor.visitIfcObjectDefinition
+PLACEMENT poped
+                    BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+PLACEMENT pushed : 210, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11756.4, jO=12422.3, kO=0
+PRODUCT: 231, GUID=2JuXRljVH1lAVD85_X3iM3, NAME=Basic Wall:Generic - 200mm - Filled:199485, Representation: 0xb5c730
+                    BrepReaderVisitor.visitIfcProductRepresentation
+                      representationtype: Curve2D
+                      BrepReaderVisitor.visitIfcRepresentation
+                        key=214
+                      end of visitIfcRepresentation
+                      representationtype: SweptSolid
+                      BrepReaderVisitor.visitIfcRepresentation
+                        key=223
+PLACEMENT pushed : 222, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                        BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=8000, i=0, j=0, k=1, xdim=10000, ydim200
+PLACEMENT poped
+                      end of visitIfcRepresentation
+                    end of visitIfcProductRepresentation
+                    BrepReaderVisitor.visitIfcObjectDefinition
+                    end of BrepReaderVisitor.visitIfcObjectDefinition
+PLACEMENT poped
+                    BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+PLACEMENT pushed : 244, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1856.36, jO=12322.3, kO=0
+PRODUCT: 265, GUID=2JuXRljVH1lAVD85_X3iKy, NAME=Basic Wall:Generic - 200mm - Filled:199554, Representation: 0xb6cf00
+                    BrepReaderVisitor.visitIfcProductRepresentation
+                      representationtype: Curve2D
+                      BrepReaderVisitor.visitIfcRepresentation
+                        key=248
+                      end of visitIfcRepresentation
+                      representationtype: SweptSolid
+                      BrepReaderVisitor.visitIfcRepresentation
+                        key=257
+PLACEMENT pushed : 256, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                        BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=5000, i=0, j=0, k=1, xdim=20000, ydim200
+PLACEMENT poped
+                      end of visitIfcRepresentation
+                    end of visitIfcProductRepresentation
+                    BrepReaderVisitor.visitIfcObjectDefinition
+                    end of BrepReaderVisitor.visitIfcObjectDefinition
+PLACEMENT poped
+                    BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+PLACEMENT pushed : 278, iEX=-1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1956.36, jO=-7577.66, kO=0
+PRODUCT: 299, GUID=2JuXRljVH1lAVD85_X3iKL, NAME=Basic Wall:Generic - 200mm - Filled:199595, Representation: 0xb72950
+                    BrepReaderVisitor.visitIfcProductRepresentation
+                      representationtype: Curve2D
+                      BrepReaderVisitor.visitIfcRepresentation
+                        key=282
+                      end of visitIfcRepresentation
+                      representationtype: SweptSolid
+                      BrepReaderVisitor.visitIfcRepresentation
+                        key=291
+PLACEMENT pushed : 290, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                        BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=3000, i=0, j=0, k=1, xdim=9800, ydim200
+PLACEMENT poped
+                      end of visitIfcRepresentation
+                    end of visitIfcProductRepresentation
+                    BrepReaderVisitor.visitIfcObjectDefinition
+                    end of BrepReaderVisitor.visitIfcObjectDefinition
+PLACEMENT poped
+                  BrepReaderVisitor.visitIfcRelContainedInSpatialStructure()
+                  BrepReaderVisitor.visitIfcObjectDefinition
+                  end of BrepReaderVisitor.visitIfcObjectDefinition
+PLACEMENT poped
+                BrepReaderVisitor.visitIfcSpatialStructureElement()
+              end of BrepReaderVisitor.visitIfcRelAggregates
+            end of BrepReaderVisitor.visitIfcObjectDefinition
+PLACEMENT poped
+          BrepReaderVisitor.visitIfcSpatialStructureElement()
+        end of BrepReaderVisitor.visitIfcRelAggregates
+      end of BrepReaderVisitor.visitIfcObjectDefinition
+PLACEMENT poped
+    BrepReaderVisitor.visitIfcSpatialStructureElement()
+  end of BrepReaderVisitor.visitIfcRelAggregates
+end of BrepReaderVisitor.visitIfcObjectDefinition

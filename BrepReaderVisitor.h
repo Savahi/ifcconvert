@@ -28,6 +28,8 @@ public:
     */
     virtual bool visitIfcRelAggregates(ifc2x3::IfcRelAggregates *value);
     
+    virtual bool visitIfcRelDecomposes(ifc2x3::IfcRelDecomposes *value);
+
     /*!
     ** \brief Visit an IfcProduct
     ** If it has a placement, push it at the start
@@ -82,7 +84,8 @@ public:
     virtual bool visitIfcProfileDef(ifc2x3::IfcProfileDef *value);
     virtual bool visitIfcSweptAreaSolid(ifc2x3::IfcSweptAreaSolid *value);
     virtual bool visitIfcExtrudedAreaSolid(ifc2x3::IfcExtrudedAreaSolid *value);
-    /* The ned of "Mine" */
+    virtual bool visitIfcMaterialDefinitionRepresentation(ifc2x3::IfcMaterialDefinitionRepresentation *value);
+    /* The end of "Mine" */
 
     /*!
     ** \brief Visit an IfcFacetedBrep
@@ -158,6 +161,8 @@ protected:
 
     int _hierarchy;
     void printHierarchy( std::string str, bool endOfLine=true );
+
+    void buildExtrudedArea( double depth, double xDim, double yDim, double i, double j, double k );
 };
 
 #endif // BREPREADERVISITOR_H
