@@ -13,7 +13,6 @@
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 // Lesser General Public License for more details.
-
 #include <ifc2x3/SPFReader.h>
 #include <ifc2x3/SPFWriter.h>
 #include <ifc2x3/ExpressDataSet.h>
@@ -108,10 +107,49 @@ int main(int argc, char **argv)
         std::cout << "Can't write into the output file. Exiting..." << std::endl; 
     }
 
-	BRepBuilder brepBuilder( &outputFile );
-	BrepReaderVisitor visitor( &brepBuilder );
+    std::cout << "Extracting materials...\n";    
+
+    Step::RefLinkedList< ifc2x3::IfcRelAssociatesMaterial >::iterator ramIt = expressDataSet->getAllIfcRelAssociatesMaterial().begin();
+    for( ; ramIt != expressDataSet->getAllIfcRelAssociatesMaterial().end(); ++ramIt ) {
+
+        std::vector<std::wstring> materialsNames;        
+
+        std::cout << " IfcRelAssociatesMaterial" << std::endl;
+        ifc2x3::IfcMaterialSelect* rm = ramIt->getRelatingMaterial();
+        if( rm != NULL ) {
+            std::cout <<  " Relaing material type: " << rm->currentTypeName() << std::endl;
+            if( rm->currentType() == ifc2x3::IfcMaterialSelect::IFCMATERIALLAYERSETUSAGE ) {
+                ifc2x3::IfcMaterialLayerSetUsage *mlsu = rm->getIfcMaterialLayerSetUsage();
+                if( mlsu != NULL ) {
+                    std::cout <<  "  Material Layer Usage " << std::endl;
+                    ifc2x3::IfcMaterialLayerSet *mls = mlsu->getForLayerSet(); // Getting a MATERIAL LAYER SET
+                    if( mls != NULL ) {
+                        std::cout <<  "   Material Layer Set " << std::endl;
+                        ifc2x3::List_IfcMaterialLayer_1_n layers = mls->getMaterialLayers();
+                        ifc2x3::List_IfcMaterialLayer_1_n::iterator layersIt = layers.begin();
+                        for( ; layersIt != layers.end() ; ++layersIt ) {
+                            ifc2x3::IfcMaterial* material = (*layersIt)->getMaterial();
+                            if( material != NULL ) {
+                                std::cout << "    Material name: " << material->getName() << std::endl;
+                                materialsNames.push_back( material->getName() );
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        ifc2x3::Set_IfcRoot_1_n relObjs = ramIt->getRelatedObjects();
+        ifc2x3::Set_IfcRoot_1_n::iterator relObjsIt = relObjs.begin();
+        for( ; relObjsIt != relObjs.end() ; ++relObjsIt ) {   
+            std::cout << " Related object: type=" << (*relObjsIt)->type() << ", id=" << (*relObjsIt)->getGlobalId() << ", name= " << (*relObjsIt)->getName() << "\n";
+        }
+        //it->acceptVisitor(&visitor);
+    }
 
     std::cout << "Running visitors...\n";
+    BRepBuilder brepBuilder( &outputFile );
+    BrepReaderVisitor visitor( &brepBuilder );
 
     Step::RefLinkedList< ifc2x3::IfcProject >::iterator projIt = expressDataSet->getAllIfcProject().begin();
     for( ; projIt != expressDataSet->getAllIfcProject().end(); ++projIt ) {

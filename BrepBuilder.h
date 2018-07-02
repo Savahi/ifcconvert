@@ -49,8 +49,11 @@ public:
 	int nPoints;
 
 	std::vector<BRepBuilderPlacement> placements;
+
+    int _hierarchy;
+    void printHierarchy( std::string str, bool endOfLine=true );	
 	
-	BRepBuilder( std::ofstream *pOutputFile ) : pOutputFile(pOutputFile), 
+	BRepBuilder( std::ofstream *pOutputFile ) : pOutputFile(pOutputFile), _hierarchy(0),
 		nProductsOpened(0), nProductsClosed(0), nFacesOpened(0), nFacesClosed(0), nPoints(0) {
 		;
 	}
@@ -77,8 +80,10 @@ public:
 			iO = center[0]; jO = center[1]; kO = center[2];
 		}
 		this->placements.push_back( BRepBuilderPlacement( iEX, jEX, kEX, iEZ, jEZ, kEZ, iO, jO, kO ) );
-		std::cout << "PLACEMENT pushed : " << value->getKey() << ", iEX=" << iEX << ", jEX=" << jEX << ", kEX=" << kEX;
-		std::cout << ", iEZ=" << iEZ << ", jEZ=" << jEZ << ", kEZ=" << kEZ << ", iO=" << iO << ", jO=" << jO << ", kO=" << kO << std::endl;
+		std::stringstream ss;
+		ss << "PLACEMENT pushed : " << value->getKey() << ", iEX=" << iEX << ", jEX=" << jEX << ", kEX=" << kEX;
+		ss << ", iEZ=" << iEZ << ", jEZ=" << jEZ << ", kEZ=" << kEZ << ", iO=" << iO << ", jO=" << jO << ", kO=" << kO << std::endl;
+		this->printHierarchy( ss.str(), 1 );
 	}
 
 	virtual void popPlacement()
@@ -86,12 +91,15 @@ public:
 		if( this->placements.size() > 0 ) {
 			this->placements.pop_back();			
 		}
-		std::cout << "PLACEMENT poped" << std::endl;
+		this->printHierarchy( "PLACEMENT poped", -1 );
 	}
 
     virtual void addProduct( ifc2x3::IfcProduct *value )
 	{
-		std::cout << "PRODUCT: " << value->getKey() << ", GUID=" << value->getGlobalId() << ", NAME=" << value->getName() << ", Representation: " << value->getRepresentation() << std::endl;
+		std::stringstream ss;
+		ss << "PRODUCT: " << value->getKey() << ", GUID=" << value->getGlobalId() << ", NAME=" << value->getName() << ", Representation: " << value->getRepresentation() << std::endl;
+		this->printHierarchy( ss.str(), 0 );
+
 		this->closeFaceIfRequired();
 		if( this->nProductsOpened > this->nProductsClosed ) {
 			(*this->pOutputFile) << std::endl;	
@@ -188,6 +196,17 @@ public:
 		closeFaceIfRequired();
 	}
 
+	void printHierarchy( const std::string str, int changeHierarchy=0, bool endOfLine=true ) 
+	{
+	    for( int i = 0 ; i < this->_hierarchy ; i++ ) {
+	        std::cout << "  ";
+	    }
+	    std::cout << str;
+	    if( endOfLine ) {
+	        std::cout << std::endl;
+	    }
+		this->_hierarchy += changeHierarchy;
+	}
 };
 
 #endif // BRepBuilder_H

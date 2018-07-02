@@ -159,9 +159,6 @@ protected:
 	BRepBuilder* _brepBuilder;
     bool _fatherIsOpeningEl;
 
-    int _hierarchy;
-    void printHierarchy( std::string str, bool endOfLine=true );
-
     void buildExtrudedArea( double depth, double xDim, double yDim, double i, double j, double k );
 };
 
