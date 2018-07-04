@@ -4,13 +4,24 @@
 #include <ifc2x3/DefinedTypes.h>
 #include <ifc2x3/all.h>
 
-struct BRepBuilderPlacement {
+namespace Spider3d {
+
+struct MaterialLayer {
+    std::wstring name;
+    double thickness;
+};
+
+typedef std::wstring MaterialAssignmentKey;
+typedef std::vector<MaterialLayer> MaterialLayers;
+typedef std::wstring MaterialName;
+
+struct Placement {
 	double iEX, jEX, kEX; 
 	double iEY, jEY, kEY;
 	double iEZ, jEZ, kEZ;
 	double iO, jO, kO;
 
-	BRepBuilderPlacement( double iEX, double jEX, double kEX, 
+	Placement( double iEX, double jEX, double kEX, 
 		double iEZ, double jEZ, double kEZ, double iO, double jO, double kO ) {
 		this->iEX = iEX; this->jEX = jEX; this->kEX = kEX;
 		this->iEZ = iEZ; this->jEZ = jEZ, this->kEZ = kEZ;
@@ -20,7 +31,7 @@ struct BRepBuilderPlacement {
 		this->iO = iO, this->jO = jO, this->kO = kO;
 	}
 
-	~BRepBuilderPlacement() {;}
+	~Placement() {;}
 
 	void toInitialAxis( double& x, double& y, double& z ) {
 		double xCopy = x, yCopy = y, zCopy = z;
@@ -41,6 +52,8 @@ struct BRepBuilderPlacement {
 class BRepBuilder
 {
 public:
+	std::map<MaterialAssignmentKey, MaterialLayers> mlAssignments; // To store materials assigned to each object
+
 	std::ofstream *pOutputFile;
 	int nProductsOpened;
 	int nProductsClosed;
@@ -48,12 +61,12 @@ public:
 	int nFacesClosed;
 	int nPoints;
 
-	std::vector<BRepBuilderPlacement> placements;
+	std::vector<Placement> placements;
 
-    int _hierarchy;
+    int hierarchy;
     void printHierarchy( std::string str, bool endOfLine=true );	
 	
-	BRepBuilder( std::ofstream *pOutputFile ) : pOutputFile(pOutputFile), _hierarchy(0),
+	BRepBuilder( std::ofstream *pOutputFile ) : pOutputFile(pOutputFile), hierarchy(0),
 		nProductsOpened(0), nProductsClosed(0), nFacesOpened(0), nFacesClosed(0), nPoints(0) {
 		;
 	}
@@ -79,7 +92,7 @@ public:
 			ifc2x3::List_IfcLengthMeasure_1_3 center = location->getCoordinates();
 			iO = center[0]; jO = center[1]; kO = center[2];
 		}
-		this->placements.push_back( BRepBuilderPlacement( iEX, jEX, kEX, iEZ, jEZ, kEZ, iO, jO, kO ) );
+		this->placements.push_back( Placement( iEX, jEX, kEX, iEZ, jEZ, kEZ, iO, jO, kO ) );
 		std::stringstream ss;
 		ss << "PLACEMENT pushed : " << value->getKey() << ", iEX=" << iEX << ", jEX=" << jEX << ", kEX=" << kEX;
 		ss << ", iEZ=" << iEZ << ", jEZ=" << jEZ << ", kEZ=" << kEZ << ", iO=" << iO << ", jO=" << jO << ", kO=" << kO << std::endl;
@@ -198,15 +211,17 @@ public:
 
 	void printHierarchy( const std::string str, int changeHierarchy=0, bool endOfLine=true ) 
 	{
-	    for( int i = 0 ; i < this->_hierarchy ; i++ ) {
+	    for( int i = 0 ; i < this->hierarchy ; i++ ) {
 	        std::cout << "  ";
 	    }
 	    std::cout << str;
 	    if( endOfLine ) {
 	        std::cout << std::endl;
 	    }
-		this->_hierarchy += changeHierarchy;
+		this->hierarchy += changeHierarchy;
 	}
 };
+
+} // End of namespace Spider3d
 
 #endif // BRepBuilder_H

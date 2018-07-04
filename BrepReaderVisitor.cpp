@@ -2,11 +2,68 @@
 
 #include <ifc2x3/ExpressDataSet.h>
 
-BrepReaderVisitor::BrepReaderVisitor(BRepBuilder* brepBuilder) 
-    : _brepBuilder(brepBuilder),
-      _fatherIsOpeningEl(false)
+namespace Spider3d {
+
+BrepReaderVisitor::BrepReaderVisitor(BRepBuilder* brepBuilder) : _brepBuilder(brepBuilder), _fatherIsOpeningEl(false)
 {
 }
+
+bool BrepReaderVisitor::visitIfcRelAssociatesMaterial(ifc2x3::IfcRelAssociatesMaterial *ifcRelAssociatesMaterial) {
+
+    std::vector<MaterialName> mlNames; // To store the names of the materials read.    
+    std::vector<double> mlThickness; // To store the thickness of the material layers read.
+
+    std::cout << " IfcRelAssociatesMaterial" << std::endl;
+    ifc2x3::IfcMaterialSelect* rm = ifcRelAssociatesMaterial->getRelatingMaterial(); // The relating material of type 'IfcMaterialSelect'
+    if( rm != NULL ) {
+        std::cout <<  " Relaing material type: " << rm->currentTypeName() << std::endl;
+        if( rm->currentType() == ifc2x3::IfcMaterialSelect::IFCMATERIALLAYERSETUSAGE ) {
+            ifc2x3::IfcMaterialLayerSetUsage *mlsu = rm->getIfcMaterialLayerSetUsage();
+            if( mlsu != NULL ) {
+                ifc2x3::IfcMaterialLayerSet *mls = mlsu->getForLayerSet(); // Getting a MATERIAL LAYER SET
+                if( mls != NULL ) {
+                    std::cout <<  "  Material Layer Set " << std::endl;
+                    ifc2x3::List_IfcMaterialLayer_1_n layers = mls->getMaterialLayers(); // Getting the LAYERS
+                    ifc2x3::List_IfcMaterialLayer_1_n::iterator layersIt = layers.begin();
+                    for( ; layersIt != layers.end() ; ++layersIt ) {                     // Iterating the LAYERS
+                        double thickness = (*layersIt)->getLayerThickness();
+                        ifc2x3::IfcMaterial* material = (*layersIt)->getMaterial();
+                        if( material != NULL ) {
+                            std::cout << "   Material name: " << material->getName() << std::endl;
+                            mlNames.push_back( material->getName() );
+                            mlThickness.push_back( thickness );
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ifc2x3::Set_IfcRoot_1_n relObjs = ifcRelAssociatesMaterial->getRelatedObjects(); // Getting all the objects related to the materials.
+    ifc2x3::Set_IfcRoot_1_n::iterator relObjsIt = relObjs.begin(); // Retrieving the iterator
+    for( ; relObjsIt != relObjs.end() ; ++relObjsIt ) {  // Iterating...
+        std::cout << " Related object: type=" << (*relObjsIt)->type();
+        std::cout << ", id=" << (*relObjsIt)->getGlobalId() << ", name= " << (*relObjsIt)->getName() << "\n";
+        MaterialAssignmentKey objectGlobalId = (*relObjsIt)->getGlobalId(); // An id of an object the material is assigned to.
+
+        std::map<MaterialAssignmentKey, MaterialLayers>::iterator objectFound = 
+            _brepBuilder->mlAssignments.find( objectGlobalId ); // Searching for the key in the map...
+        if( objectFound == _brepBuilder->mlAssignments.end() ) { // ...if not found...
+            MaterialLayers mls; // ...adding one...
+            bool success;
+            std::pair<std::map<MaterialAssignmentKey, MaterialLayers>::iterator, bool>(objectFound, success) = 
+                _brepBuilder->mlAssignments.insert( std::pair<MaterialAssignmentKey, MaterialLayers>(objectGlobalId, mls ) );
+            if( !success ) { // If failed to insert a new key-value pair...
+                continue; // ... continuing the cycle without adding a layer.
+            }
+        }
+        for( int i = 0 ; i < mlNames.size() ; i++ ) { // Adding a new material (layer thickness and name) to all the objects related...
+            MaterialLayer ml = { mlNames[i], mlThickness[i] };
+            objectFound->second.push_back( ml ); // For each object pushing a yet another material's name and layer thickness.
+        }
+    }
+}
+
 
 bool BrepReaderVisitor::visitIfcObjectDefinition(ifc2x3::IfcObjectDefinition *value)
 {
@@ -442,3 +499,5 @@ void BrepReaderVisitor::buildExtrudedArea( double depth, double xDim, double yDi
     _brepBuilder->addPoint(x2new,y2new,znew);
     _brepBuilder->addPoint(x1new,y2new,znew);
 }
+
+} // End of namespace Spider3d

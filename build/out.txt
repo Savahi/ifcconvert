@@ -2,43 +2,111 @@ Reading Brep geometry of Ifc2x3...
 reading file ...
 OK!!
 Reading the model...
-Reading building elements...
-Extracting materials...
+
+****Extracting materials...
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
-  Material Layer Usage 
-   Material Layer Set 
-    Material name: Brick, Common
+  Material Layer Set 
+   Material name: Brick, Common
  Related object: type=IfcWallStandardCase, id=2JuXRljVH1lAVD85_X3iHh, name= Basic Wall:Generic - 200mm - Filled:199381
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSet
  Related object: type=IfcWallType, id=0Ktsech6bAFh3WEiws1ntI, name= Basic Wall:Generic - 200mm - Filled
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
-  Material Layer Usage 
-   Material Layer Set 
-    Material name: Brick, Common
+  Material Layer Set 
+   Material name: Brick, Common
  Related object: type=IfcWallStandardCase, id=2JuXRljVH1lAVD85_X3iM3, name= Basic Wall:Generic - 200mm - Filled:199485
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
-  Material Layer Usage 
-   Material Layer Set 
-    Material name: Brick, Common
+  Material Layer Set 
+   Material name: Brick, Common
  Related object: type=IfcWallStandardCase, id=2JuXRljVH1lAVD85_X3iKy, name= Basic Wall:Generic - 200mm - Filled:199554
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
-  Material Layer Usage 
-   Material Layer Set 
-    Material name: Brick, Common
+  Material Layer Set 
+   Material name: Brick, Common
  Related object: type=IfcWallStandardCase, id=2JuXRljVH1lAVD85_X3iKL, name= Basic Wall:Generic - 200mm - Filled:199595
-Running visitors...
+ IfcRelAssociatesMaterial
+ Relaing material type: IfcMaterialLayerSetUsage
+  Material Layer Set 
+   Material name: Concrete, Cast-in-Place gray
+ Related object: type=IfcWallStandardCase, id=005Zuk9110axXeKE0kulOg, name= Basic Wall:Foundation - 300mm Concrete:200122
+ IfcRelAssociatesMaterial
+ Relaing material type: IfcMaterialLayerSet
+ Related object: type=IfcWallType, id=1HBVb1NdfA6PUA6LzWtJ1R, name= Basic Wall:Foundation - 300mm Concrete
+ IfcRelAssociatesMaterial
+ Relaing material type: IfcMaterialLayerSetUsage
+  Material Layer Set 
+   Material name: Concrete, Cast-in-Place gray
+ Related object: type=IfcWallStandardCase, id=005Zuk9110axXeKE0kulMy, name= Basic Wall:Foundation - 300mm Concrete:200236
+ IfcRelAssociatesMaterial
+ Relaing material type: IfcMaterialLayerSetUsage
+  Material Layer Set 
+   Material name: Concrete, Cast-in-Place gray
+ Related object: type=IfcWallStandardCase, id=005Zuk9110axXeKE0kulKY, name= Basic Wall:Foundation - 300mm Concrete:200370
+ IfcRelAssociatesMaterial
+ Relaing material type: IfcMaterialLayerSetUsage
+  Material Layer Set 
+   Material name: Concrete, Cast-in-Place gray
+ Related object: type=IfcWallStandardCase, id=005Zuk9110axXeKE0kulLc, name= Basic Wall:Foundation - 300mm Concrete:200438
+ IfcRelAssociatesMaterial
+ Relaing material type: IfcMaterialLayerSetUsage
+  Material Layer Set 
+   Material name: Gypsum Wall Board
+   Material name: Gypsum Wall Board
+   Material name: Metal Stud Layer
+   Material name: Gypsum Wall Board
+   Material name: Gypsum Wall Board
+ Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkgZ, name= Basic Wall:Interior - 79mm Partition (1-hr):201319
+ IfcRelAssociatesMaterial
+ Relaing material type: IfcMaterialLayerSet
+ Related object: type=IfcWallType, id=2JF5JXaxWHqu3u0C1FZlqm, name= Basic Wall:Interior - 79mm Partition (1-hr)
+ IfcRelAssociatesMaterial
+ Relaing material type: IfcMaterialLayerSetUsage
+  Material Layer Set 
+   Material name: Gypsum Wall Board
+   Material name: Gypsum Wall Board
+   Material name: Metal Stud Layer
+   Material name: Gypsum Wall Board
+   Material name: Gypsum Wall Board
+ Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkl9, name= Basic Wall:Interior - 79mm Partition (1-hr):201485
+ IfcRelAssociatesMaterial
+ Relaing material type: IfcMaterialLayerSetUsage
+  Material Layer Set 
+   Material name: Gypsum Wall Board
+   Material name: Gypsum Wall Board
+   Material name: Metal Stud Layer
+   Material name: Gypsum Wall Board
+   Material name: Gypsum Wall Board
+ Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkje, name= Basic Wall:Interior - 79mm Partition (1-hr):201644
+ IfcRelAssociatesMaterial
+ Relaing material type: IfcMaterialLayerSetUsage
+  Material Layer Set 
+   Material name: Gypsum Wall Board
+   Material name: Gypsum Wall Board
+   Material name: Metal Stud Layer
+   Material name: Gypsum Wall Board
+   Material name: Gypsum Wall Board
+ Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkiJ, name= Basic Wall:Interior - 79mm Partition (1-hr):201687
+ IfcRelAssociatesMaterial
+ Relaing material type: IfcMaterialLayerSetUsage
+  Material Layer Set 
+   Material name: Gypsum Wall Board
+   Material name: Gypsum Wall Board
+   Material name: Metal Stud Layer
+   Material name: Gypsum Wall Board
+   Material name: Gypsum Wall Board
+ Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkpV, name= Basic Wall:Interior - 79mm Partition (1-hr):201755
+
+****Reading building elements and running visitors...
 BrepReaderVisitor.visitIfcObjectDefinition
   BrepReaderVisitor.visitIfcRelAggregates()
     getRelatedObjects() item: IfcSite
     BrepReaderVisitor.visitIfcSpatialStructureElement()
-      PLACEMENT pushed : 310, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+      PLACEMENT pushed : 690, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-        PRODUCT: 312, GUID=1E4TBrWx93mRpLzhEIBOeZ, NAME=Default, Representation: 0
+        PRODUCT: 692, GUID=1E4TBrWx93mRpLzhEIBOeZ, NAME=Default, Representation: 0
 
         BrepReaderVisitor.visitIfcObjectDefinition
           BrepReaderVisitor.visitIfcRelAggregates()
@@ -52,25 +120,25 @@ BrepReaderVisitor.visitIfcObjectDefinition
                   BrepReaderVisitor.visitIfcRelAggregates()
                     getRelatedObjects() item: IfcBuildingStorey
                     BrepReaderVisitor.visitIfcSpatialStructureElement()
-                      PLACEMENT pushed : 117, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                      PLACEMENT pushed : 124, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                        PRODUCT: 120, GUID=1E4TBrWx93mRpLzhDjqaRU, NAME=Level 1, Representation: 0
+                        PRODUCT: 126, GUID=1E4TBrWx93mRpLzhDjqaRU, NAME=Level 1, Representation: 0
 
                         BrepReaderVisitor.visitIfcRelContainedInSpatialStructure()
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
-                          PLACEMENT pushed : 130, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11856.4, jO=-7677.66, kO=0
+                          PLACEMENT pushed : 136, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11856.4, jO=-7677.66, kO=0
 
-                            PRODUCT: 162, GUID=2JuXRljVH1lAVD85_X3iHh, NAME=Basic Wall:Generic - 200mm - Filled:199381, Representation: 0x1472300
+                            PRODUCT: 168, GUID=2JuXRljVH1lAVD85_X3iHh, NAME=Basic Wall:Generic - 200mm - Filled:199381, Representation: 0x263b2c0
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D
                               BrepReaderVisitor.visitIfcRepresentation
-                                key=135
+                                key=141
                                 end of visitIfcRepresentation
                               representationtype: SweptSolid
                               BrepReaderVisitor.visitIfcRepresentation
-                                key=145
-                                PLACEMENT pushed : 144, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                                key=151
+                                PLACEMENT pushed : 150, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
                                   BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=6500, i=0, j=0, k=1, xdim=20200, ydim200
                                   PLACEMENT poped
@@ -80,19 +148,19 @@ BrepReaderVisitor.visitIfcObjectDefinition
                               end of BrepReaderVisitor.visitIfcObjectDefinition
                             PLACEMENT poped
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
-                          PLACEMENT pushed : 210, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11756.4, jO=12422.3, kO=0
+                          PLACEMENT pushed : 216, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11756.4, jO=12422.3, kO=0
 
-                            PRODUCT: 231, GUID=2JuXRljVH1lAVD85_X3iM3, NAME=Basic Wall:Generic - 200mm - Filled:199485, Representation: 0x1463470
+                            PRODUCT: 237, GUID=2JuXRljVH1lAVD85_X3iM3, NAME=Basic Wall:Generic - 200mm - Filled:199485, Representation: 0x2608e60
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D
                               BrepReaderVisitor.visitIfcRepresentation
-                                key=214
+                                key=220
                                 end of visitIfcRepresentation
                               representationtype: SweptSolid
                               BrepReaderVisitor.visitIfcRepresentation
-                                key=223
-                                PLACEMENT pushed : 222, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                                key=229
+                                PLACEMENT pushed : 228, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
                                   BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=8000, i=0, j=0, k=1, xdim=10000, ydim200
                                   PLACEMENT poped
@@ -102,19 +170,19 @@ BrepReaderVisitor.visitIfcObjectDefinition
                               end of BrepReaderVisitor.visitIfcObjectDefinition
                             PLACEMENT poped
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
-                          PLACEMENT pushed : 244, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1856.36, jO=12322.3, kO=0
+                          PLACEMENT pushed : 250, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1856.36, jO=12322.3, kO=0
 
-                            PRODUCT: 265, GUID=2JuXRljVH1lAVD85_X3iKy, NAME=Basic Wall:Generic - 200mm - Filled:199554, Representation: 0x1473fd0
+                            PRODUCT: 271, GUID=2JuXRljVH1lAVD85_X3iKy, NAME=Basic Wall:Generic - 200mm - Filled:199554, Representation: 0x263d230
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D
                               BrepReaderVisitor.visitIfcRepresentation
-                                key=248
+                                key=254
                                 end of visitIfcRepresentation
                               representationtype: SweptSolid
                               BrepReaderVisitor.visitIfcRepresentation
-                                key=257
-                                PLACEMENT pushed : 256, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                                key=263
+                                PLACEMENT pushed : 262, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
                                   BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=5000, i=0, j=0, k=1, xdim=20000, ydim200
                                   PLACEMENT poped
@@ -124,21 +192,219 @@ BrepReaderVisitor.visitIfcObjectDefinition
                               end of BrepReaderVisitor.visitIfcObjectDefinition
                             PLACEMENT poped
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
-                          PLACEMENT pushed : 278, iEX=-1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1956.36, jO=-7577.66, kO=0
+                          PLACEMENT pushed : 284, iEX=-1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1956.36, jO=-7577.66, kO=0
 
-                            PRODUCT: 299, GUID=2JuXRljVH1lAVD85_X3iKL, NAME=Basic Wall:Generic - 200mm - Filled:199595, Representation: 0x1474a40
+                            PRODUCT: 305, GUID=2JuXRljVH1lAVD85_X3iKL, NAME=Basic Wall:Generic - 200mm - Filled:199595, Representation: 0x263de70
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D
                               BrepReaderVisitor.visitIfcRepresentation
-                                key=282
+                                key=288
                                 end of visitIfcRepresentation
                               representationtype: SweptSolid
                               BrepReaderVisitor.visitIfcRepresentation
-                                key=291
-                                PLACEMENT pushed : 290, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                                key=297
+                                PLACEMENT pushed : 296, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
                                   BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=3000, i=0, j=0, k=1, xdim=9800, ydim200
+                                  PLACEMENT poped
+                                end of visitIfcRepresentation
+                              end of visitIfcProductRepresentation
+                            BrepReaderVisitor.visitIfcObjectDefinition
+                              end of BrepReaderVisitor.visitIfcObjectDefinition
+                            PLACEMENT poped
+                          BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+                          PLACEMENT pushed : 318, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-2006.36, jO=-7577.66, kO=-3500
+
+                            PRODUCT: 345, GUID=005Zuk9110axXeKE0kulOg, NAME=Basic Wall:Foundation - 300mm Concrete:200122, Representation: 0x263ec50
+
+                            BrepReaderVisitor.visitIfcProductRepresentation
+                              representationtype: Curve2D
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=322
+                                end of visitIfcRepresentation
+                              representationtype: SweptSolid
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=331
+                                PLACEMENT pushed : 330, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+
+                                  BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=3500, i=0, j=0, k=1, xdim=13700, ydim300
+                                  PLACEMENT poped
+                                end of visitIfcRepresentation
+                              end of visitIfcProductRepresentation
+                            BrepReaderVisitor.visitIfcObjectDefinition
+                              end of BrepReaderVisitor.visitIfcObjectDefinition
+                            PLACEMENT poped
+                          BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+                          PLACEMENT pushed : 375, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=11543.6, jO=-7427.66, kO=-3500
+
+                            PRODUCT: 396, GUID=005Zuk9110axXeKE0kulMy, NAME=Basic Wall:Foundation - 300mm Concrete:200236, Representation: 0x2615de0
+
+                            BrepReaderVisitor.visitIfcProductRepresentation
+                              representationtype: Curve2D
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=379
+                                end of visitIfcRepresentation
+                              representationtype: SweptSolid
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=388
+                                PLACEMENT pushed : 387, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+
+                                  BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=3500, i=0, j=0, k=1, xdim=10100, ydim300
+                                  PLACEMENT poped
+                                end of visitIfcRepresentation
+                              end of visitIfcProductRepresentation
+                            BrepReaderVisitor.visitIfcObjectDefinition
+                              end of BrepReaderVisitor.visitIfcObjectDefinition
+                            PLACEMENT poped
+                          BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+                          PLACEMENT pushed : 409, iEX=-1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=11393.6, jO=2522.34, kO=-3500
+
+                            PRODUCT: 430, GUID=005Zuk9110axXeKE0kulKY, NAME=Basic Wall:Foundation - 300mm Concrete:200370, Representation: 0x26405e0
+
+                            BrepReaderVisitor.visitIfcProductRepresentation
+                              representationtype: Curve2D
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=413
+                                end of visitIfcRepresentation
+                              representationtype: SweptSolid
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=422
+                                PLACEMENT pushed : 421, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+
+                                  BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=3500, i=0, j=0, k=1, xdim=13400, ydim300
+                                  PLACEMENT poped
+                                end of visitIfcRepresentation
+                              end of visitIfcProductRepresentation
+                            BrepReaderVisitor.visitIfcObjectDefinition
+                              end of BrepReaderVisitor.visitIfcObjectDefinition
+                            PLACEMENT poped
+                          BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+                          PLACEMENT pushed : 443, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1856.36, jO=2372.34, kO=-3500
+
+                            PRODUCT: 464, GUID=005Zuk9110axXeKE0kulLc, NAME=Basic Wall:Foundation - 300mm Concrete:200438, Representation: 0x2640f60
+
+                            BrepReaderVisitor.visitIfcProductRepresentation
+                              representationtype: Curve2D
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=447
+                                end of visitIfcRepresentation
+                              representationtype: SweptSolid
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=456
+                                PLACEMENT pushed : 455, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+
+                                  BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=3500, i=0, j=0, k=1, xdim=9800, ydim300
+                                  PLACEMENT poped
+                                end of visitIfcRepresentation
+                              end of visitIfcProductRepresentation
+                            BrepReaderVisitor.visitIfcObjectDefinition
+                              end of BrepReaderVisitor.visitIfcObjectDefinition
+                            PLACEMENT poped
+                          BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+                          PLACEMENT pushed : 477, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11756.4, jO=-1537.66, kO=0
+
+                            PRODUCT: 504, GUID=1JmC8d7t19Ve0s7aURIkgZ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201319, Representation: 0x2641f70
+
+                            BrepReaderVisitor.visitIfcProductRepresentation
+                              representationtype: Curve2D
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=481
+                                end of visitIfcRepresentation
+                              representationtype: SweptSolid
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=490
+                                PLACEMENT pushed : 489, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+
+                                  BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=2900, ydim80
+                                  PLACEMENT poped
+                                end of visitIfcRepresentation
+                              end of visitIfcProductRepresentation
+                            BrepReaderVisitor.visitIfcObjectDefinition
+                              end of BrepReaderVisitor.visitIfcObjectDefinition
+                            PLACEMENT poped
+                          BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+                          PLACEMENT pushed : 556, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-8896.36, jO=-1497.66, kO=0
+
+                            PRODUCT: 577, GUID=1JmC8d7t19Ve0s7aURIkl9, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201485, Representation: 0x2624280
+
+                            BrepReaderVisitor.visitIfcProductRepresentation
+                              representationtype: Curve2D
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=560
+                                end of visitIfcRepresentation
+                              representationtype: SweptSolid
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=569
+                                PLACEMENT pushed : 568, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+
+                                  BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=3280, ydim80
+                                  PLACEMENT poped
+                                end of visitIfcRepresentation
+                              end of visitIfcProductRepresentation
+                            BrepReaderVisitor.visitIfcObjectDefinition
+                              end of BrepReaderVisitor.visitIfcObjectDefinition
+                            PLACEMENT poped
+                          BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+                          PLACEMENT pushed : 590, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-8856.36, jO=1742.34, kO=0
+
+                            PRODUCT: 611, GUID=1JmC8d7t19Ve0s7aURIkje, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201644, Representation: 0x26433b0
+
+                            BrepReaderVisitor.visitIfcProductRepresentation
+                              representationtype: Curve2D
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=594
+                                end of visitIfcRepresentation
+                              representationtype: SweptSolid
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=603
+                                PLACEMENT pushed : 602, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+
+                                  BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=3380, ydim80
+                                  PLACEMENT poped
+                                end of visitIfcRepresentation
+                              end of visitIfcProductRepresentation
+                            BrepReaderVisitor.visitIfcObjectDefinition
+                              end of BrepReaderVisitor.visitIfcObjectDefinition
+                            PLACEMENT poped
+                          BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+                          PLACEMENT pushed : 624, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-5516.36, jO=1702.34, kO=0
+
+                            PRODUCT: 645, GUID=1JmC8d7t19Ve0s7aURIkiJ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201687, Representation: 0x2643f00
+
+                            BrepReaderVisitor.visitIfcProductRepresentation
+                              representationtype: Curve2D
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=628
+                                end of visitIfcRepresentation
+                              representationtype: SweptSolid
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=637
+                                PLACEMENT pushed : 636, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+
+                                  BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=2200, ydim80
+                                  PLACEMENT poped
+                                end of visitIfcRepresentation
+                              end of visitIfcProductRepresentation
+                            BrepReaderVisitor.visitIfcObjectDefinition
+                              end of BrepReaderVisitor.visitIfcObjectDefinition
+                            PLACEMENT poped
+                          BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+                          PLACEMENT pushed : 658, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-5476.36, jO=-457.655, kO=0
+
+                            PRODUCT: 679, GUID=1JmC8d7t19Ve0s7aURIkpV, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201755, Representation: 0x2644a50
+
+                            BrepReaderVisitor.visitIfcProductRepresentation
+                              representationtype: Curve2D
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=662
+                                end of visitIfcRepresentation
+                              representationtype: SweptSolid
+                              BrepReaderVisitor.visitIfcRepresentation
+                                key=671
+                                PLACEMENT pushed : 670, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+
+                                  BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=3520, ydim80
                                   PLACEMENT poped
                                 end of visitIfcRepresentation
                               end of visitIfcProductRepresentation

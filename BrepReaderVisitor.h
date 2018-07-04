@@ -5,6 +5,8 @@
 
 #include <ifc2x3/InheritVisitor.h>
 
+namespace Spider3d {
+
 /*!
 ** \class BrepReaderVisitor BrepReaderVisitor.h
 ** \brief Class used as interface for the BrepBuilder
@@ -18,6 +20,8 @@ class BrepReaderVisitor : public ifc2x3::InheritVisitor
 {
 public:
     BrepReaderVisitor(BRepBuilder* brepBuilder);
+
+    virtual bool visitIfcRelAssociatesMaterial(ifc2x3::IfcRelAssociatesMaterial *value);
 	
     /*!
     ** \brief Visit "decomposedby" items of an IfcObjectDefinition
@@ -161,5 +165,7 @@ protected:
 
     void buildExtrudedArea( double depth, double xDim, double yDim, double i, double j, double k );
 };
+
+} // End of namespace Spider3d
 
 #endif // BREPREADERVISITOR_H

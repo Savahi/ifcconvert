@@ -29,6 +29,8 @@
 #include "BrepBuilder.h"
 #include "BrepReaderVisitor.h"
 
+using namespace Spider3d;
+
 class ConsoleCallBack : public Step::CallBack
 {
 public:
@@ -94,62 +96,29 @@ int main(int argc, char **argv)
     ifc2x3::ExpressDataSet * expressDataSet = dynamic_cast<ifc2x3::ExpressDataSet*>(reader.getExpressDataSet());
 
     if( expressDataSet == NULL ) {
-        std::cout << "There is no ExpressDataSet. Exiting..." << std::endl;
+        std::cout << "There is no ExpressDataSet. Exiting...\n" << std::endl;
         return (2);
     }
 
-    std::cout << "Reading building elements...\n";
-
-    // ** Reading building elements
+    // Opening a file to output 
     std::ofstream outputFile;
     outputFile.open( argv[2] );    
     if( outputFile.fail() ) {
         std::cout << "Can't write into the output file. Exiting..." << std::endl; 
+        return 0;
     }
+    BRepBuilder brepBuilder( &outputFile );
+    
+    BrepReaderVisitor visitor( &brepBuilder );
 
-    std::cout << "Extracting materials...\n";    
+    std::cout << "\n****Reading materials...\n";
 
     Step::RefLinkedList< ifc2x3::IfcRelAssociatesMaterial >::iterator ramIt = expressDataSet->getAllIfcRelAssociatesMaterial().begin();
     for( ; ramIt != expressDataSet->getAllIfcRelAssociatesMaterial().end(); ++ramIt ) {
-
-        std::vector<std::wstring> materialsNames;        
-
-        std::cout << " IfcRelAssociatesMaterial" << std::endl;
-        ifc2x3::IfcMaterialSelect* rm = ramIt->getRelatingMaterial();
-        if( rm != NULL ) {
-            std::cout <<  " Relaing material type: " << rm->currentTypeName() << std::endl;
-            if( rm->currentType() == ifc2x3::IfcMaterialSelect::IFCMATERIALLAYERSETUSAGE ) {
-                ifc2x3::IfcMaterialLayerSetUsage *mlsu = rm->getIfcMaterialLayerSetUsage();
-                if( mlsu != NULL ) {
-                    std::cout <<  "  Material Layer Usage " << std::endl;
-                    ifc2x3::IfcMaterialLayerSet *mls = mlsu->getForLayerSet(); // Getting a MATERIAL LAYER SET
-                    if( mls != NULL ) {
-                        std::cout <<  "   Material Layer Set " << std::endl;
-                        ifc2x3::List_IfcMaterialLayer_1_n layers = mls->getMaterialLayers();
-                        ifc2x3::List_IfcMaterialLayer_1_n::iterator layersIt = layers.begin();
-                        for( ; layersIt != layers.end() ; ++layersIt ) {
-                            ifc2x3::IfcMaterial* material = (*layersIt)->getMaterial();
-                            if( material != NULL ) {
-                                std::cout << "    Material name: " << material->getName() << std::endl;
-                                materialsNames.push_back( material->getName() );
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        ifc2x3::Set_IfcRoot_1_n relObjs = ramIt->getRelatedObjects();
-        ifc2x3::Set_IfcRoot_1_n::iterator relObjsIt = relObjs.begin();
-        for( ; relObjsIt != relObjs.end() ; ++relObjsIt ) {   
-            std::cout << " Related object: type=" << (*relObjsIt)->type() << ", id=" << (*relObjsIt)->getGlobalId() << ", name= " << (*relObjsIt)->getName() << "\n";
-        }
-        //it->acceptVisitor(&visitor);
+        ramIt->acceptVisitor(&visitor);
     }
 
-    std::cout << "Running visitors...\n";
-    BRepBuilder brepBuilder( &outputFile );
-    BrepReaderVisitor visitor( &brepBuilder );
+    std::cout << "\n****Reading building elements and running visitors...\n";
 
     Step::RefLinkedList< ifc2x3::IfcProject >::iterator projIt = expressDataSet->getAllIfcProject().begin();
     for( ; projIt != expressDataSet->getAllIfcProject().end(); ++projIt ) {
