@@ -8,10 +8,111 @@ BrepReaderVisitor::BrepReaderVisitor(BRepBuilder* brepBuilder) : _brepBuilder(br
 {
 }
 
+bool BrepReaderVisitor::visitIfcMaterialDefinitionRepresentation(ifc2x3::IfcMaterialDefinitionRepresentation *mdr) {
+//IfcMaterial *IfcMaterialDefinitionRepresentation::getRepresentedMaterial();
+
+ifc2x3::List_IfcRepresentation_1_n repres = mdr->getRepresentations(); // Getting representations
+ifc2x3::List_IfcRepresentation_1_n::iterator represIter = repres.begin(); 
+for( ; represIter != repres.end() ; ++represIter ) { // Iterating representations
+    std::cout << "(*represIter)[1] Key=" << (*represIter)->getKey() << std::endl; 
+    ifc2x3::Set_IfcRepresentationItem_1_n represItems = (*represIter)->getItems(); // Getting representation items
+    ifc2x3::Set_IfcRepresentationItem_1_n::iterator represItemsIter = represItems.begin();
+    for( ; represItemsIter != represItems.end() ; ++represItemsIter ) { // Iterating representation items
+        std::cout << "(*represItemsIter)[2] Key=" << (*represItemsIter)->getKey();
+        std::cout << ", type=" << (*represItemsIter)->type() << std::endl;
+        Step::RefPtr<ifc2x3::IfcStyledItem> si = (*represItemsIter); // Representation item == style item
+        ifc2x3::Set_IfcPresentationStyleAssignment_1_n psa = si->getStyles(); // Getting style assignments
+        ifc2x3::Set_IfcPresentationStyleAssignment_1_n::iterator psaIter = psa.begin();
+        for( ; psaIter != psa.end() ; ++psaIter ) {
+            std::cout << "(*psaIter)[3] Key=" << (*psaIter)->getKey() << std::endl;
+            ifc2x3::Set_IfcPresentationStyleSelect_1_n pss = (*psaIter)->getStyles(); // Getting styles
+            ifc2x3::Set_IfcPresentationStyleSelect_1_n::iterator pssIter = pss.begin();
+            if( pssIter != pss.end() ) {
+                Step::RefPtr<ifc2x3::IfcPresentationStyleSelect> pss = (*pssIter); // Getting style
+                if( pss->currentType() == ifc2x3::IfcPresentationStyleSelect::IFCSURFACESTYLE ) { // This style is a surface style?
+                    ifc2x3::IfcSurfaceStyle* ss = pss->getIfcSurfaceStyle();
+                    if( ss != NULL ) {
+                        ifc2x3::Set_IfcSurfaceStyleElementSelect_1_5 sses = ss->getStyles();
+                        ifc2x3::Set_IfcSurfaceStyleElementSelect_1_5::iterator ssesIter = sses.begin(); // Getting style elements
+                        for( ; ssesIter != sses.end() ; ++ssesIter ) {
+                            if( (*ssesIter)->currentType() == ifc2x3::IfcSurfaceStyleElementSelect::IFCSURFACESTYLESHADING ) { // Shading style?
+                                ifc2x3::IfcSurfaceStyleShading* sss = (*ssesIter)->getIfcSurfaceStyleShading();
+                                ifc2x3::IfcColourRgb* rgb = sss->getSurfaceColour(); // Getting rgb
+                                if( rgb != NULL ) {
+                                    ifc2x3::IfcNormalisedRatioMeasure r = rgb->getRed();
+                                    ifc2x3::IfcNormalisedRatioMeasure g = rgb->getGreen();
+                                    ifc2x3::IfcNormalisedRatioMeasure b = rgb->getBlue();
+                                    std::cout << "SURFACE STYLE SHADING rgb: " << r << ", " << g << ", " << b << "\n";
+                                }
+                            }  
+                        }
+                    }
+                }
+            }                
+        }
+        /*
+        ifc2x3::Inverse_Set_IfcPresentationLayerAssignment_0_n psa = (*represItemsIter)->getLayerAssignments();
+        ifc2x3::Inverse_Set_IfcPresentationLayerAssignment_0_n::iterator psaIter = psa.begin();
+        for( ; psaIter != psa.end() ; ++psaIter ) {
+            std::cout << "(*psaIter)[3] Key=" << (*psaIter)->getKey() << std::endl;
+        }
+        ifc2x3::Inverse_Set_IfcStyledItem_0_1 sbi = (*represItemsIter)->getStyledByItem();
+        ifc2x3::Inverse_Set_IfcStyledItem_0_1::iterator sbiIter = sbi.begin();
+        if( sbiIter != sbi.end() ) {
+            std::cout << "(*sbiIter)[3] Key=" << (*sbiIter)->getKey() << std::endl;
+        }
+        */
+/*
+            ifc2x3::Set_IfcPresentationStyleSelect_1_n pss = (*psaIt)->getStyles();
+            ifc2x3::Set_IfcPresentationStyleSelect_1_n::iterator pssIt = pss.begin();
+            if( pssIt != pss.end() ) {
+                    printf("\nHERE5!\n");
+                Step::RefPtr<ifc2x3::IfcPresentationStyleSelect> pss = (*pssIt);
+                if( pss->currentType() == ifc2x3::IfcPresentationStyleSelect::IFCSURFACESTYLE ) {
+                    printf("\nHERE6!\n");
+                }
+            }                
+        }
+*/
+    }
+}
+/*
+-List_IfcRepresentation_1_n &IfcProductRepresentation::getRepresentations()
+-IfcRepresentation 
+-IfcProductRepresentation 
+-virtual Set_IfcRepresentationItem_1_n &getItems();
+-IfcRepresentationItem
+-virtual Inverse_Set_IfcStyledItem_0_1 &getStyledByItem();
+-IfcStyledItem
+-virtual Set_IfcPresentationStyleAssignment_1_n &getStyles();
+IfcPresentationStyleAssignment
+IfcPresentationStyleSelect
+union IfcPresentationStyleSelect_union {
+            IfcNullStyle m_IfcNullStyle; IfcCurveStyle *m_IfcCurveStyle; IfcSymbolStyle *m_IfcSymbolStyle;
+            IfcFillAreaStyle *m_IfcFillAreaStyle; IfcTextStyle *m_IfcTextStyle; IfcSurfaceStyle *m_IfcSurfaceStyle;
+        };
+IfcSurfaceStyle
+virtual Set_IfcSurfaceStyleElementSelect_1_5 &getStyles();
+IfcSurfaceStyleElementSelect
+union IfcSurfaceStyleElementSelect_union {
+            IfcSurfaceStyleShading *m_IfcSurfaceStyleShading; IfcSurfaceStyleLighting *m_IfcSurfaceStyleLighting;
+            IfcSurfaceStyleWithTextures *m_IfcSurfaceStyleWithTextures; IfcExternallyDefinedSurfaceStyle *m_IfcExternallyDefinedSurfaceStyle;
+            IfcSurfaceStyleRefraction *m_IfcSurfaceStyleRefraction;
+        };
+IfcSurfaceStyleShading
+virtual IfcColourRgb *getSurfaceColour();
+IfcColourRgb
+virtual IfcNormalisedRatioMeasure getBlue();
+*/
+;
+}
+
+
 bool BrepReaderVisitor::visitIfcRelAssociatesMaterial(ifc2x3::IfcRelAssociatesMaterial *ifcRelAssociatesMaterial) {
 
     std::vector<MaterialName> mlNames; // To store the names of the materials read.    
     std::vector<double> mlThickness; // To store the thickness of the material layers read.
+    std::vector<Step::Id> mlKeys; // To store the keys () of the materials read.    
 
     std::cout << " IfcRelAssociatesMaterial" << std::endl;
     ifc2x3::IfcMaterialSelect* rm = ifcRelAssociatesMaterial->getRelatingMaterial(); // The relating material of type 'IfcMaterialSelect'
@@ -29,9 +130,12 @@ bool BrepReaderVisitor::visitIfcRelAssociatesMaterial(ifc2x3::IfcRelAssociatesMa
                         double thickness = (*layersIt)->getLayerThickness();
                         ifc2x3::IfcMaterial* material = (*layersIt)->getMaterial();
                         if( material != NULL ) {
-                            std::cout << "   Material name: " << material->getName() << std::endl;
+                            std::cout << "   Material name: " << material->getName();
+                            std::cout << ", Material key: " << material->getKey();
+                            std::cout << ", thickness=" << thickness << std::endl;
                             mlNames.push_back( material->getName() );
                             mlThickness.push_back( thickness );
+                            mlKeys.push_back( material->getKey() );
                         }
                     }
                 }
@@ -58,7 +162,7 @@ bool BrepReaderVisitor::visitIfcRelAssociatesMaterial(ifc2x3::IfcRelAssociatesMa
             }
         }
         for( int i = 0 ; i < mlNames.size() ; i++ ) { // Adding a new material (layer thickness and name) to all the objects related...
-            MaterialLayer ml = { mlNames[i], mlThickness[i] };
+            MaterialLayer ml = { mlKeys[i], mlNames[i], mlThickness[i] };
             objectFound->second.push_back( ml ); // For each object pushing a yet another material's name and layer thickness.
         }
     }
@@ -237,10 +341,6 @@ bool BrepReaderVisitor::visitIfcRelContainedInSpatialStructure(ifc2x3::IfcRelCon
 
     _brepBuilder->printHierarchy( "end of BrepReaderVisitor.visitIfcRelContainedInSpatialStructure()", -1 );
     return true;
-}
-
-bool BrepReaderVisitor::visitIfcMaterialDefinitionRepresentation(ifc2x3::IfcMaterialDefinitionRepresentation *value) {
-    printf("\nHERE!!!!\n");
 }
 
 

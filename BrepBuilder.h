@@ -7,6 +7,7 @@
 namespace Spider3d {
 
 struct MaterialLayer {
+	Step::Id key; // A key (#NUM) that starts each line of an ".ifc" file.  
     std::wstring name;
     double thickness;
 };

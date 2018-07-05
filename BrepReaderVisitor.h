@@ -21,6 +21,8 @@ class BrepReaderVisitor : public ifc2x3::InheritVisitor
 public:
     BrepReaderVisitor(BRepBuilder* brepBuilder);
 
+    virtual bool visitIfcMaterialDefinitionRepresentation(ifc2x3::IfcMaterialDefinitionRepresentation *value);
+
     virtual bool visitIfcRelAssociatesMaterial(ifc2x3::IfcRelAssociatesMaterial *value);
 	
     /*!
@@ -88,7 +90,6 @@ public:
     virtual bool visitIfcProfileDef(ifc2x3::IfcProfileDef *value);
     virtual bool visitIfcSweptAreaSolid(ifc2x3::IfcSweptAreaSolid *value);
     virtual bool visitIfcExtrudedAreaSolid(ifc2x3::IfcExtrudedAreaSolid *value);
-    virtual bool visitIfcMaterialDefinitionRepresentation(ifc2x3::IfcMaterialDefinitionRepresentation *value);
     /* The end of "Mine" */
 
     /*!

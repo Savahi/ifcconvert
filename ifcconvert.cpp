@@ -111,6 +111,13 @@ int main(int argc, char **argv)
     
     BrepReaderVisitor visitor( &brepBuilder );
 
+    std::cout << "\n****Reading material definition representations...\n";
+    Step::RefLinkedList< ifc2x3::IfcMaterialDefinitionRepresentation >::iterator mdefIt = 
+        expressDataSet->getAllIfcMaterialDefinitionRepresentation().begin();
+    for( ; mdefIt != expressDataSet->getAllIfcMaterialDefinitionRepresentation().end(); ++mdefIt ) {
+        mdefIt->acceptVisitor(&visitor);
+    }
+
     std::cout << "\n****Reading materials...\n";
 
     Step::RefLinkedList< ifc2x3::IfcRelAssociatesMaterial >::iterator ramIt = expressDataSet->getAllIfcRelAssociatesMaterial().begin();
