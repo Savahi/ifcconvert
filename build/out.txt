@@ -1,13 +1,35 @@
-Reading Brep geometry of Ifc2x3...
-reading file ...
-OK!!
+Importing:
+reading ../dat/run.ini...
+Read Ok.
 Reading the model...
+
+****Reading material definition representations...
+Material key: 177
+[1] List_IfcRepresentation_1_n iterator: key=184
+[2] Set_IfcRepresentationItem_1_n iterator: key=182, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=180
+SURFACE STYLE SHADING rgb: 0.298039, 0.215686, 0.231373
+Material key: 348
+[1] List_IfcRepresentation_1_n iterator: key=353
+[2] Set_IfcRepresentationItem_1_n iterator: key=351, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=349
+SURFACE STYLE SHADING rgb: 0.45098, 0.454902, 0.423529
+Material key: 507
+[1] List_IfcRepresentation_1_n iterator: key=512
+[2] Set_IfcRepresentationItem_1_n iterator: key=510, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=508
+SURFACE STYLE SHADING rgb: 0.670588, 0.666667, 0.658824
+Material key: 517
+[1] List_IfcRepresentation_1_n iterator: key=526
+[2] Set_IfcRepresentationItem_1_n iterator: key=524, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=522
+SURFACE STYLE SHADING rgb: 0.329412, 0.32549, 0.317647
 
 ****Reading materials...
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Brick, Common, thickness=200
+   Material name: Brick, Common, Material key: 177, thickness=200
  Related object: type=IfcWallStandardCase, id=2JuXRljVH1lAVD85_X3iHh, name= Basic Wall:Generic - 200mm - Filled:199381
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSet
@@ -15,22 +37,22 @@ Reading the model...
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Brick, Common, thickness=200
+   Material name: Brick, Common, Material key: 177, thickness=200
  Related object: type=IfcWallStandardCase, id=2JuXRljVH1lAVD85_X3iM3, name= Basic Wall:Generic - 200mm - Filled:199485
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Brick, Common, thickness=200
+   Material name: Brick, Common, Material key: 177, thickness=200
  Related object: type=IfcWallStandardCase, id=2JuXRljVH1lAVD85_X3iKy, name= Basic Wall:Generic - 200mm - Filled:199554
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Brick, Common, thickness=200
+   Material name: Brick, Common, Material key: 177, thickness=200
  Related object: type=IfcWallStandardCase, id=2JuXRljVH1lAVD85_X3iKL, name= Basic Wall:Generic - 200mm - Filled:199595
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Concrete, Cast-in-Place gray, thickness=300
+   Material name: Concrete, Cast-in-Place gray, Material key: 348, thickness=300
  Related object: type=IfcWallStandardCase, id=005Zuk9110axXeKE0kulOg, name= Basic Wall:Foundation - 300mm Concrete:200122
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSet
@@ -38,26 +60,26 @@ Reading the model...
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Concrete, Cast-in-Place gray, thickness=300
+   Material name: Concrete, Cast-in-Place gray, Material key: 348, thickness=300
  Related object: type=IfcWallStandardCase, id=005Zuk9110axXeKE0kulMy, name= Basic Wall:Foundation - 300mm Concrete:200236
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Concrete, Cast-in-Place gray, thickness=300
+   Material name: Concrete, Cast-in-Place gray, Material key: 348, thickness=300
  Related object: type=IfcWallStandardCase, id=005Zuk9110axXeKE0kulKY, name= Basic Wall:Foundation - 300mm Concrete:200370
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Concrete, Cast-in-Place gray, thickness=300
+   Material name: Concrete, Cast-in-Place gray, Material key: 348, thickness=300
  Related object: type=IfcWallStandardCase, id=005Zuk9110axXeKE0kulLc, name= Basic Wall:Foundation - 300mm Concrete:200438
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Gypsum Wall Board, thickness=13
-   Material name: Gypsum Wall Board, thickness=6
-   Material name: Metal Stud Layer, thickness=42
-   Material name: Gypsum Wall Board, thickness=6
-   Material name: Gypsum Wall Board, thickness=13
+   Material name: Gypsum Wall Board, Material key: 507, thickness=13
+   Material name: Gypsum Wall Board, Material key: 507, thickness=6
+   Material name: Metal Stud Layer, Material key: 517, thickness=42
+   Material name: Gypsum Wall Board, Material key: 507, thickness=6
+   Material name: Gypsum Wall Board, Material key: 507, thickness=13
  Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkgZ, name= Basic Wall:Interior - 79mm Partition (1-hr):201319
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSet
@@ -65,38 +87,38 @@ Reading the model...
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Gypsum Wall Board, thickness=13
-   Material name: Gypsum Wall Board, thickness=6
-   Material name: Metal Stud Layer, thickness=42
-   Material name: Gypsum Wall Board, thickness=6
-   Material name: Gypsum Wall Board, thickness=13
+   Material name: Gypsum Wall Board, Material key: 507, thickness=13
+   Material name: Gypsum Wall Board, Material key: 507, thickness=6
+   Material name: Metal Stud Layer, Material key: 517, thickness=42
+   Material name: Gypsum Wall Board, Material key: 507, thickness=6
+   Material name: Gypsum Wall Board, Material key: 507, thickness=13
  Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkl9, name= Basic Wall:Interior - 79mm Partition (1-hr):201485
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Gypsum Wall Board, thickness=13
-   Material name: Gypsum Wall Board, thickness=6
-   Material name: Metal Stud Layer, thickness=42
-   Material name: Gypsum Wall Board, thickness=6
-   Material name: Gypsum Wall Board, thickness=13
+   Material name: Gypsum Wall Board, Material key: 507, thickness=13
+   Material name: Gypsum Wall Board, Material key: 507, thickness=6
+   Material name: Metal Stud Layer, Material key: 517, thickness=42
+   Material name: Gypsum Wall Board, Material key: 507, thickness=6
+   Material name: Gypsum Wall Board, Material key: 507, thickness=13
  Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkje, name= Basic Wall:Interior - 79mm Partition (1-hr):201644
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Gypsum Wall Board, thickness=13
-   Material name: Gypsum Wall Board, thickness=6
-   Material name: Metal Stud Layer, thickness=42
-   Material name: Gypsum Wall Board, thickness=6
-   Material name: Gypsum Wall Board, thickness=13
+   Material name: Gypsum Wall Board, Material key: 507, thickness=13
+   Material name: Gypsum Wall Board, Material key: 507, thickness=6
+   Material name: Metal Stud Layer, Material key: 517, thickness=42
+   Material name: Gypsum Wall Board, Material key: 507, thickness=6
+   Material name: Gypsum Wall Board, Material key: 507, thickness=13
  Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkiJ, name= Basic Wall:Interior - 79mm Partition (1-hr):201687
  IfcRelAssociatesMaterial
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Gypsum Wall Board, thickness=13
-   Material name: Gypsum Wall Board, thickness=6
-   Material name: Metal Stud Layer, thickness=42
-   Material name: Gypsum Wall Board, thickness=6
-   Material name: Gypsum Wall Board, thickness=13
+   Material name: Gypsum Wall Board, Material key: 507, thickness=13
+   Material name: Gypsum Wall Board, Material key: 507, thickness=6
+   Material name: Metal Stud Layer, Material key: 517, thickness=42
+   Material name: Gypsum Wall Board, Material key: 507, thickness=6
+   Material name: Gypsum Wall Board, Material key: 507, thickness=13
  Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkpV, name= Basic Wall:Interior - 79mm Partition (1-hr):201755
 
 ****Reading building elements and running visitors...
@@ -128,7 +150,7 @@ BrepReaderVisitor.visitIfcObjectDefinition
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
                           PLACEMENT pushed : 136, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11856.4, jO=-7677.66, kO=0
 
-                            PRODUCT: 168, GUID=2JuXRljVH1lAVD85_X3iHh, NAME=Basic Wall:Generic - 200mm - Filled:199381, Representation: 0x228b2c0
+                            PRODUCT: 168, GUID=2JuXRljVH1lAVD85_X3iHh, NAME=Basic Wall:Generic - 200mm - Filled:199381, Representation: 0x1fd7fe0
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D
@@ -150,7 +172,7 @@ BrepReaderVisitor.visitIfcObjectDefinition
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
                           PLACEMENT pushed : 216, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11756.4, jO=12422.3, kO=0
 
-                            PRODUCT: 237, GUID=2JuXRljVH1lAVD85_X3iM3, NAME=Basic Wall:Generic - 200mm - Filled:199485, Representation: 0x2258e60
+                            PRODUCT: 237, GUID=2JuXRljVH1lAVD85_X3iM3, NAME=Basic Wall:Generic - 200mm - Filled:199485, Representation: 0x1fbefb0
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D
@@ -172,7 +194,7 @@ BrepReaderVisitor.visitIfcObjectDefinition
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
                           PLACEMENT pushed : 250, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1856.36, jO=12322.3, kO=0
 
-                            PRODUCT: 271, GUID=2JuXRljVH1lAVD85_X3iKy, NAME=Basic Wall:Generic - 200mm - Filled:199554, Representation: 0x228d230
+                            PRODUCT: 271, GUID=2JuXRljVH1lAVD85_X3iKy, NAME=Basic Wall:Generic - 200mm - Filled:199554, Representation: 0x1ff3770
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D
@@ -194,7 +216,7 @@ BrepReaderVisitor.visitIfcObjectDefinition
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
                           PLACEMENT pushed : 284, iEX=-1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1956.36, jO=-7577.66, kO=0
 
-                            PRODUCT: 305, GUID=2JuXRljVH1lAVD85_X3iKL, NAME=Basic Wall:Generic - 200mm - Filled:199595, Representation: 0x228de70
+                            PRODUCT: 305, GUID=2JuXRljVH1lAVD85_X3iKL, NAME=Basic Wall:Generic - 200mm - Filled:199595, Representation: 0x1ff43b0
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D
@@ -216,7 +238,7 @@ BrepReaderVisitor.visitIfcObjectDefinition
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
                           PLACEMENT pushed : 318, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-2006.36, jO=-7577.66, kO=-3500
 
-                            PRODUCT: 345, GUID=005Zuk9110axXeKE0kulOg, NAME=Basic Wall:Foundation - 300mm Concrete:200122, Representation: 0x228ec50
+                            PRODUCT: 345, GUID=005Zuk9110axXeKE0kulOg, NAME=Basic Wall:Foundation - 300mm Concrete:200122, Representation: 0x1ff4f40
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D
@@ -238,7 +260,7 @@ BrepReaderVisitor.visitIfcObjectDefinition
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
                           PLACEMENT pushed : 375, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=11543.6, jO=-7427.66, kO=-3500
 
-                            PRODUCT: 396, GUID=005Zuk9110axXeKE0kulMy, NAME=Basic Wall:Foundation - 300mm Concrete:200236, Representation: 0x2265de0
+                            PRODUCT: 396, GUID=005Zuk9110axXeKE0kulMy, NAME=Basic Wall:Foundation - 300mm Concrete:200236, Representation: 0x1fcbf10
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D
@@ -260,7 +282,7 @@ BrepReaderVisitor.visitIfcObjectDefinition
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
                           PLACEMENT pushed : 409, iEX=-1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=11393.6, jO=2522.34, kO=-3500
 
-                            PRODUCT: 430, GUID=005Zuk9110axXeKE0kulKY, NAME=Basic Wall:Foundation - 300mm Concrete:200370, Representation: 0x22905e0
+                            PRODUCT: 430, GUID=005Zuk9110axXeKE0kulKY, NAME=Basic Wall:Foundation - 300mm Concrete:200370, Representation: 0x1ff66a0
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D
@@ -282,7 +304,7 @@ BrepReaderVisitor.visitIfcObjectDefinition
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
                           PLACEMENT pushed : 443, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1856.36, jO=2372.34, kO=-3500
 
-                            PRODUCT: 464, GUID=005Zuk9110axXeKE0kulLc, NAME=Basic Wall:Foundation - 300mm Concrete:200438, Representation: 0x2290f60
+                            PRODUCT: 464, GUID=005Zuk9110axXeKE0kulLc, NAME=Basic Wall:Foundation - 300mm Concrete:200438, Representation: 0x1ff6f50
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D
@@ -304,7 +326,7 @@ BrepReaderVisitor.visitIfcObjectDefinition
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
                           PLACEMENT pushed : 477, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11756.4, jO=-1537.66, kO=0
 
-                            PRODUCT: 504, GUID=1JmC8d7t19Ve0s7aURIkgZ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201319, Representation: 0x2291f70
+                            PRODUCT: 504, GUID=1JmC8d7t19Ve0s7aURIkgZ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201319, Representation: 0x1ff7ae0
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D
@@ -326,7 +348,7 @@ BrepReaderVisitor.visitIfcObjectDefinition
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
                           PLACEMENT pushed : 556, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-8896.36, jO=-1497.66, kO=0
 
-                            PRODUCT: 577, GUID=1JmC8d7t19Ve0s7aURIkl9, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201485, Representation: 0x2274280
+                            PRODUCT: 577, GUID=1JmC8d7t19Ve0s7aURIkl9, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201485, Representation: 0x1fda3b0
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D
@@ -348,7 +370,7 @@ BrepReaderVisitor.visitIfcObjectDefinition
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
                           PLACEMENT pushed : 590, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-8856.36, jO=1742.34, kO=0
 
-                            PRODUCT: 611, GUID=1JmC8d7t19Ve0s7aURIkje, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201644, Representation: 0x22933b0
+                            PRODUCT: 611, GUID=1JmC8d7t19Ve0s7aURIkje, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201644, Representation: 0x1ff8dc0
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D
@@ -370,7 +392,7 @@ BrepReaderVisitor.visitIfcObjectDefinition
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
                           PLACEMENT pushed : 624, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-5516.36, jO=1702.34, kO=0
 
-                            PRODUCT: 645, GUID=1JmC8d7t19Ve0s7aURIkiJ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201687, Representation: 0x2293f00
+                            PRODUCT: 645, GUID=1JmC8d7t19Ve0s7aURIkiJ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201687, Representation: 0x1ff9910
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D
@@ -392,7 +414,7 @@ BrepReaderVisitor.visitIfcObjectDefinition
                           BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
                           PLACEMENT pushed : 658, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-5476.36, jO=-457.655, kO=0
 
-                            PRODUCT: 679, GUID=1JmC8d7t19Ve0s7aURIkpV, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201755, Representation: 0x2294a50
+                            PRODUCT: 679, GUID=1JmC8d7t19Ve0s7aURIkpV, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201755, Representation: 0x1ffa460
 
                             BrepReaderVisitor.visitIfcProductRepresentation
                               representationtype: Curve2D

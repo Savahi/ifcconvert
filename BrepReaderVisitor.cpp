@@ -9,102 +9,70 @@ BrepReaderVisitor::BrepReaderVisitor(BRepBuilder* brepBuilder) : _brepBuilder(br
 }
 
 bool BrepReaderVisitor::visitIfcMaterialDefinitionRepresentation(ifc2x3::IfcMaterialDefinitionRepresentation *mdr) {
-//IfcMaterial *IfcMaterialDefinitionRepresentation::getRepresentedMaterial();
+    Step::Id materialKey;
+    ifc2x3::IfcNormalisedRatioMeasure red;
+    ifc2x3::IfcNormalisedRatioMeasure green;
+    ifc2x3::IfcNormalisedRatioMeasure blue;
 
-ifc2x3::List_IfcRepresentation_1_n repres = mdr->getRepresentations(); // Getting representations
-ifc2x3::List_IfcRepresentation_1_n::iterator represIter = repres.begin(); 
-for( ; represIter != repres.end() ; ++represIter ) { // Iterating representations
-    std::cout << "(*represIter)[1] Key=" << (*represIter)->getKey() << std::endl; 
-    ifc2x3::Set_IfcRepresentationItem_1_n represItems = (*represIter)->getItems(); // Getting representation items
-    ifc2x3::Set_IfcRepresentationItem_1_n::iterator represItemsIter = represItems.begin();
-    for( ; represItemsIter != represItems.end() ; ++represItemsIter ) { // Iterating representation items
-        std::cout << "(*represItemsIter)[2] Key=" << (*represItemsIter)->getKey();
-        std::cout << ", type=" << (*represItemsIter)->type() << std::endl;
-        Step::RefPtr<ifc2x3::IfcStyledItem> si = (*represItemsIter); // Representation item == style item
-        ifc2x3::Set_IfcPresentationStyleAssignment_1_n psa = si->getStyles(); // Getting style assignments
-        ifc2x3::Set_IfcPresentationStyleAssignment_1_n::iterator psaIter = psa.begin();
-        for( ; psaIter != psa.end() ; ++psaIter ) {
-            std::cout << "(*psaIter)[3] Key=" << (*psaIter)->getKey() << std::endl;
-            ifc2x3::Set_IfcPresentationStyleSelect_1_n pss = (*psaIter)->getStyles(); // Getting styles
-            ifc2x3::Set_IfcPresentationStyleSelect_1_n::iterator pssIter = pss.begin();
-            if( pssIter != pss.end() ) {
-                Step::RefPtr<ifc2x3::IfcPresentationStyleSelect> pss = (*pssIter); // Getting style
-                if( pss->currentType() == ifc2x3::IfcPresentationStyleSelect::IFCSURFACESTYLE ) { // This style is a surface style?
-                    ifc2x3::IfcSurfaceStyle* ss = pss->getIfcSurfaceStyle();
-                    if( ss != NULL ) {
-                        ifc2x3::Set_IfcSurfaceStyleElementSelect_1_5 sses = ss->getStyles();
-                        ifc2x3::Set_IfcSurfaceStyleElementSelect_1_5::iterator ssesIter = sses.begin(); // Getting style elements
-                        for( ; ssesIter != sses.end() ; ++ssesIter ) {
-                            if( (*ssesIter)->currentType() == ifc2x3::IfcSurfaceStyleElementSelect::IFCSURFACESTYLESHADING ) { // Shading style?
-                                ifc2x3::IfcSurfaceStyleShading* sss = (*ssesIter)->getIfcSurfaceStyleShading();
-                                ifc2x3::IfcColourRgb* rgb = sss->getSurfaceColour(); // Getting rgb
-                                if( rgb != NULL ) {
-                                    ifc2x3::IfcNormalisedRatioMeasure r = rgb->getRed();
-                                    ifc2x3::IfcNormalisedRatioMeasure g = rgb->getGreen();
-                                    ifc2x3::IfcNormalisedRatioMeasure b = rgb->getBlue();
-                                    std::cout << "SURFACE STYLE SHADING rgb: " << r << ", " << g << ", " << b << "\n";
-                                }
-                            }  
+    ifc2x3::IfcMaterial* material = mdr->getRepresentedMaterial();
+    if( material == NULL ) {
+        return true;
+    }
+    materialKey = material->getKey();
+    std::cout << "Material key: " << materialKey << std::endl;
+
+    bool rgbFound = false;
+    ifc2x3::List_IfcRepresentation_1_n repres = mdr->getRepresentations(); // Getting representations
+    ifc2x3::List_IfcRepresentation_1_n::iterator represIter = repres.begin(); 
+    for( ; represIter != repres.end() ; ++represIter ) { // Iterating representations
+        std::cout << "[1] List_IfcRepresentation_1_n iterator: key=" << (*represIter)->getKey() << std::endl; 
+        ifc2x3::Set_IfcRepresentationItem_1_n represItems = (*represIter)->getItems(); // Getting representation items
+        ifc2x3::Set_IfcRepresentationItem_1_n::iterator represItemsIter = represItems.begin();
+        for( ; represItemsIter != represItems.end() ; ++represItemsIter ) { // Iterating representation items
+            std::cout << "[2] Set_IfcRepresentationItem_1_n iterator: key=" << (*represItemsIter)->getKey(); 
+            std::cout << ", type=" << (*represItemsIter)->type() << std::endl;
+            
+            Step::RefPtr<ifc2x3::IfcStyledItem> si = (*represItemsIter); // Representation item == style item (friend class)
+            ifc2x3::Set_IfcPresentationStyleAssignment_1_n psa = si->getStyles(); // Getting style assignments
+            ifc2x3::Set_IfcPresentationStyleAssignment_1_n::iterator psaIter = psa.begin();
+            for( ; psaIter != psa.end() ; ++psaIter ) {
+                std::cout << "[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=" << (*psaIter)->getKey() << std::endl;
+                ifc2x3::Set_IfcPresentationStyleSelect_1_n pss = (*psaIter)->getStyles(); // Getting styles
+                ifc2x3::Set_IfcPresentationStyleSelect_1_n::iterator pssIter = pss.begin();
+                if( pssIter != pss.end() ) {
+                    Step::RefPtr<ifc2x3::IfcPresentationStyleSelect> pss = (*pssIter); // Getting style
+                    if( pss->currentType() == ifc2x3::IfcPresentationStyleSelect::IFCSURFACESTYLE ) { // This style is a surface style?
+                        ifc2x3::IfcSurfaceStyle* ss = pss->getIfcSurfaceStyle();
+                        if( ss != NULL ) {
+                            ifc2x3::Set_IfcSurfaceStyleElementSelect_1_5 sses = ss->getStyles();
+                            ifc2x3::Set_IfcSurfaceStyleElementSelect_1_5::iterator ssesIter = sses.begin(); // Getting style elements
+                            for( ; ssesIter != sses.end() ; ++ssesIter ) {
+                                if( (*ssesIter)->currentType() == ifc2x3::IfcSurfaceStyleElementSelect::IFCSURFACESTYLESHADING ) { // Shading style?
+                                    ifc2x3::IfcSurfaceStyleShading* sss = (*ssesIter)->getIfcSurfaceStyleShading();
+                                    ifc2x3::IfcColourRgb* rgb = sss->getSurfaceColour(); // Getting rgb
+                                    if( rgb != NULL ) {
+                                        red = rgb->getRed();
+                                        green = rgb->getGreen();
+                                        blue = rgb->getBlue();
+                                        std::cout << "SURFACE STYLE SHADING rgb: " << red << ", " << green << ", " << blue << "\n";
+                                        rgbFound = true;
+                                        break;
+                                    }
+                                }  
+                            }
                         }
                     }
-                }
-            }                
+                }                
+            }
+            if( rgbFound ) { break; }
         }
-        /*
-        ifc2x3::Inverse_Set_IfcPresentationLayerAssignment_0_n psa = (*represItemsIter)->getLayerAssignments();
-        ifc2x3::Inverse_Set_IfcPresentationLayerAssignment_0_n::iterator psaIter = psa.begin();
-        for( ; psaIter != psa.end() ; ++psaIter ) {
-            std::cout << "(*psaIter)[3] Key=" << (*psaIter)->getKey() << std::endl;
-        }
-        ifc2x3::Inverse_Set_IfcStyledItem_0_1 sbi = (*represItemsIter)->getStyledByItem();
-        ifc2x3::Inverse_Set_IfcStyledItem_0_1::iterator sbiIter = sbi.begin();
-        if( sbiIter != sbi.end() ) {
-            std::cout << "(*sbiIter)[3] Key=" << (*sbiIter)->getKey() << std::endl;
-        }
-        */
-/*
-            ifc2x3::Set_IfcPresentationStyleSelect_1_n pss = (*psaIt)->getStyles();
-            ifc2x3::Set_IfcPresentationStyleSelect_1_n::iterator pssIt = pss.begin();
-            if( pssIt != pss.end() ) {
-                    printf("\nHERE5!\n");
-                Step::RefPtr<ifc2x3::IfcPresentationStyleSelect> pss = (*pssIt);
-                if( pss->currentType() == ifc2x3::IfcPresentationStyleSelect::IFCSURFACESTYLE ) {
-                    printf("\nHERE6!\n");
-                }
-            }                
-        }
-*/
+        if( rgbFound ) { break; }
     }
-}
-/*
--List_IfcRepresentation_1_n &IfcProductRepresentation::getRepresentations()
--IfcRepresentation 
--IfcProductRepresentation 
--virtual Set_IfcRepresentationItem_1_n &getItems();
--IfcRepresentationItem
--virtual Inverse_Set_IfcStyledItem_0_1 &getStyledByItem();
--IfcStyledItem
--virtual Set_IfcPresentationStyleAssignment_1_n &getStyles();
-IfcPresentationStyleAssignment
-IfcPresentationStyleSelect
-union IfcPresentationStyleSelect_union {
-            IfcNullStyle m_IfcNullStyle; IfcCurveStyle *m_IfcCurveStyle; IfcSymbolStyle *m_IfcSymbolStyle;
-            IfcFillAreaStyle *m_IfcFillAreaStyle; IfcTextStyle *m_IfcTextStyle; IfcSurfaceStyle *m_IfcSurfaceStyle;
-        };
-IfcSurfaceStyle
-virtual Set_IfcSurfaceStyleElementSelect_1_5 &getStyles();
-IfcSurfaceStyleElementSelect
-union IfcSurfaceStyleElementSelect_union {
-            IfcSurfaceStyleShading *m_IfcSurfaceStyleShading; IfcSurfaceStyleLighting *m_IfcSurfaceStyleLighting;
-            IfcSurfaceStyleWithTextures *m_IfcSurfaceStyleWithTextures; IfcExternallyDefinedSurfaceStyle *m_IfcExternallyDefinedSurfaceStyle;
-            IfcSurfaceStyleRefraction *m_IfcSurfaceStyleRefraction;
-        };
-IfcSurfaceStyleShading
-virtual IfcColourRgb *getSurfaceColour();
-IfcColourRgb
-virtual IfcNormalisedRatioMeasure getBlue();
-*/
-;
+    if( rgbFound ) {
+        MaterialRepresentation materialRepresentation = { red, green, blue };
+        _brepBuilder->mRepresentations.insert( std::pair<Step::Id, MaterialRepresentation>(materialKey, materialRepresentation) );
+    }
+    return true;
 }
 
 
@@ -166,6 +134,7 @@ bool BrepReaderVisitor::visitIfcRelAssociatesMaterial(ifc2x3::IfcRelAssociatesMa
             objectFound->second.push_back( ml ); // For each object pushing a yet another material's name and layer thickness.
         }
     }
+    return true;
 }
 
 

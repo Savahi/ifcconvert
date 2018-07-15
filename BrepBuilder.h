@@ -6,6 +6,12 @@
 
 namespace Spider3d {
 
+struct MaterialRepresentation {
+	ifc2x3::IfcNormalisedRatioMeasure red;
+	ifc2x3::IfcNormalisedRatioMeasure green;
+	ifc2x3::IfcNormalisedRatioMeasure blue;
+};
+
 struct MaterialLayer {
 	Step::Id key; // A key (#NUM) that starts each line of an ".ifc" file.  
     std::wstring name;
@@ -53,6 +59,7 @@ struct Placement {
 class BRepBuilder
 {
 public:
+	std::map<Step::Id, MaterialRepresentation> mRepresentations; // To store color (and later other characteristics) of material
 	std::map<MaterialAssignmentKey, MaterialLayers> mlAssignments; // To store materials assigned to each object
 
 	std::ofstream *pOutputFile;

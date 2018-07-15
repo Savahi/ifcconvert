@@ -25,6 +25,7 @@
 #include <Step/CallBack.h>
 
 #include <iostream>
+#include <map>
 
 #include "BrepBuilder.h"
 #include "BrepReaderVisitor.h"
@@ -43,26 +44,39 @@ protected:
     size_t _max;
 };
 
+static const char *inputFileKey = "IfcFile";
+static const char *outputPathKey = "OutputPath";
+static int loadIni( const char *configFile, std::map<std::string, std::string>& configParameters );
 
 int main(int argc, char **argv)
 {
-    std::cout << "Reading Brep geometry of Ifc2x3..." << std::endl;
-
-    if( argc < 3 ) {
-        std::cout << "Invalid command line arguments. Use " << argv[0] << " <input-ifc-file-name> <output-file-name>" << std::endl;
+    if( argc < 2 ) {
+        std::cout << "Invalid command line arguments. Use " << argv[0] << " <input-ifc-file-name>" << std::endl;
         return 1;
     }
 
-    // ** open, load, close the file
+    std::map<std::string, std::string> configParameters;
+    loadIni( argv[1], configParameters );
+    if( configParameters.find(inputFileKey) == configParameters.end() ) {
+        std::cout << "An input file hasn't been specified!\nExiting...\n";
+        return(1);
+    } 
+    if( configParameters.find(outputPathKey) == configParameters.end() ) {
+        std::cout << "An output path hasn't been specified!\nExiting...\n";
+        return(1);
+    }
+
+    std::cout << "Importing:" << std::endl;
+
     std::ifstream ifcFile;
-    ifcFile.open(argv[1]);
+    ifcFile.open( configParameters[inputFileKey].c_str() );
 
     ifc2x3::SPFReader reader;
     ConsoleCallBack cb;
     reader.setCallBack(&cb);
 
     if ( ifcFile.is_open() ) {
-        std::cout << "reading file ..." << std::endl;
+        std::cout << "reading " << argv[1] << "..." << std::endl;
     } else {
         std::cout << "ERROR: failed to open <" << argv[1] << ">" << std::endl;
         return 1;
@@ -77,7 +91,7 @@ int main(int argc, char **argv)
     ifcFile.close();
 
     if (result) {
-        std::cout << "OK!!" << std::endl;
+        std::cout << "Read Ok." << std::endl;
     } else {
         std::cout << "An error occured:" << std::endl;
         std::vector<std::string> errors = reader.errors();
@@ -90,7 +104,7 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    std::cout << "Reading the model...\n";
+    std::cout << "Reading the model..." << std::endl;
 
     // ** Getting the model
     ifc2x3::ExpressDataSet * expressDataSet = dynamic_cast<ifc2x3::ExpressDataSet*>(reader.getExpressDataSet());
@@ -100,9 +114,9 @@ int main(int argc, char **argv)
         return (2);
     }
 
-    // Opening a file to output 
+    // Opening the output file 
     std::ofstream outputFile;
-    outputFile.open( argv[2] );    
+    outputFile.open( (configParameters[outputPathKey] + std::string("models.txt")).c_str() );    
     if( outputFile.fail() ) {
         std::cout << "Can't write into the output file. Exiting..." << std::endl; 
         return 0;
@@ -119,14 +133,12 @@ int main(int argc, char **argv)
     }
 
     std::cout << "\n****Reading materials...\n";
-
     Step::RefLinkedList< ifc2x3::IfcRelAssociatesMaterial >::iterator ramIt = expressDataSet->getAllIfcRelAssociatesMaterial().begin();
     for( ; ramIt != expressDataSet->getAllIfcRelAssociatesMaterial().end(); ++ramIt ) {
         ramIt->acceptVisitor(&visitor);
     }
 
-    std::cout << "\n****Reading building elements and running visitors...\n";
-
+    std::cout << "\n****Reading building elements...\n";
     Step::RefLinkedList< ifc2x3::IfcProject >::iterator projIt = expressDataSet->getAllIfcProject().begin();
     for( ; projIt != expressDataSet->getAllIfcProject().end(); ++projIt ) {
         projIt->acceptVisitor(&visitor);
@@ -136,5 +148,23 @@ int main(int argc, char **argv)
 
     outputFile.close();
 
+    return 0;
+}
+
+
+static int loadIni( const char *configFile, std::map<std::string, std::string>& configParameters ) {
+    std::ifstream infile( configFile );
+    std::string line;
+
+    while( std::getline( infile, line ) )   {
+        std::istringstream iss_line( line );
+        std::string key;
+        if( std::getline( iss_line, key, '=' ) ) {
+            std::string value;
+            if( std::getline(iss_line, value ) ) {
+                configParameters[key] = value;
+            }
+        }
+    }
     return 0;
 }
