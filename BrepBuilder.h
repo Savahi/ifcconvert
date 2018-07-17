@@ -6,6 +6,75 @@
 
 namespace Spider3d {
 
+class Vertex {
+	public:
+		double mX, mY, mZ;
+		Vertex( void ) {;}
+		Vertex( double x, double y, double z ) : mX(x), mY(y), mZ(z) {;}
+		~Vertex(){;}
+
+		int setXYZ( double x, double y, double z ) {
+			this->mX = x;
+			this->mY = y;
+			this->mZ = z;
+			return 0;
+		}
+		int setXYZ( double *x, double *y, double *z ) {
+			if( x != NULL ) { this->mX = *x; }
+			if( y != NULL ) { this->mY = *y; }
+			if( z != NULL ) { this->mZ = *z; }
+			return 0;
+		}
+};
+
+class Facet {
+	public:
+		std::vector<Vertex> mVertices;
+
+		Facet() {;}
+		~Facet() {;}
+		int addPoint( double x, double y, double z ) {
+			this->mVertices.push_back( Vertex(x,y,z) );
+			return 0;
+		}
+};
+
+class Model {
+	public:
+		std::vector<Facet> mFacets; 
+
+		Model() {;}
+		~Model() {;}
+		int addFacet() {
+			this->mFacets.push_back( Facet() );
+			return 0;
+		}
+		Facet* getLastFacet() {
+			int size = this->mFacets.size(); 
+			if( size == 0 ) { 
+				return NULL; 
+			} 
+			return &(this->mFacets[size-1]); 
+		}
+};
+
+
+class Product {
+	public:
+	Model model;
+	std::wstring id;
+	std::wstring name;
+	int hierarchy;
+
+	Product( std::wstring id, std::wstring name, int spiderHierarchy  ) {
+		this->id = id;
+		this->name = name;
+		this->hierarchy  = spiderHierarchy ;
+	}
+	~Product() {;}
+};
+
+
 struct MaterialRepresentation {
 	ifc2x3::IfcNormalisedRatioMeasure red;
 	ifc2x3::IfcNormalisedRatioMeasure green;
@@ -22,7 +91,8 @@ typedef std::wstring MaterialAssignmentKey;
 typedef std::vector<MaterialLayer> MaterialLayers;
 typedef std::wstring MaterialName;
 
-struct Placement {
+class Placement {
+	public:
 	double iEX, jEX, kEX; 
 	double iEY, jEY, kEY;
 	double iEZ, jEZ, kEZ;
@@ -46,15 +116,9 @@ struct Placement {
 		x = this->iEX * xCopy + this->iEY * yCopy + this->iEZ * zCopy + this->iO;
 		y = this->jEX * xCopy + this->jEY * yCopy + this->jEZ * zCopy + this->jO;
 		z = this->kEX * xCopy + this->kEY * yCopy + this->kEZ * zCopy + this->kO;
-		/*
-		double xCopy = x+this->iO, yCopy = y+this->jO, zCopy = z+this->kO;
-
-		x = this->iEX * xCopy + this->iEY * yCopy + this->iEZ * zCopy;
-		y = this->jEX * xCopy + this->jEY * yCopy + this->jEZ * zCopy;
-		z = this->kEX * xCopy + this->kEY * yCopy + this->kEZ * zCopy;
-		*/
 	}
 };
+
 
 class BRepBuilder
 {
@@ -62,24 +126,19 @@ public:
 	std::map<Step::Id, MaterialRepresentation> mRepresentations; // To store color (and later other characteristics) of material
 	std::map<MaterialAssignmentKey, MaterialLayers> mlAssignments; // To store materials assigned to each object
 
-	std::ofstream *pOutputFile;
-	int nProductsOpened;
-	int nProductsClosed;
-	int nFacesOpened;
-	int nFacesClosed;
-	int nPoints;
-
 	std::vector<Placement> placements;
 
-    int hierarchy;
-    void printHierarchy( std::string str, bool endOfLine=true );	
-	
-	BRepBuilder( std::ofstream *pOutputFile ) : pOutputFile(pOutputFile), hierarchy(0),
-		nProductsOpened(0), nProductsClosed(0), nFacesOpened(0), nFacesClosed(0), nPoints(0) {
+    std::vector<Product> products;
+
+    int spiderHierarchy;
+    int ifcHierarchy;
+
+	BRepBuilder() : spiderHierarchy(0), ifcHierarchy(0) {
 		;
 	}
-
-	virtual ~BRepBuilder() {;}
+	virtual ~BRepBuilder() {
+		;
+	}
 
 	virtual void pushPlacement( ifc2x3::IfcAxis2Placement3D *value )
 	{
@@ -104,7 +163,7 @@ public:
 		std::stringstream ss;
 		ss << "PLACEMENT pushed : " << value->getKey() << ", iEX=" << iEX << ", jEX=" << jEX << ", kEX=" << kEX;
 		ss << ", iEZ=" << iEZ << ", jEZ=" << jEZ << ", kEZ=" << kEZ << ", iO=" << iO << ", jO=" << jO << ", kO=" << kO << std::endl;
-		this->printHierarchy( ss.str(), 1 );
+		this->printIfcHierarchy  ( ss.str(), 1 );
 	}
 
 	virtual void popPlacement()
@@ -112,22 +171,16 @@ public:
 		if( this->placements.size() > 0 ) {
 			this->placements.pop_back();			
 		}
-		this->printHierarchy( "PLACEMENT poped", -1 );
+		this->printIfcHierarchy  ( "PLACEMENT poped", -1 );
 	}
 
     virtual void addProduct( ifc2x3::IfcProduct *value )
 	{
 		std::stringstream ss;
 		ss << "PRODUCT: " << value->getKey() << ", GUID=" << value->getGlobalId() << ", NAME=" << value->getName() << ", Representation: " << value->getRepresentation() << std::endl;
-		this->printHierarchy( ss.str(), 0 );
+		this->printIfcHierarchy  ( ss.str(), 0 );
 
-		this->closeFaceIfRequired();
-		if( this->nProductsOpened > this->nProductsClosed ) {
-			(*this->pOutputFile) << std::endl;	
-			this->nProductsClosed++;
-		}
-		(*this->pOutputFile) << value->getGlobalId() << ";" << value->getName() << ";";
-		this->nProductsOpened++;
+		this->products.push_back( Product( value->getGlobalId(), value->getName(), this->spiderHierarchy   ) );
 	}
 
 	virtual void addRepresentation( ifc2x3::IfcRepresentationItem *value )
@@ -142,93 +195,84 @@ public:
 
 	virtual void addFace( ifc2x3::IfcFace *value )
 	{
-		//std::cout << "Face: " << value->getKey() << std::endl;
-		if( !(this->nProductsOpened > this->nProductsClosed) ) {
-			std::cout << "A face cannot be placed outside a product!" << std::endl;
-			return;
-		}		
-		this->closeFaceIfRequired();
-		(*this->pOutputFile) << "<facet>";
-		this->nFacesOpened++;
-	}
-
-	virtual void addPoint( ifc2x3::IfcCartesianPoint *value )
-	{
-		if( !isAddPoint() ) { return; }
-
-		ifc2x3::List_IfcLengthMeasure_1_3 xyz = value->getCoordinates();
-		// Going back to the initial coordinates
-		for( int i = this->placements.size()-1 ; i >= 0 ; i-- ) {
-			//std::cout << "OLD POINT: " << xyz[0] << "," << xyz[1] << "," << xyz[2] << std::cout;
-			this->placements[i].toInitialAxis( xyz[0], xyz[1], xyz[2] );
-			//std::cout << "NEW POINT: " << xyz[0] << "," << xyz[1] << "," << xyz[2] << std::cout;
-		}
-
-		(*this->pOutputFile) << "<point>" << xyz[0] << "," << xyz[1] << "," << xyz[2] << "</point>";
-		this->nPoints++;
+		this->addFace();
 	}
 
 	virtual void addFace( void )
 	{
-		if( !(this->nProductsOpened > this->nProductsClosed) ) {
+		Product* product = this->getCurrentProductInHierarchy();
+		if( product == NULL ) {
 			std::cout << "A face cannot be placed outside a product!" << std::endl;
 			return;
-		}		
-		this->closeFaceIfRequired();
-		(*this->pOutputFile) << "<facet>";
-		this->nFacesOpened++;
+		}
+		product->model.addFacet();
+	}
+
+
+	virtual void addPoint( ifc2x3::IfcCartesianPoint *value )
+	{
+		Facet* face = getFaceToAddPoint();
+		if( face == NULL ) { return; }
+
+		ifc2x3::List_IfcLengthMeasure_1_3 xyz = value->getCoordinates();
+		// Going back to the initial coordinates
+		for( int i = this->placements.size()-1 ; i >= 0 ; i-- ) {
+			this->placements[i].toInitialAxis( xyz[0], xyz[1], xyz[2] );
+		}
+		face->addPoint(xyz[0], xyz[1], xyz[2]);
 	}
 
 	virtual void addPoint( double x, double y, double z )
 	{
-		if( !isAddPoint() ) { return; }
-		//std::cout << "BEFORE: x=" << x << ", y=" << y << ", z=" << z << std::endl;
+		Facet* face = getFaceToAddPoint();
+		if( face == NULL ) { return; }
 
 		// Going back to the initial coordinates
 		for( int i = this->placements.size()-1 ; i >= 0 ; i-- ) {
 			this->placements[i].toInitialAxis( x, y, z );
 		}
-		(*this->pOutputFile) << "<point>" << x << "," << y << "," << z << "</point>";
-		this->nPoints++;
-
-		//std::cout << "AFTER: x=" << x << ", y=" << y << ", z=" << z << std::endl;
+		face->addPoint(x, y, z);
 	}
 
-	bool isAddPoint() {
-		if( !(this->nProductsOpened > this->nProductsClosed) ) {
+	Facet* getFaceToAddPoint() {
+		Product* product = this->getCurrentProductInHierarchy();
+		if( product == NULL ) {
 			std::cout << "A point cannot be placed outside a product!" << std::endl;
-			return false;
-		}		
-		if( !(this->nFacesOpened > this->nFacesClosed) ) {
+			return NULL;
+		}
+		Facet *face = product->model.getLastFacet();
+		if( face == NULL ) {
 			std::cout << "A point cannot be placed outside a face!" << std::endl;
-			return false;
 		}		
-		return true;
+		return face;
 	}
 
-	void closeFaceIfRequired( void ) {
-		if( this->nFacesOpened > this->nFacesClosed ) {
-			(*this->pOutputFile) << "</facet>";
-			this->nFacesClosed++;
-		}		
-	}
-
-	void closeTags( void ) {
-		closeFaceIfRequired();
-	}
-
-	void printHierarchy( const std::string str, int changeHierarchy=0, bool endOfLine=true ) 
+	void printIfcHierarchy( std::string str, int changeHierarchy=0, bool endOfLine=true )
 	{
-	    for( int i = 0 ; i < this->hierarchy ; i++ ) {
+	    for( int i = 0 ; i < this->ifcHierarchy  ; i++ ) {
 	        std::cout << "  ";
 	    }
 	    std::cout << str;
 	    if( endOfLine ) {
 	        std::cout << std::endl;
 	    }
-		this->hierarchy += changeHierarchy;
+		this->ifcHierarchy  += changeHierarchy;
+	}
+
+	void changeSpiderHierarchy( int change ) {
+		this->spiderHierarchy += change;
+	}
+
+	Product* getCurrentProductInHierarchy( void ) {
+		for( int i = this->products.size()-1 ; i >= 0 ; i-- ) {
+			if( this->products[i].hierarchy == this->spiderHierarchy  ) {
+				return &this->products[i];
+			}  
+		}
+		return NULL;
 	}
 };
+
 
 } // End of namespace Spider3d
 

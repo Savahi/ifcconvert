@@ -159,6 +159,7 @@ protected:
     ** \return if the product has an object placement
     */
     bool pushPlacementAndComputeRepresentation(ifc2x3::IfcProduct *value, bool addProduct = true);
+    bool popPlacement( bool hadPlacement );
 
 protected:
 	BRepBuilder* _brepBuilder;

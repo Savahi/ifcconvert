@@ -44,9 +44,13 @@ protected:
     size_t _max;
 };
 
-static const char *inputFileKey = "IfcFile";
-static const char *outputPathKey = "OutputPath";
+static const char *cpInputFileKey = "IfcFile";
+static const char *cpOutputPathKey = "OutputPath";
 static int loadIni( const char *configFile, std::map<std::string, std::string>& configParameters );
+
+static const char *cpFileOper = "oper.txt";
+static const char *cpFileMat = "mat.txt";
+static const char *cpFileMod = "mod.txt";
 
 int main(int argc, char **argv)
 {
@@ -57,11 +61,11 @@ int main(int argc, char **argv)
 
     std::map<std::string, std::string> configParameters;
     loadIni( argv[1], configParameters );
-    if( configParameters.find(inputFileKey) == configParameters.end() ) {
+    if( configParameters.find(cpInputFileKey) == configParameters.end() ) {
         std::cout << "An input file hasn't been specified!\nExiting...\n";
         return(1);
     } 
-    if( configParameters.find(outputPathKey) == configParameters.end() ) {
+    if( configParameters.find(cpOutputPathKey) == configParameters.end() ) {
         std::cout << "An output path hasn't been specified!\nExiting...\n";
         return(1);
     }
@@ -69,7 +73,7 @@ int main(int argc, char **argv)
     std::cout << "Importing:" << std::endl;
 
     std::ifstream ifcFile;
-    ifcFile.open( configParameters[inputFileKey].c_str() );
+    ifcFile.open( configParameters[cpInputFileKey].c_str() );
 
     ifc2x3::SPFReader reader;
     ConsoleCallBack cb;
@@ -114,14 +118,7 @@ int main(int argc, char **argv)
         return (2);
     }
 
-    // Opening the output file 
-    std::ofstream outputFile;
-    outputFile.open( (configParameters[outputPathKey] + std::string("models.txt")).c_str() );    
-    if( outputFile.fail() ) {
-        std::cout << "Can't write into the output file. Exiting..." << std::endl; 
-        return 0;
-    }
-    BRepBuilder brepBuilder( &outputFile );
+    BRepBuilder brepBuilder;
     
     BrepReaderVisitor visitor( &brepBuilder );
 
@@ -144,9 +141,36 @@ int main(int argc, char **argv)
         projIt->acceptVisitor(&visitor);
     }
 
-    brepBuilder.closeTags();
 
-    outputFile.close();
+    // Opening the 'operations' file 
+    std::ofstream fsOper;
+    fsOper.open( (configParameters[cpOutputPathKey] + std::string(cpFileOper)).c_str() );    
+    if( fsOper.fail() ) {
+        std::cout << "Can't write into the " << cpFileOper << " (operations) file. Exiting..." << std::endl; 
+        return 0;
+    }
+    // Writing operations...
+    fsOper.close();
+
+    // Opening the 'models' file 
+    std::ofstream fsMod;
+    fsMod.open( (configParameters[cpOutputPathKey] + std::string(cpFileMod)).c_str() );    
+    if( fsMod.fail() ) {
+        std::cout << "Can't write into the " << cpFileMod << " (models) file. Exiting..." << std::endl; 
+        return 0;
+    }
+    // Writing materials...
+    fsMod.close();
+
+    // Opening the 'materials' file...
+    std::ofstream fsMat;
+    fsMat.open( (configParameters[cpOutputPathKey] + std::string(cpFileMat)).c_str() );    
+    if( fsMat.fail() ) {
+        std::cout << "Can't write into the " << cpFileMat << " (materials) file. Exiting..." << std::endl; 
+        return 0;
+    }
+    // Writing materials...
+    fsMat.close();
 
     return 0;
 }
