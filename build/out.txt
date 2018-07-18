@@ -26,53 +26,53 @@ Material key: 517
 SURFACE STYLE SHADING rgb: 0.329412, 0.32549, 0.317647
 
 ****Reading materials...
- IfcRelAssociatesMaterial
+Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
    Material name: Brick, Common, Material key: 177, thickness=200
  Related object: type=IfcWallStandardCase, id=2JuXRljVH1lAVD85_X3iHh, name= Basic Wall:Generic - 200mm - Filled:199381
- IfcRelAssociatesMaterial
+Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSet
  Related object: type=IfcWallType, id=0Ktsech6bAFh3WEiws1ntI, name= Basic Wall:Generic - 200mm - Filled
- IfcRelAssociatesMaterial
+Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
    Material name: Brick, Common, Material key: 177, thickness=200
  Related object: type=IfcWallStandardCase, id=2JuXRljVH1lAVD85_X3iM3, name= Basic Wall:Generic - 200mm - Filled:199485
- IfcRelAssociatesMaterial
+Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
    Material name: Brick, Common, Material key: 177, thickness=200
  Related object: type=IfcWallStandardCase, id=2JuXRljVH1lAVD85_X3iKy, name= Basic Wall:Generic - 200mm - Filled:199554
- IfcRelAssociatesMaterial
+Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
    Material name: Brick, Common, Material key: 177, thickness=200
  Related object: type=IfcWallStandardCase, id=2JuXRljVH1lAVD85_X3iKL, name= Basic Wall:Generic - 200mm - Filled:199595
- IfcRelAssociatesMaterial
+Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
    Material name: Concrete, Cast-in-Place gray, Material key: 348, thickness=300
  Related object: type=IfcWallStandardCase, id=005Zuk9110axXeKE0kulOg, name= Basic Wall:Foundation - 300mm Concrete:200122
- IfcRelAssociatesMaterial
+Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSet
  Related object: type=IfcWallType, id=1HBVb1NdfA6PUA6LzWtJ1R, name= Basic Wall:Foundation - 300mm Concrete
- IfcRelAssociatesMaterial
+Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
    Material name: Concrete, Cast-in-Place gray, Material key: 348, thickness=300
  Related object: type=IfcWallStandardCase, id=005Zuk9110axXeKE0kulMy, name= Basic Wall:Foundation - 300mm Concrete:200236
- IfcRelAssociatesMaterial
+Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
    Material name: Concrete, Cast-in-Place gray, Material key: 348, thickness=300
  Related object: type=IfcWallStandardCase, id=005Zuk9110axXeKE0kulKY, name= Basic Wall:Foundation - 300mm Concrete:200370
- IfcRelAssociatesMaterial
+Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
    Material name: Concrete, Cast-in-Place gray, Material key: 348, thickness=300
  Related object: type=IfcWallStandardCase, id=005Zuk9110axXeKE0kulLc, name= Basic Wall:Foundation - 300mm Concrete:200438
- IfcRelAssociatesMaterial
+Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
    Material name: Gypsum Wall Board, Material key: 507, thickness=13
@@ -81,10 +81,10 @@ SURFACE STYLE SHADING rgb: 0.329412, 0.32549, 0.317647
    Material name: Gypsum Wall Board, Material key: 507, thickness=6
    Material name: Gypsum Wall Board, Material key: 507, thickness=13
  Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkgZ, name= Basic Wall:Interior - 79mm Partition (1-hr):201319
- IfcRelAssociatesMaterial
+Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSet
  Related object: type=IfcWallType, id=2JF5JXaxWHqu3u0C1FZlqm, name= Basic Wall:Interior - 79mm Partition (1-hr)
- IfcRelAssociatesMaterial
+Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
    Material name: Gypsum Wall Board, Material key: 507, thickness=13
@@ -93,7 +93,7 @@ SURFACE STYLE SHADING rgb: 0.329412, 0.32549, 0.317647
    Material name: Gypsum Wall Board, Material key: 507, thickness=6
    Material name: Gypsum Wall Board, Material key: 507, thickness=13
  Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkl9, name= Basic Wall:Interior - 79mm Partition (1-hr):201485
- IfcRelAssociatesMaterial
+Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
    Material name: Gypsum Wall Board, Material key: 507, thickness=13
@@ -102,7 +102,7 @@ SURFACE STYLE SHADING rgb: 0.329412, 0.32549, 0.317647
    Material name: Gypsum Wall Board, Material key: 507, thickness=6
    Material name: Gypsum Wall Board, Material key: 507, thickness=13
  Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkje, name= Basic Wall:Interior - 79mm Partition (1-hr):201644
- IfcRelAssociatesMaterial
+Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
    Material name: Gypsum Wall Board, Material key: 507, thickness=13
@@ -111,7 +111,7 @@ SURFACE STYLE SHADING rgb: 0.329412, 0.32549, 0.317647
    Material name: Gypsum Wall Board, Material key: 507, thickness=6
    Material name: Gypsum Wall Board, Material key: 507, thickness=13
  Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkiJ, name= Basic Wall:Interior - 79mm Partition (1-hr):201687
- IfcRelAssociatesMaterial
+Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
    Material name: Gypsum Wall Board, Material key: 507, thickness=13
@@ -122,719 +122,400 @@ SURFACE STYLE SHADING rgb: 0.329412, 0.32549, 0.317647
  Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkpV, name= Basic Wall:Interior - 79mm Partition (1-hr):201755
 
 ****Reading building elements...
-BrepReaderVisitor.visitIfcObjectDefinition
-BrepReaderVisitor.visitIfcRelAggregates()
+Visitor.visitIfcObjectDefinition
+Visitor.visitIfcRelAggregates()
 getRelatedObjects() item: IfcSite
-BrepReaderVisitor.visitIfcSpatialStructureElement()
+Visitor.visitIfcSpatialStructureElement()
   PLACEMENT pushed : 690, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
     PRODUCT: 692, GUID=1E4TBrWx93mRpLzhEIBOeZ, NAME=Default, Representation: 0
 
-    BrepReaderVisitor.visitIfcObjectDefinition
-    BrepReaderVisitor.visitIfcRelAggregates()
+    Visitor.visitIfcObjectDefinition
+    Visitor.visitIfcRelAggregates()
     getRelatedObjects() item: IfcBuilding
-    BrepReaderVisitor.visitIfcSpatialStructureElement()
+    Visitor.visitIfcSpatialStructureElement()
       PLACEMENT pushed : 31, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
         PRODUCT: 111, GUID=1E4TBrWx93mRpLzhEIBOeW, NAME=, Representation: 0
 
-        BrepReaderVisitor.visitIfcObjectDefinition
-        BrepReaderVisitor.visitIfcRelAggregates()
+        Visitor.visitIfcObjectDefinition
+        Visitor.visitIfcRelAggregates()
         getRelatedObjects() item: IfcBuildingStorey
-        BrepReaderVisitor.visitIfcSpatialStructureElement()
+        Visitor.visitIfcSpatialStructureElement()
           PLACEMENT pushed : 124, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
             PRODUCT: 126, GUID=1E4TBrWx93mRpLzhDjqaRU, NAME=Level 1, Representation: 0
 
-            BrepReaderVisitor.visitIfcRelContainedInSpatialStructure()
-              BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+            Visitor.visitIfcRelContainedInSpatialStructure()
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 136, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11856.4, jO=-7677.66, kO=0
 
-                PRODUCT: 168, GUID=2JuXRljVH1lAVD85_X3iHh, NAME=Basic Wall:Generic - 200mm - Filled:199381, Representation: 0x1889fe0
+                PRODUCT: 168, GUID=2JuXRljVH1lAVD85_X3iHh, NAME=Basic Wall:Generic - 200mm - Filled:199381, Representation: 0x16d3fe0
 
-                BrepReaderVisitor.visitIfcProductRepresentation
+                Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=141
+                  Visitor.visitIfcRepresentation
+                    key=141, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=151
+                  Visitor.visitIfcRepresentation
+                    key=151, type=IfcExtrudedAreaSolid
                     PLACEMENT pushed : 150, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=6500, i=0, j=0, k=1, xdim=20200, ydim200
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
+                      Visitor.visitIfcExtrudedAreaSolid: depth=6500, i=0, j=0, k=1, xdim=20200, ydim200
                       PLACEMENT poped
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
-                BrepReaderVisitor.visitIfcObjectDefinition
-                end of BrepReaderVisitor.visitIfcObjectDefinition
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
-              BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 216, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11756.4, jO=12422.3, kO=0
 
-                PRODUCT: 237, GUID=2JuXRljVH1lAVD85_X3iM3, NAME=Basic Wall:Generic - 200mm - Filled:199485, Representation: 0x1870fb0
+                PRODUCT: 237, GUID=2JuXRljVH1lAVD85_X3iM3, NAME=Basic Wall:Generic - 200mm - Filled:199485, Representation: 0x16bafb0
 
-                BrepReaderVisitor.visitIfcProductRepresentation
+                Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=220
+                  Visitor.visitIfcRepresentation
+                    key=220, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=229
+                  Visitor.visitIfcRepresentation
+                    key=229, type=IfcExtrudedAreaSolid
                     PLACEMENT pushed : 228, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=8000, i=0, j=0, k=1, xdim=10000, ydim200
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
+                      Visitor.visitIfcExtrudedAreaSolid: depth=8000, i=0, j=0, k=1, xdim=10000, ydim200
                       PLACEMENT poped
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
-                BrepReaderVisitor.visitIfcObjectDefinition
-                end of BrepReaderVisitor.visitIfcObjectDefinition
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
-              BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 250, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1856.36, jO=12322.3, kO=0
 
-                PRODUCT: 271, GUID=2JuXRljVH1lAVD85_X3iKy, NAME=Basic Wall:Generic - 200mm - Filled:199554, Representation: 0x18a3820
+                PRODUCT: 271, GUID=2JuXRljVH1lAVD85_X3iKy, NAME=Basic Wall:Generic - 200mm - Filled:199554, Representation: 0x16ed820
 
-                BrepReaderVisitor.visitIfcProductRepresentation
+                Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=254
+                  Visitor.visitIfcRepresentation
+                    key=254, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=263
+                  Visitor.visitIfcRepresentation
+                    key=263, type=IfcExtrudedAreaSolid
                     PLACEMENT pushed : 262, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=5000, i=0, j=0, k=1, xdim=20000, ydim200
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
+                      Visitor.visitIfcExtrudedAreaSolid: depth=5000, i=0, j=0, k=1, xdim=20000, ydim200
                       PLACEMENT poped
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
-                BrepReaderVisitor.visitIfcObjectDefinition
-                end of BrepReaderVisitor.visitIfcObjectDefinition
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
-              BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 284, iEX=-1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1956.36, jO=-7577.66, kO=0
 
-                PRODUCT: 305, GUID=2JuXRljVH1lAVD85_X3iKL, NAME=Basic Wall:Generic - 200mm - Filled:199595, Representation: 0x18a4460
+                PRODUCT: 305, GUID=2JuXRljVH1lAVD85_X3iKL, NAME=Basic Wall:Generic - 200mm - Filled:199595, Representation: 0x16ee460
 
-                BrepReaderVisitor.visitIfcProductRepresentation
+                Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=288
+                  Visitor.visitIfcRepresentation
+                    key=288, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=297
+                  Visitor.visitIfcRepresentation
+                    key=297, type=IfcExtrudedAreaSolid
                     PLACEMENT pushed : 296, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=3000, i=0, j=0, k=1, xdim=9800, ydim200
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
+                      Visitor.visitIfcExtrudedAreaSolid: depth=3000, i=0, j=0, k=1, xdim=9800, ydim200
                       PLACEMENT poped
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
-                BrepReaderVisitor.visitIfcObjectDefinition
-                end of BrepReaderVisitor.visitIfcObjectDefinition
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
-              BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 318, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-2006.36, jO=-7577.66, kO=-3500
 
-                PRODUCT: 345, GUID=005Zuk9110axXeKE0kulOg, NAME=Basic Wall:Foundation - 300mm Concrete:200122, Representation: 0x18a4ff0
+                PRODUCT: 345, GUID=005Zuk9110axXeKE0kulOg, NAME=Basic Wall:Foundation - 300mm Concrete:200122, Representation: 0x16eeff0
 
-                BrepReaderVisitor.visitIfcProductRepresentation
+                Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=322
+                  Visitor.visitIfcRepresentation
+                    key=322, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=331
+                  Visitor.visitIfcRepresentation
+                    key=331, type=IfcExtrudedAreaSolid
                     PLACEMENT pushed : 330, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=3500, i=0, j=0, k=1, xdim=13700, ydim300
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
+                      Visitor.visitIfcExtrudedAreaSolid: depth=3500, i=0, j=0, k=1, xdim=13700, ydim300
                       PLACEMENT poped
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
-                BrepReaderVisitor.visitIfcObjectDefinition
-                end of BrepReaderVisitor.visitIfcObjectDefinition
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
-              BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 375, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=11543.6, jO=-7427.66, kO=-3500
 
-                PRODUCT: 396, GUID=005Zuk9110axXeKE0kulMy, NAME=Basic Wall:Foundation - 300mm Concrete:200236, Representation: 0x187df10
+                PRODUCT: 396, GUID=005Zuk9110axXeKE0kulMy, NAME=Basic Wall:Foundation - 300mm Concrete:200236, Representation: 0x16c7f10
 
-                BrepReaderVisitor.visitIfcProductRepresentation
+                Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=379
+                  Visitor.visitIfcRepresentation
+                    key=379, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=388
+                  Visitor.visitIfcRepresentation
+                    key=388, type=IfcExtrudedAreaSolid
                     PLACEMENT pushed : 387, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=3500, i=0, j=0, k=1, xdim=10100, ydim300
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
+                      Visitor.visitIfcExtrudedAreaSolid: depth=3500, i=0, j=0, k=1, xdim=10100, ydim300
                       PLACEMENT poped
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
-                BrepReaderVisitor.visitIfcObjectDefinition
-                end of BrepReaderVisitor.visitIfcObjectDefinition
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
-              BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 409, iEX=-1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=11393.6, jO=2522.34, kO=-3500
 
-                PRODUCT: 430, GUID=005Zuk9110axXeKE0kulKY, NAME=Basic Wall:Foundation - 300mm Concrete:200370, Representation: 0x18a6750
+                PRODUCT: 430, GUID=005Zuk9110axXeKE0kulKY, NAME=Basic Wall:Foundation - 300mm Concrete:200370, Representation: 0x16f0750
 
-                BrepReaderVisitor.visitIfcProductRepresentation
+                Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=413
+                  Visitor.visitIfcRepresentation
+                    key=413, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=422
+                  Visitor.visitIfcRepresentation
+                    key=422, type=IfcExtrudedAreaSolid
                     PLACEMENT pushed : 421, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=3500, i=0, j=0, k=1, xdim=13400, ydim300
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
+                      Visitor.visitIfcExtrudedAreaSolid: depth=3500, i=0, j=0, k=1, xdim=13400, ydim300
                       PLACEMENT poped
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
-                BrepReaderVisitor.visitIfcObjectDefinition
-                end of BrepReaderVisitor.visitIfcObjectDefinition
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
-              BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 443, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1856.36, jO=2372.34, kO=-3500
 
-                PRODUCT: 464, GUID=005Zuk9110axXeKE0kulLc, NAME=Basic Wall:Foundation - 300mm Concrete:200438, Representation: 0x18a7000
+                PRODUCT: 464, GUID=005Zuk9110axXeKE0kulLc, NAME=Basic Wall:Foundation - 300mm Concrete:200438, Representation: 0x16f1000
 
-                BrepReaderVisitor.visitIfcProductRepresentation
+                Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=447
+                  Visitor.visitIfcRepresentation
+                    key=447, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=456
+                  Visitor.visitIfcRepresentation
+                    key=456, type=IfcExtrudedAreaSolid
                     PLACEMENT pushed : 455, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=3500, i=0, j=0, k=1, xdim=9800, ydim300
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
+                      Visitor.visitIfcExtrudedAreaSolid: depth=3500, i=0, j=0, k=1, xdim=9800, ydim300
                       PLACEMENT poped
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
-                BrepReaderVisitor.visitIfcObjectDefinition
-                end of BrepReaderVisitor.visitIfcObjectDefinition
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
-              BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 477, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11756.4, jO=-1537.66, kO=0
 
-                PRODUCT: 504, GUID=1JmC8d7t19Ve0s7aURIkgZ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201319, Representation: 0x18a7b90
+                PRODUCT: 504, GUID=1JmC8d7t19Ve0s7aURIkgZ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201319, Representation: 0x16f1b90
 
-                BrepReaderVisitor.visitIfcProductRepresentation
+                Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=481
+                  Visitor.visitIfcRepresentation
+                    key=481, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=490
+                  Visitor.visitIfcRepresentation
+                    key=490, type=IfcExtrudedAreaSolid
                     PLACEMENT pushed : 489, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=2900, ydim80
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
+                      Visitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=2900, ydim80
                       PLACEMENT poped
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
-                BrepReaderVisitor.visitIfcObjectDefinition
-                end of BrepReaderVisitor.visitIfcObjectDefinition
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
-              BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 556, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-8896.36, jO=-1497.66, kO=0
 
-                PRODUCT: 577, GUID=1JmC8d7t19Ve0s7aURIkl9, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201485, Representation: 0x188c3b0
+                PRODUCT: 577, GUID=1JmC8d7t19Ve0s7aURIkl9, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201485, Representation: 0x16d63b0
 
-                BrepReaderVisitor.visitIfcProductRepresentation
+                Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=560
+                  Visitor.visitIfcRepresentation
+                    key=560, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=569
+                  Visitor.visitIfcRepresentation
+                    key=569, type=IfcExtrudedAreaSolid
                     PLACEMENT pushed : 568, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=3280, ydim80
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
+                      Visitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=3280, ydim80
                       PLACEMENT poped
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
-                BrepReaderVisitor.visitIfcObjectDefinition
-                end of BrepReaderVisitor.visitIfcObjectDefinition
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
-              BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 590, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-8856.36, jO=1742.34, kO=0
 
-                PRODUCT: 611, GUID=1JmC8d7t19Ve0s7aURIkje, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201644, Representation: 0x18a8d40
+                PRODUCT: 611, GUID=1JmC8d7t19Ve0s7aURIkje, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201644, Representation: 0x16f2f80
 
-                BrepReaderVisitor.visitIfcProductRepresentation
+                Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=594
+                  Visitor.visitIfcRepresentation
+                    key=594, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=603
+                  Visitor.visitIfcRepresentation
+                    key=603, type=IfcExtrudedAreaSolid
                     PLACEMENT pushed : 602, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=3380, ydim80
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
+                      Visitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=3380, ydim80
                       PLACEMENT poped
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
-                BrepReaderVisitor.visitIfcObjectDefinition
-                end of BrepReaderVisitor.visitIfcObjectDefinition
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
-              BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 624, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-5516.36, jO=1702.34, kO=0
 
-                PRODUCT: 645, GUID=1JmC8d7t19Ve0s7aURIkiJ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201687, Representation: 0x18a9890
+                PRODUCT: 645, GUID=1JmC8d7t19Ve0s7aURIkiJ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201687, Representation: 0x16f3af0
 
-                BrepReaderVisitor.visitIfcProductRepresentation
+                Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=628
+                  Visitor.visitIfcRepresentation
+                    key=628, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=637
+                  Visitor.visitIfcRepresentation
+                    key=637, type=IfcExtrudedAreaSolid
                     PLACEMENT pushed : 636, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=2200, ydim80
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
+                      Visitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=2200, ydim80
                       PLACEMENT poped
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
-                BrepReaderVisitor.visitIfcObjectDefinition
-                end of BrepReaderVisitor.visitIfcObjectDefinition
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
-              BrepReaderVisitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 658, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-5476.36, jO=-457.655, kO=0
 
-                PRODUCT: 679, GUID=1JmC8d7t19Ve0s7aURIkpV, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201755, Representation: 0x18aa3e0
+                PRODUCT: 679, GUID=1JmC8d7t19Ve0s7aURIkpV, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201755, Representation: 0x16f4750
 
-                BrepReaderVisitor.visitIfcProductRepresentation
+                Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=662
+                  Visitor.visitIfcRepresentation
+                    key=662, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
-                  BrepReaderVisitor.visitIfcRepresentation
-                    key=671
+                  Visitor.visitIfcRepresentation
+                    key=671, type=IfcExtrudedAreaSolid
                     PLACEMENT pushed : 670, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      BrepReaderVisitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=3520, ydim80
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A face cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
-A point cannot be placed outside a product!
+                      Visitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=3520, ydim80
                       PLACEMENT poped
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
-                BrepReaderVisitor.visitIfcObjectDefinition
-                end of BrepReaderVisitor.visitIfcObjectDefinition
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
-              end of BrepReaderVisitor.visitIfcRelContainedInSpatialStructure()
-            BrepReaderVisitor.visitIfcObjectDefinition
-            end of BrepReaderVisitor.visitIfcObjectDefinition
+              end of Visitor.visitIfcRelContainedInSpatialStructure()
+            Visitor.visitIfcObjectDefinition
+            end of Visitor.visitIfcObjectDefinition
             PLACEMENT poped
-          end of BrepReaderVisitor.visitIfcSpatialStructureElement()
-        end of BrepReaderVisitor.visitIfcRelAggregates
-        end of BrepReaderVisitor.visitIfcObjectDefinition
+          end of Visitor.visitIfcSpatialStructureElement()
+        end of Visitor.visitIfcRelAggregates
+        end of Visitor.visitIfcObjectDefinition
         PLACEMENT poped
-      end of BrepReaderVisitor.visitIfcSpatialStructureElement()
-    end of BrepReaderVisitor.visitIfcRelAggregates
-    end of BrepReaderVisitor.visitIfcObjectDefinition
+      end of Visitor.visitIfcSpatialStructureElement()
+    end of Visitor.visitIfcRelAggregates
+    end of Visitor.visitIfcObjectDefinition
     PLACEMENT poped
-  end of BrepReaderVisitor.visitIfcSpatialStructureElement()
-end of BrepReaderVisitor.visitIfcRelAggregates
-end of BrepReaderVisitor.visitIfcObjectDefinition
+  end of Visitor.visitIfcSpatialStructureElement()
+end of Visitor.visitIfcRelAggregates
+end of Visitor.visitIfcObjectDefinition
+
+
+********* PRODUCTS:
+id:1E4TBrWx93mRpLzhEIBOeZ, name: Default, hierarchy: 1, ifcnameIfcSite
+id:1E4TBrWx93mRpLzhEIBOeW, name: , hierarchy: 2, ifcnameIfcBuilding
+id:1E4TBrWx93mRpLzhDjqaRU, name: Level 1, hierarchy: 3, ifcnameIfcBuildingStorey
+id:2JuXRljVH1lAVD85_X3iHh, name: Basic Wall:Generic - 200mm - Filled:199381, hierarchy: 4, ifcnameIfcWallStandardCase
+id:2JuXRljVH1lAVD85_X3iM3, name: Basic Wall:Generic - 200mm - Filled:199485, hierarchy: 4, ifcnameIfcWallStandardCase
+id:2JuXRljVH1lAVD85_X3iKy, name: Basic Wall:Generic - 200mm - Filled:199554, hierarchy: 4, ifcnameIfcWallStandardCase
+id:2JuXRljVH1lAVD85_X3iKL, name: Basic Wall:Generic - 200mm - Filled:199595, hierarchy: 4, ifcnameIfcWallStandardCase
+id:005Zuk9110axXeKE0kulOg, name: Basic Wall:Foundation - 300mm Concrete:200122, hierarchy: 4, ifcnameIfcWallStandardCase
+id:005Zuk9110axXeKE0kulMy, name: Basic Wall:Foundation - 300mm Concrete:200236, hierarchy: 4, ifcnameIfcWallStandardCase
+id:005Zuk9110axXeKE0kulKY, name: Basic Wall:Foundation - 300mm Concrete:200370, hierarchy: 4, ifcnameIfcWallStandardCase
+id:005Zuk9110axXeKE0kulLc, name: Basic Wall:Foundation - 300mm Concrete:200438, hierarchy: 4, ifcnameIfcWallStandardCase
+id:1JmC8d7t19Ve0s7aURIkgZ, name: Basic Wall:Interior - 79mm Partition (1-hr):201319, hierarchy: 4, ifcnameIfcWallStandardCase
+id:1JmC8d7t19Ve0s7aURIkl9, name: Basic Wall:Interior - 79mm Partition (1-hr):201485, hierarchy: 4, ifcnameIfcWallStandardCase
+id:1JmC8d7t19Ve0s7aURIkje, name: Basic Wall:Interior - 79mm Partition (1-hr):201644, hierarchy: 4, ifcnameIfcWallStandardCase
+id:1JmC8d7t19Ve0s7aURIkiJ, name: Basic Wall:Interior - 79mm Partition (1-hr):201687, hierarchy: 4, ifcnameIfcWallStandardCase
+id:1JmC8d7t19Ve0s7aURIkpV, name: Basic Wall:Interior - 79mm Partition (1-hr):201755, hierarchy: 4, ifcnameIfcWallStandardCase
+
+
+********* MATERIALS:
+material assignment key: 005Zuk9110axXeKE0kulKY #1
+name: Concrete, Cast-in-Place gray, material key=348
+material assignment key: 005Zuk9110axXeKE0kulLc #1
+name: Concrete, Cast-in-Place gray, material key=348
+material assignment key: 005Zuk9110axXeKE0kulMy #1
+name: Concrete, Cast-in-Place gray, material key=348
+material assignment key: 005Zuk9110axXeKE0kulOg #1
+name: Concrete, Cast-in-Place gray, material key=348
+material assignment key: 0Ktsech6bAFh3WEiws1ntI #0
+material assignment key: 1HBVb1NdfA6PUA6LzWtJ1R #0
+material assignment key: 1JmC8d7t19Ve0s7aURIkgZ #5
+name: Gypsum Wall Board, material key=507
+name: Gypsum Wall Board, material key=507
+name: Metal Stud Layer, material key=517
+name: Gypsum Wall Board, material key=507
+name: Gypsum Wall Board, material key=507
+material assignment key: 1JmC8d7t19Ve0s7aURIkiJ #5
+name: Gypsum Wall Board, material key=507
+name: Gypsum Wall Board, material key=507
+name: Metal Stud Layer, material key=517
+name: Gypsum Wall Board, material key=507
+name: Gypsum Wall Board, material key=507
+material assignment key: 1JmC8d7t19Ve0s7aURIkje #5
+name: Gypsum Wall Board, material key=507
+name: Gypsum Wall Board, material key=507
+name: Metal Stud Layer, material key=517
+name: Gypsum Wall Board, material key=507
+name: Gypsum Wall Board, material key=507
+material assignment key: 1JmC8d7t19Ve0s7aURIkl9 #5
+name: Gypsum Wall Board, material key=507
+name: Gypsum Wall Board, material key=507
+name: Metal Stud Layer, material key=517
+name: Gypsum Wall Board, material key=507
+name: Gypsum Wall Board, material key=507
+material assignment key: 1JmC8d7t19Ve0s7aURIkpV #5
+name: Gypsum Wall Board, material key=507
+name: Gypsum Wall Board, material key=507
+name: Metal Stud Layer, material key=517
+name: Gypsum Wall Board, material key=507
+name: Gypsum Wall Board, material key=507
+material assignment key: 2JF5JXaxWHqu3u0C1FZlqm #0
+material assignment key: 2JuXRljVH1lAVD85_X3iHh #1
+name: Brick, Common, material key=177
+material assignment key: 2JuXRljVH1lAVD85_X3iKL #1
+name: Brick, Common, material key=177
+material assignment key: 2JuXRljVH1lAVD85_X3iKy #1
+name: Brick, Common, material key=177
+material assignment key: 2JuXRljVH1lAVD85_X3iM3 #1
+name: Brick, Common, material key=177

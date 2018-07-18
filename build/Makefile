@@ -123,32 +123,59 @@ ifcconvert/fast:
 	$(MAKE) -f CMakeFiles/ifcconvert.dir/build.make CMakeFiles/ifcconvert.dir/build
 .PHONY : ifcconvert/fast
 
-BrepReaderVisitor.o: BrepReaderVisitor.cpp.o
+Builder.o: Builder.cpp.o
 
-.PHONY : BrepReaderVisitor.o
+.PHONY : Builder.o
 
 # target to build an object file
-BrepReaderVisitor.cpp.o:
-	$(MAKE) -f CMakeFiles/ifcconvert.dir/build.make CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o
-.PHONY : BrepReaderVisitor.cpp.o
+Builder.cpp.o:
+	$(MAKE) -f CMakeFiles/ifcconvert.dir/build.make CMakeFiles/ifcconvert.dir/Builder.cpp.o
+.PHONY : Builder.cpp.o
 
-BrepReaderVisitor.i: BrepReaderVisitor.cpp.i
+Builder.i: Builder.cpp.i
 
-.PHONY : BrepReaderVisitor.i
+.PHONY : Builder.i
 
 # target to preprocess a source file
-BrepReaderVisitor.cpp.i:
-	$(MAKE) -f CMakeFiles/ifcconvert.dir/build.make CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.i
-.PHONY : BrepReaderVisitor.cpp.i
+Builder.cpp.i:
+	$(MAKE) -f CMakeFiles/ifcconvert.dir/build.make CMakeFiles/ifcconvert.dir/Builder.cpp.i
+.PHONY : Builder.cpp.i
 
-BrepReaderVisitor.s: BrepReaderVisitor.cpp.s
+Builder.s: Builder.cpp.s
 
-.PHONY : BrepReaderVisitor.s
+.PHONY : Builder.s
 
 # target to generate assembly for a file
-BrepReaderVisitor.cpp.s:
-	$(MAKE) -f CMakeFiles/ifcconvert.dir/build.make CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.s
-.PHONY : BrepReaderVisitor.cpp.s
+Builder.cpp.s:
+	$(MAKE) -f CMakeFiles/ifcconvert.dir/build.make CMakeFiles/ifcconvert.dir/Builder.cpp.s
+.PHONY : Builder.cpp.s
+
+Visitor.o: Visitor.cpp.o
+
+.PHONY : Visitor.o
+
+# target to build an object file
+Visitor.cpp.o:
+	$(MAKE) -f CMakeFiles/ifcconvert.dir/build.make CMakeFiles/ifcconvert.dir/Visitor.cpp.o
+.PHONY : Visitor.cpp.o
+
+Visitor.i: Visitor.cpp.i
+
+.PHONY : Visitor.i
+
+# target to preprocess a source file
+Visitor.cpp.i:
+	$(MAKE) -f CMakeFiles/ifcconvert.dir/build.make CMakeFiles/ifcconvert.dir/Visitor.cpp.i
+.PHONY : Visitor.cpp.i
+
+Visitor.s: Visitor.cpp.s
+
+.PHONY : Visitor.s
+
+# target to generate assembly for a file
+Visitor.cpp.s:
+	$(MAKE) -f CMakeFiles/ifcconvert.dir/build.make CMakeFiles/ifcconvert.dir/Visitor.cpp.s
+.PHONY : Visitor.cpp.s
 
 ifcconvert.o: ifcconvert.cpp.o
 
@@ -186,9 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ifcconvert"
-	@echo "... BrepReaderVisitor.o"
-	@echo "... BrepReaderVisitor.i"
-	@echo "... BrepReaderVisitor.s"
+	@echo "... Builder.o"
+	@echo "... Builder.i"
+	@echo "... Builder.s"
+	@echo "... Visitor.o"
+	@echo "... Visitor.i"
+	@echo "... Visitor.s"
 	@echo "... ifcconvert.o"
 	@echo "... ifcconvert.i"
 	@echo "... ifcconvert.s"

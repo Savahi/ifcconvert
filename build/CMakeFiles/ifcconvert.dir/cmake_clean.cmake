@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o"
+  "CMakeFiles/ifcconvert.dir/Builder.cpp.o"
+  "CMakeFiles/ifcconvert.dir/Visitor.cpp.o"
   "CMakeFiles/ifcconvert.dir/ifcconvert.cpp.o"
   "ifcconvert.pdb"
   "ifcconvert"

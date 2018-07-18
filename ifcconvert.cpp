@@ -27,22 +27,34 @@
 #include <iostream>
 #include <map>
 
-#include "BrepBuilder.h"
-#include "BrepReaderVisitor.h"
+#include "Builder.h"
+#include "Visitor.h"
 
-using namespace Spider3d;
+using namespace IfcConvert;
 
 class ConsoleCallBack : public Step::CallBack
 {
 public:
-    ConsoleCallBack() : _max(100) {}
-    virtual void setMaximum(size_t max) { _max = max; }
-    virtual void setProgress(size_t progress) { std::cerr << int(double(progress)/double(_max)*100.0) << "%..."; }
+    ConsoleCallBack() : max(100), done(false) {;}
+    virtual void setMaximum( size_t max ) { this->max = max; }
+    virtual void setProgress( size_t progress ) { 
+        if( !this->done ) {  
+            size_t progressPct = int( double(progress)/double(this->max)*100.0 + 0.5 );
+            std::cerr << "\r" << progressPct << "%...   ";
+            if( progressPct >= 100 ) { std::cerr << "\r" << "Done!     " << std::endl; this->done = true; }
+        }
+    }
     virtual bool stop() const {return false;}
 
 protected:
-    size_t _max;
+    size_t max;
+    bool done;
 };
+
+struct ExportedMaterial {
+    ifc2x3::IfcLabel name;
+};
+
 
 static const char *cpInputFileKey = "IfcFile";
 static const char *cpOutputPathKey = "OutputPath";
@@ -51,6 +63,7 @@ static int loadIni( const char *configFile, std::map<std::string, std::string>& 
 static const char *cpFileOper = "oper.txt";
 static const char *cpFileMat = "mat.txt";
 static const char *cpFileMod = "mod.txt";
+static const char *cpFileOperMat = "oper_mat.txt";
 
 int main(int argc, char **argv)
 {
@@ -118,9 +131,9 @@ int main(int argc, char **argv)
         return (2);
     }
 
-    BRepBuilder brepBuilder;
+    Builder builder;
     
-    BrepReaderVisitor visitor( &brepBuilder );
+    Visitor visitor( &builder );
 
     std::cout << "\n****Reading material definition representations...\n";
     Step::RefLinkedList< ifc2x3::IfcMaterialDefinitionRepresentation >::iterator mdefIt = 
@@ -141,6 +154,30 @@ int main(int argc, char **argv)
         projIt->acceptVisitor(&visitor);
     }
 
+    std::cout << "\n\n********* PRODUCTS:\n";
+    for( int i = 0 ; i < builder.products.size() ; i++ ) {
+        Product* p = &builder.products[i];
+        std::cout << "id:" << p->id << ", name: " << p->name;
+        std::cout << ", hierarchy: " << p->hierarchy << ", ifcname" << p->ifcType << std::endl;
+    }
+
+    std::map<Step::Id, ExportedMaterial> exportedMaterials; // Exported materials: to build the "mat.txt" file
+    std::cout << "\n\n********* MATERIALS:\n";
+    std::map<ifc2x3::IfcGloballyUniqueId, MaterialLayers>::const_iterator assignIter = builder.mlAssignments.begin();
+    for( ; assignIter != builder.mlAssignments.end() ; ++assignIter ) {
+        MaterialLayers::const_iterator layerIter = assignIter->second.begin();
+        std::cout << "material assignment key: " << assignIter->first << " #" << assignIter->second.size() << std::endl; 
+        for( ; layerIter != assignIter->second.end() ; ++layerIter ) {
+            std::cout << "name: " << layerIter->name << ", material key=" << layerIter->key << std::endl;
+
+            // Exported materials: to build the "mat.txt" file
+            std::map<Step::Id, ExportedMaterial>::iterator iter = exportedMaterials.find( layerIter->key );
+            if( iter == exportedMaterials.end() ) {
+                ExportedMaterial em = { layerIter->name };
+                exportedMaterials.insert( std::pair<Step::Id,ExportedMaterial>(layerIter->key, em ) );
+            }
+        }
+    }    
 
     // Opening the 'operations' file 
     std::ofstream fsOper;
@@ -149,7 +186,22 @@ int main(int argc, char **argv)
         std::cout << "Can't write into the " << cpFileOper << " (operations) file. Exiting..." << std::endl; 
         return 0;
     }
+
     // Writing operations...
+    fsOper << "Level\t'Code\tName\tDPH\tType\tVolPlan\tUnit\tPrior\tAsapStart\tAsapFin\tFactStart\tFactFin\tDurPlanD\tDurPlan\tModel" << std::endl;
+    for( int i = 0 ; i < builder.products.size() ; i++ ) {
+        Product* p = &builder.products[i];
+
+        if( p->name.size() == 0 ) {
+            if( p->ifcType.size() > 0 ) {
+                p->name.assign( p->ifcType.begin(), p->ifcType.end() );
+            } else {
+                std::string unnamed = "Unnamed";
+                p->name.assign( unnamed.begin(), unnamed.end() );
+            }
+        } 
+        fsOper << p->hierarchy << "\t" << p->id << "\t" << p->name << "\t\t\t\t\t\t\t\t\t\t\t\t" << p->id << std::endl;
+    }    
     fsOper.close();
 
     // Opening the 'models' file 
@@ -159,7 +211,23 @@ int main(int argc, char **argv)
         std::cout << "Can't write into the " << cpFileMod << " (models) file. Exiting..." << std::endl; 
         return 0;
     }
-    // Writing materials...
+    // Writing models...
+    fsMod << "Code\tName\tDescription" << std::endl;
+    for( int i = 0 ; i < builder.products.size() ; i++ ) {
+        Product* p = &builder.products[i];
+        Model* m = &(p->model);
+        fsMod << p->id << "\t" << p->name << "\t";
+        for( int iM = 0 ; iM < m->faces.size() ; iM++ ) {
+            fsMod << "<facet>";            
+            Face* f = &m->faces[iM];
+            for( int iP = 0 ; iP < f->points.size() ; iP++ ) {
+                Point* p = &f->points[i];
+                fsMod << "<point>" << p->x << "," << p->y << "," << p->z << "</point>";
+            }
+            fsMod << "</facet>";
+        }
+        fsMod << std::endl;
+    }
     fsMod.close();
 
     // Opening the 'materials' file...
@@ -170,7 +238,49 @@ int main(int argc, char **argv)
         return 0;
     }
     // Writing materials...
+    fsMat << "Code\tName\tType\tUnit" << std::endl;
+    std::map<Step::Id, ExportedMaterial>::const_iterator iter = exportedMaterials.begin();
+    for( ; iter != exportedMaterials.end() ; ++iter ) {
+        fsMat << iter->first << "\t" << iter->second.name << "\t\t" << std::endl;
+    }
     fsMat.close();
+
+    // Opening the 'assingment' (or 'ass') file...
+    std::ofstream fsOperMat;
+    fsOperMat.open( (configParameters[cpOutputPathKey] + std::string(cpFileOperMat)).c_str() );    
+    if( fsOperMat.fail() ) {
+        std::cout << "Can't write into the " << cpFileOperMat << " (materials) file. Exiting..." << std::endl; 
+        return 0;
+    }
+    // Writing materials...
+    fsOperMat << "OperCode\tMatCode\tFix" << std::endl;
+    assignIter = builder.mlAssignments.begin(); // assignIter is defined earlier...
+    for( ; assignIter != builder.mlAssignments.end() ; ++assignIter ) {
+        if( assignIter->second.size() == 0 ) { // No layers assigned to the product
+            continue;
+        }
+        // Searching for the product assigned
+        Product *p=NULL; 
+        for( int i = 0 ; i < builder.products.size() ; i++ ) {
+            if( builder.products[i].id == assignIter->first ) {
+                p = &builder.products[i];
+                break;
+            }
+        }
+        if( p == NULL ) {
+            continue;
+        }
+        // Iterating layer by layer
+        MaterialLayers::const_iterator layerIter = assignIter->second.begin();
+        for( ; layerIter != assignIter->second.end() ; ++layerIter ) {
+            double number=0.0;
+            if( p->geometryType == "IfcRectangleProfileDef" ) {
+                number = layerIter->thickness * p->height;
+            }
+            fsOperMat << assignIter->first << "\t" << layerIter->key << "\t" << number << std::endl;
+        }
+    }
+    fsOperMat.close();
 
     return 0;
 }

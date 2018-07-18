@@ -1,0 +1,5 @@
+Code	Name	Type	Unit
+177	Brick, Common		
+348	Concrete, Cast-in-Place gray		
+507	Gypsum Wall Board		
+517	Metal Stud Layer		

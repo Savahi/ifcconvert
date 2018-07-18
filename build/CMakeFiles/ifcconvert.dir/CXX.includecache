@@ -16424,21 +16424,29 @@ ifc2x3/IfcEdgeCurve.h
 
 ../include/ifc2x3/fwDecl.h
 
-/home/user/Desktop/spider/ifcconvert/BrepBuilder.h
+/home/user/Desktop/spider/ifcconvert/Builder.cpp
+ifc2x3/DefinedTypes.h
+-
+ifc2x3/all.h
+-
+Builder.h
+/home/user/Desktop/spider/ifcconvert/Builder.h
+
+/home/user/Desktop/spider/ifcconvert/Builder.h
 ifc2x3/DefinedTypes.h
 -
 ifc2x3/all.h
 -
 
-/home/user/Desktop/spider/ifcconvert/BrepReaderVisitor.cpp
-BrepReaderVisitor.h
-/home/user/Desktop/spider/ifcconvert/BrepReaderVisitor.h
+/home/user/Desktop/spider/ifcconvert/Visitor.cpp
+Visitor.h
+/home/user/Desktop/spider/ifcconvert/Visitor.h
 ifc2x3/ExpressDataSet.h
 -
 
-/home/user/Desktop/spider/ifcconvert/BrepReaderVisitor.h
-BrepBuilder.h
-/home/user/Desktop/spider/ifcconvert/BrepBuilder.h
+/home/user/Desktop/spider/ifcconvert/Visitor.h
+Builder.h
+/home/user/Desktop/spider/ifcconvert/Builder.h
 ifc2x3/InheritVisitor.h
 -
 
@@ -16465,8 +16473,8 @@ iostream
 -
 map
 -
-BrepBuilder.h
-/home/user/Desktop/spider/ifcconvert/BrepBuilder.h
-BrepReaderVisitor.h
-/home/user/Desktop/spider/ifcconvert/BrepReaderVisitor.h
+Builder.h
+/home/user/Desktop/spider/ifcconvert/Builder.h
+Visitor.h
+/home/user/Desktop/spider/ifcconvert/Visitor.h
 

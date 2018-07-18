@@ -57,33 +57,57 @@ include CMakeFiles/ifcconvert.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ifcconvert.dir/flags.make
 
-CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o: CMakeFiles/ifcconvert.dir/flags.make
-CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o: ../BrepReaderVisitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/spider/ifcconvert/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o -c /home/user/Desktop/spider/ifcconvert/BrepReaderVisitor.cpp
+CMakeFiles/ifcconvert.dir/Builder.cpp.o: CMakeFiles/ifcconvert.dir/flags.make
+CMakeFiles/ifcconvert.dir/Builder.cpp.o: ../Builder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/spider/ifcconvert/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ifcconvert.dir/Builder.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ifcconvert.dir/Builder.cpp.o -c /home/user/Desktop/spider/ifcconvert/Builder.cpp
 
-CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/spider/ifcconvert/BrepReaderVisitor.cpp > CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.i
+CMakeFiles/ifcconvert.dir/Builder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ifcconvert.dir/Builder.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/spider/ifcconvert/Builder.cpp > CMakeFiles/ifcconvert.dir/Builder.cpp.i
 
-CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/spider/ifcconvert/BrepReaderVisitor.cpp -o CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.s
+CMakeFiles/ifcconvert.dir/Builder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ifcconvert.dir/Builder.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/spider/ifcconvert/Builder.cpp -o CMakeFiles/ifcconvert.dir/Builder.cpp.s
 
-CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o.requires:
+CMakeFiles/ifcconvert.dir/Builder.cpp.o.requires:
 
-.PHONY : CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o.requires
+.PHONY : CMakeFiles/ifcconvert.dir/Builder.cpp.o.requires
 
-CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o.provides: CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ifcconvert.dir/build.make CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o.provides.build
-.PHONY : CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o.provides
+CMakeFiles/ifcconvert.dir/Builder.cpp.o.provides: CMakeFiles/ifcconvert.dir/Builder.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ifcconvert.dir/build.make CMakeFiles/ifcconvert.dir/Builder.cpp.o.provides.build
+.PHONY : CMakeFiles/ifcconvert.dir/Builder.cpp.o.provides
 
-CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o.provides.build: CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o
+CMakeFiles/ifcconvert.dir/Builder.cpp.o.provides.build: CMakeFiles/ifcconvert.dir/Builder.cpp.o
+
+
+CMakeFiles/ifcconvert.dir/Visitor.cpp.o: CMakeFiles/ifcconvert.dir/flags.make
+CMakeFiles/ifcconvert.dir/Visitor.cpp.o: ../Visitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/spider/ifcconvert/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ifcconvert.dir/Visitor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ifcconvert.dir/Visitor.cpp.o -c /home/user/Desktop/spider/ifcconvert/Visitor.cpp
+
+CMakeFiles/ifcconvert.dir/Visitor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ifcconvert.dir/Visitor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/spider/ifcconvert/Visitor.cpp > CMakeFiles/ifcconvert.dir/Visitor.cpp.i
+
+CMakeFiles/ifcconvert.dir/Visitor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ifcconvert.dir/Visitor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/spider/ifcconvert/Visitor.cpp -o CMakeFiles/ifcconvert.dir/Visitor.cpp.s
+
+CMakeFiles/ifcconvert.dir/Visitor.cpp.o.requires:
+
+.PHONY : CMakeFiles/ifcconvert.dir/Visitor.cpp.o.requires
+
+CMakeFiles/ifcconvert.dir/Visitor.cpp.o.provides: CMakeFiles/ifcconvert.dir/Visitor.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ifcconvert.dir/build.make CMakeFiles/ifcconvert.dir/Visitor.cpp.o.provides.build
+.PHONY : CMakeFiles/ifcconvert.dir/Visitor.cpp.o.provides
+
+CMakeFiles/ifcconvert.dir/Visitor.cpp.o.provides.build: CMakeFiles/ifcconvert.dir/Visitor.cpp.o
 
 
 CMakeFiles/ifcconvert.dir/ifcconvert.cpp.o: CMakeFiles/ifcconvert.dir/flags.make
 CMakeFiles/ifcconvert.dir/ifcconvert.cpp.o: ../ifcconvert.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/spider/ifcconvert/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ifcconvert.dir/ifcconvert.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/spider/ifcconvert/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ifcconvert.dir/ifcconvert.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ifcconvert.dir/ifcconvert.cpp.o -c /home/user/Desktop/spider/ifcconvert/ifcconvert.cpp
 
 CMakeFiles/ifcconvert.dir/ifcconvert.cpp.i: cmake_force
@@ -107,17 +131,19 @@ CMakeFiles/ifcconvert.dir/ifcconvert.cpp.o.provides.build: CMakeFiles/ifcconvert
 
 # Object files for target ifcconvert
 ifcconvert_OBJECTS = \
-"CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o" \
+"CMakeFiles/ifcconvert.dir/Builder.cpp.o" \
+"CMakeFiles/ifcconvert.dir/Visitor.cpp.o" \
 "CMakeFiles/ifcconvert.dir/ifcconvert.cpp.o"
 
 # External object files for target ifcconvert
 ifcconvert_EXTERNAL_OBJECTS =
 
-ifcconvert: CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o
+ifcconvert: CMakeFiles/ifcconvert.dir/Builder.cpp.o
+ifcconvert: CMakeFiles/ifcconvert.dir/Visitor.cpp.o
 ifcconvert: CMakeFiles/ifcconvert.dir/ifcconvert.cpp.o
 ifcconvert: CMakeFiles/ifcconvert.dir/build.make
 ifcconvert: CMakeFiles/ifcconvert.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/Desktop/spider/ifcconvert/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ifcconvert"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/Desktop/spider/ifcconvert/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ifcconvert"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ifcconvert.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -125,7 +151,8 @@ CMakeFiles/ifcconvert.dir/build: ifcconvert
 
 .PHONY : CMakeFiles/ifcconvert.dir/build
 
-CMakeFiles/ifcconvert.dir/requires: CMakeFiles/ifcconvert.dir/BrepReaderVisitor.cpp.o.requires
+CMakeFiles/ifcconvert.dir/requires: CMakeFiles/ifcconvert.dir/Builder.cpp.o.requires
+CMakeFiles/ifcconvert.dir/requires: CMakeFiles/ifcconvert.dir/Visitor.cpp.o.requires
 CMakeFiles/ifcconvert.dir/requires: CMakeFiles/ifcconvert.dir/ifcconvert.cpp.o.requires
 
 .PHONY : CMakeFiles/ifcconvert.dir/requires
