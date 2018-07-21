@@ -112,4 +112,57 @@ namespace IfcConvert {
 	}
 
 
+	int Builder::readUnits( ifc2x3::ExpressDataSet *expressDataSet ) 
+	{
+		this->lengthUnit.exponent = 1;
+		this->lengthUnit.prefix = ifc2x3::IfcSIPrefix_UNSET;
+		this->lengthUnit.unitName = "m";
+
+		// Creating a map "siUnitPrefixes": SI-unit key -> prefix
+	    std::map<Step::Id,ifc2x3::IfcSIPrefix> siUnitPrefixes;
+	    Step::RefLinkedList< ifc2x3::IfcSIUnit >::iterator siUnitIter = expressDataSet->getAllIfcSIUnit().begin();
+	    for( ; siUnitIter != expressDataSet->getAllIfcSIUnit().end() ; ++siUnitIter ) {
+	        if( siUnitIter->testPrefix() ) {
+	            siUnitPrefixes.insert( std::pair<Step::Id,ifc2x3::IfcSIPrefix>( siUnitIter->getKey(), siUnitIter->getPrefix() ) );
+	            std::cout << "Prefix added: " << siUnitIter->getPrefix() << std::endl;
+	        }
+	    }
+
+	    // Reading global unit assignments
+	    Step::RefLinkedList< ifc2x3::IfcUnitAssignment >::iterator unitIter = expressDataSet->getAllIfcUnitAssignment().begin();
+	    for( ; unitIter != expressDataSet->getAllIfcUnitAssignment().end() ; ++unitIter ) {
+	        std::cout << "Type:" << unitIter->type() << std::endl;
+	        ifc2x3::Set_IfcUnit_1_n unitSet = unitIter->getUnits();
+	        ifc2x3::Set_IfcUnit_1_n::iterator unitSetIter = unitSet.begin();
+	        for( ; unitSetIter != unitSet.end() ; ++unitSetIter ) {
+	            Step::RefPtr< ifc2x3::IfcUnit > unit = *unitSetIter;
+	            if( unit->currentType() == ifc2x3::IfcUnit::IFCDERIVEDUNIT ) { // Just for fun yet
+	                ifc2x3::IfcDerivedUnit *derivedUnit = unit->getIfcDerivedUnit();
+	                std::cout << "DERIVED UNIT: type=" << derivedUnit->getUnitType() << ", key=" << derivedUnit->getKey() << std::endl;
+	            } else if( unit->currentType() == ifc2x3::IfcUnit::IFCNAMEDUNIT ) {
+	                ifc2x3::IfcNamedUnit *namedUnit = unit->getIfcNamedUnit();
+	                std::cout << "NAMED UNIT: type=" << namedUnit->getUnitType() << ", key=" << namedUnit->getKey();
+	                if( namedUnit->getUnitType() == ifc2x3::IfcUnitEnum_LENGTHUNIT ) { // Length unit found
+		                ifc2x3::IfcDimensionalExponents *exps = namedUnit->getDimensions();
+		                if( exps != NULL ) {
+	    	                if( exps->testLengthExponent() ) {
+								this->lengthUnit.exponent = exps->getLengthExponent(); // Must be "1"
+	                	   	}
+	                	}
+		              	std::map<Step::Id,ifc2x3::IfcSIPrefix>::iterator siUnitIter = siUnitPrefixes.find(namedUnit->getKey());
+		                if( siUnitIter != siUnitPrefixes.end() ) {
+		                    this->lengthUnit.prefix = siUnitIter->second;
+		                    if( this->lengthUnit.prefix == ifc2x3::IfcSIPrefix_MILLI ) {
+		                    	this->lengthUnit.unitName = "mm";
+		                    }                     
+		                }
+		                break;
+	                }
+	            } else if( unit->currentType() == ifc2x3::IfcUnit::IFCMONETARYUNIT ) { // Just for fun yet
+	                ifc2x3::IfcMonetaryUnit *monetaryUnit = unit->getIfcMonetaryUnit();
+	                std::cout << "MONETARY UNIT: key=" << monetaryUnit->getKey() << std::endl;
+	            }
+	        } 
+	    }
+	}
 }

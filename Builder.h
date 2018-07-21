@@ -6,6 +6,12 @@
 
 namespace IfcConvert {
 
+	struct LengthUnit {
+		ifc2x3::IfcSIPrefix prefix; // IfcSIPrefix_UNSET, IfcSIPrefix_MILLI,
+		Step::Integer exponent;
+		ifc2x3::IfcLabel unitName;
+	};
+
 	class Point {
 		public:
 			double x, y, z;
@@ -115,6 +121,8 @@ namespace IfcConvert {
 	class Builder
 	{
 	public:
+		LengthUnit lengthUnit;
+
 		std::map<Step::Id, MaterialRepresentation> mRepresentations; // To store color (and later other characteristics) of material
 		std::map<ifc2x3::IfcGloballyUniqueId, MaterialLayers> mlAssignments; // To store materials assigned to each object
 
@@ -166,6 +174,7 @@ namespace IfcConvert {
 			this->ifcHierarchy  += changeHierarchy;
 		}
 
+		int readUnits( ifc2x3::ExpressDataSet* ExpressDataSet ); 
 	};
 
 

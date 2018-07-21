@@ -1,8 +1,20 @@
 Importing:
-reading ../dat/run.ini...
+reading ../dat/wallsJuly19.ini...
 Read Ok.
-Reading the model...
+Getting Express data set...
 
+**** Reading (measure) units...
+Prefix added: 11
+Prefix added: 6
+Prefix added: 9
+Prefix added: 6
+Type:IfcUnitAssignment
+DERIVED UNIT: type=49, key=86
+DERIVED UNIT: type=49, key=76
+NAMED UNIT: type=21, key=50NAMED UNIT: type=18, key=71NAMED UNIT: type=17, key=70NAMED UNIT: type=12, key=68NAMED UNIT: type=14, key=69NAMED UNIT: type=23, key=67DERIVED UNIT: type=19, key=63
+NAMED UNIT: type=27, key=54NAMED UNIT: type=8, key=65NAMED UNIT: type=10, key=66DERIVED UNIT: type=17, key=58
+NAMED UNIT: type=13, key=52NAMED UNIT: type=28, key=51NAMED UNIT: type=22, key=49NAMED UNIT: type=29, key=45DERIVED UNIT: type=8, key=80
+NAMED UNIT: type=3, key=44NAMED UNIT: type=24, key=82NAMED UNIT: type=16, key=42
 ****Reading material definition representations...
 Material key: 177
 [1] List_IfcRepresentation_1_n iterator: key=184
@@ -14,16 +26,96 @@ Material key: 348
 [2] Set_IfcRepresentationItem_1_n iterator: key=351, type=IfcStyledItem
 [3] Set_IfcPresentationStyleAssignment_1_n iterator: key=349
 SURFACE STYLE SHADING rgb: 0.45098, 0.454902, 0.423529
-Material key: 507
-[1] List_IfcRepresentation_1_n iterator: key=512
-[2] Set_IfcRepresentationItem_1_n iterator: key=510, type=IfcStyledItem
-[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=508
+Material key: 542
+[1] List_IfcRepresentation_1_n iterator: key=547
+[2] Set_IfcRepresentationItem_1_n iterator: key=545, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=543
 SURFACE STYLE SHADING rgb: 0.670588, 0.666667, 0.658824
-Material key: 517
-[1] List_IfcRepresentation_1_n iterator: key=526
-[2] Set_IfcRepresentationItem_1_n iterator: key=524, type=IfcStyledItem
-[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=522
+Material key: 552
+[1] List_IfcRepresentation_1_n iterator: key=561
+[2] Set_IfcRepresentationItem_1_n iterator: key=559, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=557
 SURFACE STYLE SHADING rgb: 0.329412, 0.32549, 0.317647
+Material key: 768
+[1] List_IfcRepresentation_1_n iterator: key=777
+[2] Set_IfcRepresentationItem_1_n iterator: key=775, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=773
+SURFACE STYLE SHADING rgb: 0.847059, 0.662745, 0.447059
+Material key: 782
+[1] List_IfcRepresentation_1_n iterator: key=791
+[2] Set_IfcRepresentationItem_1_n iterator: key=789, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=787
+SURFACE STYLE SHADING rgb: 0.584314, 0.470588, 0.290196
+Material key: 796
+[1] List_IfcRepresentation_1_n iterator: key=801
+[2] Set_IfcRepresentationItem_1_n iterator: key=799, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=797
+SURFACE STYLE SHADING rgb: 0.313725, 0.313725, 0.313725
+Material key: 853
+[1] List_IfcRepresentation_1_n iterator: key=862
+[2] Set_IfcRepresentationItem_1_n iterator: key=860, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=858
+SURFACE STYLE SHADING rgb: 0.407843, 0.403922, 0.4
+Material key: 867
+[1] List_IfcRepresentation_1_n iterator: key=876
+[2] Set_IfcRepresentationItem_1_n iterator: key=874, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=872
+SURFACE STYLE SHADING rgb: 0.45098, 0.454902, 0.423529
+Material key: 881
+[1] List_IfcRepresentation_1_n iterator: key=890
+[2] Set_IfcRepresentationItem_1_n iterator: key=888, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=886
+SURFACE STYLE SHADING rgb: 0.329412, 0.32549, 0.317647
+Material key: 895
+[1] List_IfcRepresentation_1_n iterator: key=900
+[2] Set_IfcRepresentationItem_1_n iterator: key=898, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=896
+SURFACE STYLE SHADING rgb: 0.313725, 0.313725, 0.313725
+Material key: 969
+[1] List_IfcRepresentation_1_n iterator: key=978
+[2] Set_IfcRepresentationItem_1_n iterator: key=976, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=974
+SURFACE STYLE SHADING rgb: 0.313725, 0.313725, 0.313725
+Material key: 983
+[1] List_IfcRepresentation_1_n iterator: key=988
+[2] Set_IfcRepresentationItem_1_n iterator: key=986, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=984
+SURFACE STYLE SHADING rgb: 0.705882, 0.701961, 0.694118
+Material key: 1140
+[1] List_IfcRepresentation_1_n iterator: key=1145
+[2] Set_IfcRepresentationItem_1_n iterator: key=1143, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=1141
+SURFACE STYLE SHADING rgb: 0.6, 0.298039, 0.168627
+Material key: 1150
+[1] List_IfcRepresentation_1_n iterator: key=1155
+[2] Set_IfcRepresentationItem_1_n iterator: key=1153, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=1151
+SURFACE STYLE SHADING rgb: 0.447059, 0.321569, 0.2
+Material key: 1305
+[1] List_IfcRepresentation_1_n iterator: key=1310
+[2] Set_IfcRepresentationItem_1_n iterator: key=1308, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=1306
+SURFACE STYLE SHADING rgb: 0.854902, 0.890196, 0.878431
+Material key: 1315
+[1] List_IfcRepresentation_1_n iterator: key=1320
+[2] Set_IfcRepresentationItem_1_n iterator: key=1318, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=1316
+SURFACE STYLE SHADING rgb: 0.533333, 0.388235, 0.215686
+Material key: 2784
+[1] List_IfcRepresentation_1_n iterator: key=2789
+[2] Set_IfcRepresentationItem_1_n iterator: key=2787, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=2785
+SURFACE STYLE SHADING rgb: 0.968627, 0.968627, 0.898039
+Material key: 2794
+[1] List_IfcRepresentation_1_n iterator: key=2799
+[2] Set_IfcRepresentationItem_1_n iterator: key=2797, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=2795
+SURFACE STYLE SHADING rgb: 0.956863, 0.956863, 0.956863
+Material key: 2804
+[1] List_IfcRepresentation_1_n iterator: key=2809
+[2] Set_IfcRepresentationItem_1_n iterator: key=2807, type=IfcStyledItem
+[3] Set_IfcPresentationStyleAssignment_1_n iterator: key=2805
+SURFACE STYLE SHADING rgb: 0.603922, 0.419608, 0.239216
 
 ****Reading materials...
 Inside 'visitIfcRelAssociatesMaterial'
@@ -75,11 +167,11 @@ Inside 'visitIfcRelAssociatesMaterial'
 Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Gypsum Wall Board, Material key: 507, thickness=13
-   Material name: Gypsum Wall Board, Material key: 507, thickness=6
-   Material name: Metal Stud Layer, Material key: 517, thickness=42
-   Material name: Gypsum Wall Board, Material key: 507, thickness=6
-   Material name: Gypsum Wall Board, Material key: 507, thickness=13
+   Material name: Gypsum Wall Board, Material key: 542, thickness=13
+   Material name: Gypsum Wall Board, Material key: 542, thickness=6
+   Material name: Metal Stud Layer, Material key: 552, thickness=42
+   Material name: Gypsum Wall Board, Material key: 542, thickness=6
+   Material name: Gypsum Wall Board, Material key: 542, thickness=13
  Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkgZ, name= Basic Wall:Interior - 79mm Partition (1-hr):201319
 Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSet
@@ -87,48 +179,108 @@ Inside 'visitIfcRelAssociatesMaterial'
 Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Gypsum Wall Board, Material key: 507, thickness=13
-   Material name: Gypsum Wall Board, Material key: 507, thickness=6
-   Material name: Metal Stud Layer, Material key: 517, thickness=42
-   Material name: Gypsum Wall Board, Material key: 507, thickness=6
-   Material name: Gypsum Wall Board, Material key: 507, thickness=13
+   Material name: Gypsum Wall Board, Material key: 542, thickness=13
+   Material name: Gypsum Wall Board, Material key: 542, thickness=6
+   Material name: Metal Stud Layer, Material key: 552, thickness=42
+   Material name: Gypsum Wall Board, Material key: 542, thickness=6
+   Material name: Gypsum Wall Board, Material key: 542, thickness=13
  Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkl9, name= Basic Wall:Interior - 79mm Partition (1-hr):201485
 Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Gypsum Wall Board, Material key: 507, thickness=13
-   Material name: Gypsum Wall Board, Material key: 507, thickness=6
-   Material name: Metal Stud Layer, Material key: 517, thickness=42
-   Material name: Gypsum Wall Board, Material key: 507, thickness=6
-   Material name: Gypsum Wall Board, Material key: 507, thickness=13
+   Material name: Gypsum Wall Board, Material key: 542, thickness=13
+   Material name: Gypsum Wall Board, Material key: 542, thickness=6
+   Material name: Metal Stud Layer, Material key: 552, thickness=42
+   Material name: Gypsum Wall Board, Material key: 542, thickness=6
+   Material name: Gypsum Wall Board, Material key: 542, thickness=13
  Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkje, name= Basic Wall:Interior - 79mm Partition (1-hr):201644
 Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Gypsum Wall Board, Material key: 507, thickness=13
-   Material name: Gypsum Wall Board, Material key: 507, thickness=6
-   Material name: Metal Stud Layer, Material key: 517, thickness=42
-   Material name: Gypsum Wall Board, Material key: 507, thickness=6
-   Material name: Gypsum Wall Board, Material key: 507, thickness=13
+   Material name: Gypsum Wall Board, Material key: 542, thickness=13
+   Material name: Gypsum Wall Board, Material key: 542, thickness=6
+   Material name: Metal Stud Layer, Material key: 552, thickness=42
+   Material name: Gypsum Wall Board, Material key: 542, thickness=6
+   Material name: Gypsum Wall Board, Material key: 542, thickness=13
  Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkiJ, name= Basic Wall:Interior - 79mm Partition (1-hr):201687
 Inside 'visitIfcRelAssociatesMaterial'
  Relaing material type: IfcMaterialLayerSetUsage
   Material Layer Set 
-   Material name: Gypsum Wall Board, Material key: 507, thickness=13
-   Material name: Gypsum Wall Board, Material key: 507, thickness=6
-   Material name: Metal Stud Layer, Material key: 517, thickness=42
-   Material name: Gypsum Wall Board, Material key: 507, thickness=6
-   Material name: Gypsum Wall Board, Material key: 507, thickness=13
+   Material name: Gypsum Wall Board, Material key: 542, thickness=13
+   Material name: Gypsum Wall Board, Material key: 542, thickness=6
+   Material name: Metal Stud Layer, Material key: 552, thickness=42
+   Material name: Gypsum Wall Board, Material key: 542, thickness=6
+   Material name: Gypsum Wall Board, Material key: 542, thickness=13
  Related object: type=IfcWallStandardCase, id=1JmC8d7t19Ve0s7aURIkpV, name= Basic Wall:Interior - 79mm Partition (1-hr):201755
+Inside 'visitIfcRelAssociatesMaterial'
+ Relaing material type: IfcMaterialLayerSetUsage
+  Material Layer Set 
+   Material name: Oak Flooring, Material key: 768, thickness=19
+   Material name: Plywood, Sheathing, Material key: 782, thickness=16
+   Material name: Structure, Wood Joist/Rafter Layer, Material key: 796, thickness=220
+ Related object: type=IfcSlab, id=3Pfsc0h6P61v2EycUD0gyu, name= Floor:Wood Joist 220mm - Wood Finish:201909
+Inside 'visitIfcRelAssociatesMaterial'
+ Relaing material type: IfcMaterialLayerSetUsage
+  Material Layer Set 
+   Material name: Vinyl Composition Tile, Material key: 853, thickness=5
+   Material name: Concrete, Lightweight, Material key: 867, thickness=100
+   Material name: Metal Deck, Material key: 881, thickness=5
+   Material name: Structure, Steel Bar Joist Layer, Material key: 895, thickness=400
+ Related object: type=IfcSlab, id=3Pfsc0h6P61v2EycUD0gqN, name= Floor:Steel Bar Joist - VCT on LW Concrete:202394
+Inside 'visitIfcRelAssociatesMaterial'
+ Relaing material type: IfcMaterialLayerSetUsage
+  Material Layer Set 
+   Material name: Default, Material key: 969, thickness=36
+   Material name: Ceiling Tile 600 x 600, Material key: 983, thickness=16
+ Related object: type=IfcCovering, id=3Pfsc0h6P61v2EycUD0gmv, name= Compound Ceiling:600 x 600mm grid:202676
+Inside 'visitIfcRelAssociatesMaterial'
+ Relaing material type: IfcMaterialLayerSetUsage
+  Material Layer Set 
+   Material name: Default, Material key: 969, thickness=36
+   Material name: Ceiling Tile 600 x 600, Material key: 983, thickness=16
+ Related object: type=IfcCovering, id=3Pfsc0h6P61v2EycUD0g8r, name= Compound Ceiling:600 x 600mm grid:203192
+Inside 'visitIfcRelAssociatesMaterial'
+ Relaing material type: IfcMaterialList
+ Related object: type=IfcDoorStyle, id=3Pfsc0h6P61v2EydAD0g9Y, name= 0915 x 2134mm
+Inside 'visitIfcRelAssociatesMaterial'
+ Relaing material type: IfcMaterialList
+ Related object: type=IfcDoor, id=3Pfsc0h6P61v2EycUD0g9A, name= M_Single-Flush:0915 x 2134mm:203207
+Inside 'visitIfcRelAssociatesMaterial'
+ Relaing material type: IfcMaterialList
+ Related object: type=IfcWindowStyle, id=3Pfsc0h6P61v2EydAD0g7i, name= 0406 x 0610mm
+Inside 'visitIfcRelAssociatesMaterial'
+ Relaing material type: IfcMaterialList
+ Related object: type=IfcWindow, id=3Pfsc0h6P61v2EycUD0g6O, name= M_Fixed:0406 x 0610mm:203285
+Inside 'visitIfcRelAssociatesMaterial'
+ Relaing material type: IfcMaterialList
+ Related object: type=IfcWindow, id=3Pfsc0h6P61v2EycUD0g5w, name= M_Fixed:0406 x 0610mm:203511
+Inside 'visitIfcRelAssociatesMaterial'
+ Relaing material type: IfcMaterialList
+ Related object: type=IfcWindow, id=3Pfsc0h6P61v2EycUD0g12, name= M_Fixed:0406 x 0610mm:203727
+Inside 'visitIfcRelAssociatesMaterial'
+ Relaing material type: IfcMaterialList
+ Related object: type=IfcWindow, id=3Pfsc0h6P61v2EycUD0g1n, name= M_Fixed:0406 x 0610mm:203772
+Inside 'visitIfcRelAssociatesMaterial'
+ Relaing material type: IfcMaterialList
+ Related object: type=IfcWindow, id=3Pfsc0h6P61v2EycUD0gUb, name= M_Fixed:0406 x 0610mm:203816
+Inside 'visitIfcRelAssociatesMaterial'
+ Relaing material type: IfcMaterialList
+ Related object: type=IfcWindow, id=3Pfsc0h6P61v2EycUD0gV4, name= M_Fixed:0406 x 0610mm:203849
+Inside 'visitIfcRelAssociatesMaterial'
+ Relaing material type: IfcMaterialList
+ Related object: type=IfcFurnitureType, id=3q_0WUCv5FdPtljr0GnHDd, name= 1525 x 762mm Student
+Inside 'visitIfcRelAssociatesMaterial'
+ Relaing material type: IfcMaterialList
+ Related object: type=IfcFurnishingElement, id=3Pfsc0h6P61v2EycUD0gSW, name= M_Desk:1525 x 762mm Student:203949
 
 ****Reading building elements...
 Visitor.visitIfcObjectDefinition
 Visitor.visitIfcRelAggregates()
 getRelatedObjects() item: IfcSite
 Visitor.visitIfcSpatialStructureElement()
-  PLACEMENT pushed : 690, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+  PLACEMENT pushed : 2831, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-    PRODUCT: 692, GUID=1E4TBrWx93mRpLzhEIBOeZ, NAME=Default, Representation: 0
+    PRODUCT: 2833, GUID=1E4TBrWx93mRpLzhEIBOeZ, NAME=Default, Representation: 0
 
     Visitor.visitIfcObjectDefinition
     Visitor.visitIfcRelAggregates()
@@ -142,6 +294,36 @@ Visitor.visitIfcSpatialStructureElement()
         Visitor.visitIfcRelAggregates()
         getRelatedObjects() item: IfcBuildingStorey
         Visitor.visitIfcSpatialStructureElement()
+          PLACEMENT pushed : 119, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=-3500
+
+            PRODUCT: 122, GUID=1E4TBrWx93mRpLzhDjqMI4, NAME=Level 3, Representation: 0
+
+            Visitor.visitIfcRelContainedInSpatialStructure()
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcSlab
+              PLACEMENT pushed : 827, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+
+                PRODUCT: 850, GUID=3Pfsc0h6P61v2EycUD0gqN, NAME=Floor:Steel Bar Joist - VCT on LW Concrete:202394, Representation: 0x1d4d6b0
+
+                Visitor.visitIfcProductRepresentation
+                  representationtype: SweptSolid
+                  Visitor.visitIfcRepresentation
+                    key=836, type=IfcExtrudedAreaSolid
+                    PLACEMENT pushed : 835, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=-1, iO=4843.64, jO=-2527.66, kO=0
+
+                      Visitor.visitIfcExtrudedAreaSolid: depth=510, i=0, j=0, k=1, xdim=9800, ydim13100
+                      PLACEMENT poped
+                    end of visitIfcRepresentation
+                  end of visitIfcProductRepresentation
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
+                PLACEMENT poped
+              end of Visitor.visitIfcRelContainedInSpatialStructure()
+            Visitor.visitIfcObjectDefinition
+            end of Visitor.visitIfcObjectDefinition
+            PLACEMENT poped
+          end of Visitor.visitIfcSpatialStructureElement()
+        getRelatedObjects() item: IfcBuildingStorey
+        Visitor.visitIfcSpatialStructureElement()
           PLACEMENT pushed : 124, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
             PRODUCT: 126, GUID=1E4TBrWx93mRpLzhDjqaRU, NAME=Level 1, Representation: 0
@@ -150,7 +332,7 @@ Visitor.visitIfcSpatialStructureElement()
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 136, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11856.4, jO=-7677.66, kO=0
 
-                PRODUCT: 168, GUID=2JuXRljVH1lAVD85_X3iHh, NAME=Basic Wall:Generic - 200mm - Filled:199381, Representation: 0x16d3fe0
+                PRODUCT: 168, GUID=2JuXRljVH1lAVD85_X3iHh, NAME=Basic Wall:Generic - 200mm - Filled:199381, Representation: 0x1d13b10
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
@@ -172,7 +354,7 @@ Visitor.visitIfcSpatialStructureElement()
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 216, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11756.4, jO=12422.3, kO=0
 
-                PRODUCT: 237, GUID=2JuXRljVH1lAVD85_X3iM3, NAME=Basic Wall:Generic - 200mm - Filled:199485, Representation: 0x16bafb0
+                PRODUCT: 237, GUID=2JuXRljVH1lAVD85_X3iM3, NAME=Basic Wall:Generic - 200mm - Filled:199485, Representation: 0x1d55790
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
@@ -194,7 +376,7 @@ Visitor.visitIfcSpatialStructureElement()
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 250, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1856.36, jO=12322.3, kO=0
 
-                PRODUCT: 271, GUID=2JuXRljVH1lAVD85_X3iKy, NAME=Basic Wall:Generic - 200mm - Filled:199554, Representation: 0x16ed820
+                PRODUCT: 271, GUID=2JuXRljVH1lAVD85_X3iKy, NAME=Basic Wall:Generic - 200mm - Filled:199554, Representation: 0x1d4ebc0
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
@@ -210,13 +392,328 @@ Visitor.visitIfcSpatialStructureElement()
                       PLACEMENT poped
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
+                Visitor.visitIfcOpeningElement()
+                  PLACEMENT pushed : 3249, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=6597, jO=-100, kO=1554.21
+
+                    Visitor.visitIfcProductRepresentation
+                      representationtype: SweptSolid
+                      Visitor.visitIfcRepresentation
+                        key=3242, type=IfcExtrudedAreaSolid
+                        PLACEMENT pushed : 3241, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
+
+                          Visitor.visitIfcExtrudedAreaSolid: depth=200, i=0, j=0, k=1, xdim=610, ydim406
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+                          PLACEMENT poped
+                        end of visitIfcRepresentation
+                      end of visitIfcProductRepresentation
+                    PLACEMENT poped
+                  end of Visitor.visitIfcOpeningElement()
+                Visitor.visitIfcOpeningElement()
+                  PLACEMENT pushed : 3223, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=7877, jO=-100, kO=3030.92
+
+                    Visitor.visitIfcProductRepresentation
+                      representationtype: SweptSolid
+                      Visitor.visitIfcRepresentation
+                        key=3216, type=IfcExtrudedAreaSolid
+                        PLACEMENT pushed : 3215, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
+
+                          Visitor.visitIfcExtrudedAreaSolid: depth=200, i=0, j=0, k=1, xdim=610, ydim406
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+                          PLACEMENT poped
+                        end of visitIfcRepresentation
+                      end of visitIfcProductRepresentation
+                    PLACEMENT poped
+                  end of Visitor.visitIfcOpeningElement()
+                Visitor.visitIfcOpeningElement()
+                  PLACEMENT pushed : 3197, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=9577, jO=-100, kO=1915.7
+
+                    Visitor.visitIfcProductRepresentation
+                      representationtype: SweptSolid
+                      Visitor.visitIfcRepresentation
+                        key=3190, type=IfcExtrudedAreaSolid
+                        PLACEMENT pushed : 3189, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
+
+                          Visitor.visitIfcExtrudedAreaSolid: depth=200, i=0, j=0, k=1, xdim=610, ydim406
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+                          PLACEMENT poped
+                        end of visitIfcRepresentation
+                      end of visitIfcProductRepresentation
+                    PLACEMENT poped
+                  end of Visitor.visitIfcOpeningElement()
+                Visitor.visitIfcOpeningElement()
+                  PLACEMENT pushed : 3171, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=11677, jO=-100, kO=3051.43
+
+                    Visitor.visitIfcProductRepresentation
+                      representationtype: SweptSolid
+                      Visitor.visitIfcRepresentation
+                        key=3164, type=IfcExtrudedAreaSolid
+                        PLACEMENT pushed : 3163, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
+
+                          Visitor.visitIfcExtrudedAreaSolid: depth=200, i=0, j=0, k=1, xdim=610, ydim406
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+                          PLACEMENT poped
+                        end of visitIfcRepresentation
+                      end of visitIfcProductRepresentation
+                    PLACEMENT poped
+                  end of Visitor.visitIfcOpeningElement()
+                Visitor.visitIfcOpeningElement()
+                  PLACEMENT pushed : 3145, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=13677, jO=-100, kO=2115.67
+
+                    Visitor.visitIfcProductRepresentation
+                      representationtype: SweptSolid
+                      Visitor.visitIfcRepresentation
+                        key=3138, type=IfcExtrudedAreaSolid
+                        PLACEMENT pushed : 3137, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
+
+                          Visitor.visitIfcExtrudedAreaSolid: depth=200, i=0, j=0, k=1, xdim=610, ydim406
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+                          PLACEMENT poped
+                        end of visitIfcRepresentation
+                      end of visitIfcProductRepresentation
+                    PLACEMENT poped
+                  end of Visitor.visitIfcOpeningElement()
+                Visitor.visitIfcOpeningElement()
+                  PLACEMENT pushed : 3119, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=16137, jO=-100, kO=2797.04
+
+                    Visitor.visitIfcProductRepresentation
+                      representationtype: SweptSolid
+                      Visitor.visitIfcRepresentation
+                        key=3112, type=IfcExtrudedAreaSolid
+                        PLACEMENT pushed : 3111, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
+
+                          Visitor.visitIfcExtrudedAreaSolid: depth=200, i=0, j=0, k=1, xdim=610, ydim406
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+                          PLACEMENT poped
+                        end of visitIfcRepresentation
+                      end of visitIfcProductRepresentation
+                    PLACEMENT poped
+                  end of Visitor.visitIfcOpeningElement()
+                Visitor.visitIfcOpeningElement()
+                  PLACEMENT pushed : 3089, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=4042.5, jO=-100, kO=0
+
+                    Visitor.visitIfcProductRepresentation
+                      representationtype: SweptSolid
+                      Visitor.visitIfcRepresentation
+                        key=3082, type=IfcExtrudedAreaSolid
+                        PLACEMENT pushed : 3081, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
+
+                          Visitor.visitIfcExtrudedAreaSolid: depth=200, i=0, j=0, k=1, xdim=915, ydim2134
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A face cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+A point cannot be placed outside a product!
+                          PLACEMENT poped
+                        end of visitIfcRepresentation
+                      end of visitIfcProductRepresentation
+                    PLACEMENT poped
+                  end of Visitor.visitIfcOpeningElement()
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 284, iEX=-1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1956.36, jO=-7577.66, kO=0
 
-                PRODUCT: 305, GUID=2JuXRljVH1lAVD85_X3iKL, NAME=Basic Wall:Generic - 200mm - Filled:199595, Representation: 0x16ee460
+                PRODUCT: 305, GUID=2JuXRljVH1lAVD85_X3iKL, NAME=Basic Wall:Generic - 200mm - Filled:199595, Representation: 0x1d3d0a0
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
@@ -238,7 +735,7 @@ Visitor.visitIfcSpatialStructureElement()
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 318, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-2006.36, jO=-7577.66, kO=-3500
 
-                PRODUCT: 345, GUID=005Zuk9110axXeKE0kulOg, NAME=Basic Wall:Foundation - 300mm Concrete:200122, Representation: 0x16eeff0
+                PRODUCT: 345, GUID=005Zuk9110axXeKE0kulOg, NAME=Basic Wall:Foundation - 300mm Concrete:200122, Representation: 0x1d57770
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
@@ -260,7 +757,7 @@ Visitor.visitIfcSpatialStructureElement()
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 375, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=11543.6, jO=-7427.66, kO=-3500
 
-                PRODUCT: 396, GUID=005Zuk9110axXeKE0kulMy, NAME=Basic Wall:Foundation - 300mm Concrete:200236, Representation: 0x16c7f10
+                PRODUCT: 396, GUID=005Zuk9110axXeKE0kulMy, NAME=Basic Wall:Foundation - 300mm Concrete:200236, Representation: 0x1d2e860
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
@@ -282,61 +779,53 @@ Visitor.visitIfcSpatialStructureElement()
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 409, iEX=-1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=11393.6, jO=2522.34, kO=-3500
 
-                PRODUCT: 430, GUID=005Zuk9110axXeKE0kulKY, NAME=Basic Wall:Foundation - 300mm Concrete:200370, Representation: 0x16f0750
+                PRODUCT: 447, GUID=005Zuk9110axXeKE0kulKY, NAME=Basic Wall:Foundation - 300mm Concrete:200370, Representation: 0x1d2de80
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
                     key=413, type=IfcPolyline
                     end of visitIfcRepresentation
-                  representationtype: SweptSolid
+                  representationtype: Clipping
                   Visitor.visitIfcRepresentation
-                    key=422, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 421, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
-
-                      Visitor.visitIfcExtrudedAreaSolid: depth=3500, i=0, j=0, k=1, xdim=13400, ydim300
-                      PLACEMENT poped
+                    key=439, type=IfcBooleanClippingResult
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
-              PLACEMENT pushed : 443, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1856.36, jO=2372.34, kO=-3500
+              PLACEMENT pushed : 461, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1856.36, jO=2372.34, kO=-3500
 
-                PRODUCT: 464, GUID=005Zuk9110axXeKE0kulLc, NAME=Basic Wall:Foundation - 300mm Concrete:200438, Representation: 0x16f1000
+                PRODUCT: 499, GUID=005Zuk9110axXeKE0kulLc, NAME=Basic Wall:Foundation - 300mm Concrete:200438, Representation: 0x1df72b0
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
-                    key=447, type=IfcPolyline
+                    key=465, type=IfcPolyline
                     end of visitIfcRepresentation
-                  representationtype: SweptSolid
+                  representationtype: Clipping
                   Visitor.visitIfcRepresentation
-                    key=456, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 455, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
-
-                      Visitor.visitIfcExtrudedAreaSolid: depth=3500, i=0, j=0, k=1, xdim=9800, ydim300
-                      PLACEMENT poped
+                    key=491, type=IfcBooleanClippingResult
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
-              PLACEMENT pushed : 477, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11756.4, jO=-1537.66, kO=0
+              PLACEMENT pushed : 512, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11756.4, jO=-1537.66, kO=0
 
-                PRODUCT: 504, GUID=1JmC8d7t19Ve0s7aURIkgZ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201319, Representation: 0x16f1b90
+                PRODUCT: 539, GUID=1JmC8d7t19Ve0s7aURIkgZ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201319, Representation: 0x1df7e40
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
-                    key=481, type=IfcPolyline
+                    key=516, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
-                    key=490, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 489, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                    key=525, type=IfcExtrudedAreaSolid
+                    PLACEMENT pushed : 524, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
                       Visitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=2900, ydim80
                       PLACEMENT poped
@@ -346,19 +835,19 @@ Visitor.visitIfcSpatialStructureElement()
                 end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
-              PLACEMENT pushed : 556, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-8896.36, jO=-1497.66, kO=0
+              PLACEMENT pushed : 591, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-8896.36, jO=-1497.66, kO=0
 
-                PRODUCT: 577, GUID=1JmC8d7t19Ve0s7aURIkl9, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201485, Representation: 0x16d63b0
+                PRODUCT: 612, GUID=1JmC8d7t19Ve0s7aURIkl9, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201485, Representation: 0x1d3f470
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
-                    key=560, type=IfcPolyline
+                    key=595, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
-                    key=569, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 568, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                    key=604, type=IfcExtrudedAreaSolid
+                    PLACEMENT pushed : 603, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
                       Visitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=3280, ydim80
                       PLACEMENT poped
@@ -368,19 +857,19 @@ Visitor.visitIfcSpatialStructureElement()
                 end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
-              PLACEMENT pushed : 590, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-8856.36, jO=1742.34, kO=0
+              PLACEMENT pushed : 625, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-8856.36, jO=1742.34, kO=0
 
-                PRODUCT: 611, GUID=1JmC8d7t19Ve0s7aURIkje, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201644, Representation: 0x16f2f80
+                PRODUCT: 646, GUID=1JmC8d7t19Ve0s7aURIkje, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201644, Representation: 0x1df9100
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
-                    key=594, type=IfcPolyline
+                    key=629, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
-                    key=603, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 602, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                    key=638, type=IfcExtrudedAreaSolid
+                    PLACEMENT pushed : 637, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
                       Visitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=3380, ydim80
                       PLACEMENT poped
@@ -390,19 +879,19 @@ Visitor.visitIfcSpatialStructureElement()
                 end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
-              PLACEMENT pushed : 624, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-5516.36, jO=1702.34, kO=0
+              PLACEMENT pushed : 659, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-5516.36, jO=1702.34, kO=0
 
-                PRODUCT: 645, GUID=1JmC8d7t19Ve0s7aURIkiJ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201687, Representation: 0x16f3af0
+                PRODUCT: 680, GUID=1JmC8d7t19Ve0s7aURIkiJ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201687, Representation: 0x1df9d60
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
-                    key=628, type=IfcPolyline
+                    key=663, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
-                    key=637, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 636, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                    key=672, type=IfcExtrudedAreaSolid
+                    PLACEMENT pushed : 671, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
                       Visitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=2200, ydim80
                       PLACEMENT poped
@@ -412,22 +901,94 @@ Visitor.visitIfcSpatialStructureElement()
                 end of Visitor.visitIfcObjectDefinition
                 PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
-              PLACEMENT pushed : 658, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-5476.36, jO=-457.655, kO=0
+              PLACEMENT pushed : 693, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-5476.36, jO=-457.655, kO=0
 
-                PRODUCT: 679, GUID=1JmC8d7t19Ve0s7aURIkpV, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201755, Representation: 0x16f4750
+                PRODUCT: 714, GUID=1JmC8d7t19Ve0s7aURIkpV, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201755, Representation: 0x1dfa9c0
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
-                    key=662, type=IfcPolyline
+                    key=697, type=IfcPolyline
                     end of visitIfcRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
-                    key=671, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 670, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                    key=706, type=IfcExtrudedAreaSolid
+                    PLACEMENT pushed : 705, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
                       Visitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=3520, ydim80
                       PLACEMENT poped
+                    end of visitIfcRepresentation
+                  end of visitIfcProductRepresentation
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
+                PLACEMENT poped
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcSlab
+              PLACEMENT pushed : 727, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+
+                PRODUCT: 765, GUID=3Pfsc0h6P61v2EycUD0gyu, NAME=Floor:Wood Joist 220mm - Wood Finish:201909, Representation: 0x1dfb7a0
+
+                Visitor.visitIfcProductRepresentation
+                  representationtype: SweptSolid
+                  Visitor.visitIfcRepresentation
+                    key=751, type=IfcExtrudedAreaSolid
+                    PLACEMENT pushed : 750, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=-1, iO=-7031.36, jO=3047.34, kO=0
+
+                      PLACEMENT poped
+                    end of visitIfcRepresentation
+                  end of visitIfcProductRepresentation
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
+                PLACEMENT poped
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcCovering
+              PLACEMENT pushed : 924, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+
+                PRODUCT: 964, GUID=3Pfsc0h6P61v2EycUD0gmv, NAME=Compound Ceiling:600 x 600mm grid:202676, Representation: 0x1d54280
+
+                Visitor.visitIfcProductRepresentation
+                  representationtype: SweptSolid
+                  Visitor.visitIfcRepresentation
+                    key=950, type=IfcExtrudedAreaSolid
+                    PLACEMENT pushed : 949, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-6858.58, jO=-1799.88, kO=2600
+
+                      PLACEMENT poped
+                    end of visitIfcRepresentation
+                  end of visitIfcProductRepresentation
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
+                PLACEMENT poped
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcCovering
+              PLACEMENT pushed : 1009, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+
+                PRODUCT: 1041, GUID=3Pfsc0h6P61v2EycUD0g8r, NAME=Compound Ceiling:600 x 600mm grid:203192, Representation: 0x1d58440
+
+                Visitor.visitIfcProductRepresentation
+                  representationtype: SweptSolid
+                  Visitor.visitIfcRepresentation
+                    key=1033, type=IfcExtrudedAreaSolid
+                    PLACEMENT pushed : 1032, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-7031.36, jO=-1962.66, kO=2600
+
+                      PLACEMENT poped
+                    end of visitIfcRepresentation
+                  end of visitIfcProductRepresentation
+                Visitor.visitIfcObjectDefinition
+                end of Visitor.visitIfcObjectDefinition
+                PLACEMENT poped
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcDoor
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWindow
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWindow
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWindow
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWindow
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWindow
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWindow
+              Visitor.visitIfcRelContainedInSpatialStructure() item: IfcFurnishingElement
+              PLACEMENT pushed : 2824, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11420.9, jO=10660.3, kO=0
+
+                PRODUCT: 2826, GUID=3Pfsc0h6P61v2EycUD0gSW, NAME=M_Desk:1525 x 762mm Student:203949, Representation: 0x1e00320
+
+                Visitor.visitIfcProductRepresentation
+                  representationtype: MappedRepresentation
+                  Visitor.visitIfcRepresentation
+                    key=2816, type=IfcMappedItem
                     end of visitIfcRepresentation
                   end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
@@ -453,6 +1014,8 @@ end of Visitor.visitIfcObjectDefinition
 ********* PRODUCTS:
 id:1E4TBrWx93mRpLzhEIBOeZ, name: Default, hierarchy: 1, ifcnameIfcSite
 id:1E4TBrWx93mRpLzhEIBOeW, name: , hierarchy: 2, ifcnameIfcBuilding
+id:1E4TBrWx93mRpLzhDjqMI4, name: Level 3, hierarchy: 3, ifcnameIfcBuildingStorey
+id:3Pfsc0h6P61v2EycUD0gqN, name: Floor:Steel Bar Joist - VCT on LW Concrete:202394, hierarchy: 4, ifcnameIfcSlab
 id:1E4TBrWx93mRpLzhDjqaRU, name: Level 1, hierarchy: 3, ifcnameIfcBuildingStorey
 id:2JuXRljVH1lAVD85_X3iHh, name: Basic Wall:Generic - 200mm - Filled:199381, hierarchy: 4, ifcnameIfcWallStandardCase
 id:2JuXRljVH1lAVD85_X3iM3, name: Basic Wall:Generic - 200mm - Filled:199485, hierarchy: 4, ifcnameIfcWallStandardCase
@@ -467,6 +1030,10 @@ id:1JmC8d7t19Ve0s7aURIkl9, name: Basic Wall:Interior - 79mm Partition (1-hr):201
 id:1JmC8d7t19Ve0s7aURIkje, name: Basic Wall:Interior - 79mm Partition (1-hr):201644, hierarchy: 4, ifcnameIfcWallStandardCase
 id:1JmC8d7t19Ve0s7aURIkiJ, name: Basic Wall:Interior - 79mm Partition (1-hr):201687, hierarchy: 4, ifcnameIfcWallStandardCase
 id:1JmC8d7t19Ve0s7aURIkpV, name: Basic Wall:Interior - 79mm Partition (1-hr):201755, hierarchy: 4, ifcnameIfcWallStandardCase
+id:3Pfsc0h6P61v2EycUD0gyu, name: Floor:Wood Joist 220mm - Wood Finish:201909, hierarchy: 4, ifcnameIfcSlab
+id:3Pfsc0h6P61v2EycUD0gmv, name: Compound Ceiling:600 x 600mm grid:202676, hierarchy: 4, ifcnameIfcCovering
+id:3Pfsc0h6P61v2EycUD0g8r, name: Compound Ceiling:600 x 600mm grid:203192, hierarchy: 4, ifcnameIfcCovering
+id:3Pfsc0h6P61v2EycUD0gSW, name: M_Desk:1525 x 762mm Student:203949, hierarchy: 4, ifcnameIfcFurnishingElement
 
 
 ********* MATERIALS:
@@ -481,35 +1048,35 @@ name: Concrete, Cast-in-Place gray, material key=348
 material assignment key: 0Ktsech6bAFh3WEiws1ntI #0
 material assignment key: 1HBVb1NdfA6PUA6LzWtJ1R #0
 material assignment key: 1JmC8d7t19Ve0s7aURIkgZ #5
-name: Gypsum Wall Board, material key=507
-name: Gypsum Wall Board, material key=507
-name: Metal Stud Layer, material key=517
-name: Gypsum Wall Board, material key=507
-name: Gypsum Wall Board, material key=507
+name: Gypsum Wall Board, material key=542
+name: Gypsum Wall Board, material key=542
+name: Metal Stud Layer, material key=552
+name: Gypsum Wall Board, material key=542
+name: Gypsum Wall Board, material key=542
 material assignment key: 1JmC8d7t19Ve0s7aURIkiJ #5
-name: Gypsum Wall Board, material key=507
-name: Gypsum Wall Board, material key=507
-name: Metal Stud Layer, material key=517
-name: Gypsum Wall Board, material key=507
-name: Gypsum Wall Board, material key=507
+name: Gypsum Wall Board, material key=542
+name: Gypsum Wall Board, material key=542
+name: Metal Stud Layer, material key=552
+name: Gypsum Wall Board, material key=542
+name: Gypsum Wall Board, material key=542
 material assignment key: 1JmC8d7t19Ve0s7aURIkje #5
-name: Gypsum Wall Board, material key=507
-name: Gypsum Wall Board, material key=507
-name: Metal Stud Layer, material key=517
-name: Gypsum Wall Board, material key=507
-name: Gypsum Wall Board, material key=507
+name: Gypsum Wall Board, material key=542
+name: Gypsum Wall Board, material key=542
+name: Metal Stud Layer, material key=552
+name: Gypsum Wall Board, material key=542
+name: Gypsum Wall Board, material key=542
 material assignment key: 1JmC8d7t19Ve0s7aURIkl9 #5
-name: Gypsum Wall Board, material key=507
-name: Gypsum Wall Board, material key=507
-name: Metal Stud Layer, material key=517
-name: Gypsum Wall Board, material key=507
-name: Gypsum Wall Board, material key=507
+name: Gypsum Wall Board, material key=542
+name: Gypsum Wall Board, material key=542
+name: Metal Stud Layer, material key=552
+name: Gypsum Wall Board, material key=542
+name: Gypsum Wall Board, material key=542
 material assignment key: 1JmC8d7t19Ve0s7aURIkpV #5
-name: Gypsum Wall Board, material key=507
-name: Gypsum Wall Board, material key=507
-name: Metal Stud Layer, material key=517
-name: Gypsum Wall Board, material key=507
-name: Gypsum Wall Board, material key=507
+name: Gypsum Wall Board, material key=542
+name: Gypsum Wall Board, material key=542
+name: Metal Stud Layer, material key=552
+name: Gypsum Wall Board, material key=542
+name: Gypsum Wall Board, material key=542
 material assignment key: 2JF5JXaxWHqu3u0C1FZlqm #0
 material assignment key: 2JuXRljVH1lAVD85_X3iHh #1
 name: Brick, Common, material key=177
@@ -519,3 +1086,29 @@ material assignment key: 2JuXRljVH1lAVD85_X3iKy #1
 name: Brick, Common, material key=177
 material assignment key: 2JuXRljVH1lAVD85_X3iM3 #1
 name: Brick, Common, material key=177
+material assignment key: 3Pfsc0h6P61v2EycUD0g12 #0
+material assignment key: 3Pfsc0h6P61v2EycUD0g1n #0
+material assignment key: 3Pfsc0h6P61v2EycUD0g5w #0
+material assignment key: 3Pfsc0h6P61v2EycUD0g6O #0
+material assignment key: 3Pfsc0h6P61v2EycUD0g8r #2
+name: Default, material key=969
+name: Ceiling Tile 600 x 600, material key=983
+material assignment key: 3Pfsc0h6P61v2EycUD0g9A #0
+material assignment key: 3Pfsc0h6P61v2EycUD0gSW #0
+material assignment key: 3Pfsc0h6P61v2EycUD0gUb #0
+material assignment key: 3Pfsc0h6P61v2EycUD0gV4 #0
+material assignment key: 3Pfsc0h6P61v2EycUD0gmv #2
+name: Default, material key=969
+name: Ceiling Tile 600 x 600, material key=983
+material assignment key: 3Pfsc0h6P61v2EycUD0gqN #4
+name: Vinyl Composition Tile, material key=853
+name: Concrete, Lightweight, material key=867
+name: Metal Deck, material key=881
+name: Structure, Steel Bar Joist Layer, material key=895
+material assignment key: 3Pfsc0h6P61v2EycUD0gyu #3
+name: Oak Flooring, material key=768
+name: Plywood, Sheathing, material key=782
+name: Structure, Wood Joist/Rafter Layer, material key=796
+material assignment key: 3Pfsc0h6P61v2EydAD0g7i #0
+material assignment key: 3Pfsc0h6P61v2EydAD0g9Y #0
+material assignment key: 3q_0WUCv5FdPtljr0GnHDd #0

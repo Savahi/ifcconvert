@@ -1,0 +1,14 @@
+Code	Name	Type	Unit
+177	Brick, Common		
+348	Concrete, Cast-in-Place gray		
+542	Gypsum Wall Board		
+552	Metal Stud Layer		
+768	Oak Flooring		
+782	Plywood, Sheathing		
+796	Structure, Wood Joist/Rafter Layer		
+853	Vinyl Composition Tile		
+867	Concrete, Lightweight		
+881	Metal Deck		
+895	Structure, Steel Bar Joist Layer		
+969	Default		
+983	Ceiling Tile 600 x 600		

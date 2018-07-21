@@ -41,7 +41,7 @@ public:
         if( !this->done ) {  
             size_t progressPct = int( double(progress)/double(this->max)*100.0 + 0.5 );
             std::cerr << "\r" << progressPct << "%...   ";
-            if( progressPct >= 100 ) { std::cerr << "\r" << "Done!     " << std::endl; this->done = true; }
+            if( progressPct >= 100 ) { std::cerr << "\r" << "Done importing!     " << std::endl; this->done = true; }
         }
     }
     virtual bool stop() const {return false;}
@@ -121,10 +121,10 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    std::cout << "Reading the model..." << std::endl;
+    std::cout << "Getting Express data set..." << std::endl;
 
     // ** Getting the model
-    ifc2x3::ExpressDataSet * expressDataSet = dynamic_cast<ifc2x3::ExpressDataSet*>(reader.getExpressDataSet());
+    ifc2x3::ExpressDataSet* expressDataSet = dynamic_cast<ifc2x3::ExpressDataSet*>(reader.getExpressDataSet());
 
     if( expressDataSet == NULL ) {
         std::cout << "There is no ExpressDataSet. Exiting...\n" << std::endl;
@@ -132,6 +132,9 @@ int main(int argc, char **argv)
     }
 
     Builder builder;
+
+    std::cout << "\n**** Reading (measure) units...\n";
+    builder.readUnits( expressDataSet );
     
     Visitor visitor( &builder );
 
@@ -245,7 +248,7 @@ int main(int argc, char **argv)
     }
     fsMat.close();
 
-    // Opening the 'assingment' (or 'ass') file...
+    // Opening the 'oper_mat' file...
     std::ofstream fsOperMat;
     fsOperMat.open( (configParameters[cpOutputPathKey] + std::string(cpFileOperMat)).c_str() );    
     if( fsOperMat.fail() ) {
