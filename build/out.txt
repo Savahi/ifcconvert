@@ -302,26 +302,28 @@ Visitor.visitIfcSpatialStructureElement()
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcSlab
               PLACEMENT pushed : 827, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                PRODUCT: 850, GUID=3Pfsc0h6P61v2EycUD0gqN, NAME=Floor:Steel Bar Joist - VCT on LW Concrete:202394, Representation: 0x1d4d6b0
+                PRODUCT: 850, GUID=3Pfsc0h6P61v2EycUD0gqN, NAME=Floor:Steel Bar Joist - VCT on LW Concrete:202394, Representation: 0x19536b0
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
                     key=836, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 835, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=-1, iO=4843.64, jO=-2527.66, kO=0
+                    visitIfcExtrudedAreaSolid
+                      PLACEMENT pushed : 835, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=-1, iO=4843.64, jO=-2527.66, kO=0
 
-                      Visitor.visitIfcExtrudedAreaSolid: depth=510, i=0, j=0, k=1, xdim=9800, ydim13100
+                        IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=510, i=0, j=0, k=1, xdim=9800, ydim13100
                       PLACEMENT poped
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    end of visitIfcExtrudedAreaSolid
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
-              end of Visitor.visitIfcRelContainedInSpatialStructure()
+              PLACEMENT poped
+            end of Visitor.visitIfcRelContainedInSpatialStructure()
             Visitor.visitIfcObjectDefinition
             end of Visitor.visitIfcObjectDefinition
-            PLACEMENT poped
-          end of Visitor.visitIfcSpatialStructureElement()
+          PLACEMENT poped
+        end of Visitor.visitIfcSpatialStructureElement()
         getRelatedObjects() item: IfcBuildingStorey
         Visitor.visitIfcSpatialStructureElement()
           PLACEMENT pushed : 124, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
@@ -332,66 +334,72 @@ Visitor.visitIfcSpatialStructureElement()
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 136, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11856.4, jO=-7677.66, kO=0
 
-                PRODUCT: 168, GUID=2JuXRljVH1lAVD85_X3iHh, NAME=Basic Wall:Generic - 200mm - Filled:199381, Representation: 0x1d13b10
+                PRODUCT: 168, GUID=2JuXRljVH1lAVD85_X3iHh, NAME=Basic Wall:Generic - 200mm - Filled:199381, Representation: 0x1919b10
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
                     key=141, type=IfcPolyline
-                    end of visitIfcRepresentation
+                  end of visitIfcRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
                     key=151, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 150, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                    visitIfcExtrudedAreaSolid
+                      PLACEMENT pushed : 150, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      Visitor.visitIfcExtrudedAreaSolid: depth=6500, i=0, j=0, k=1, xdim=20200, ydim200
+                        IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=6500, i=0, j=0, k=1, xdim=20200, ydim200
                       PLACEMENT poped
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    end of visitIfcExtrudedAreaSolid
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
+              PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 216, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11756.4, jO=12422.3, kO=0
 
-                PRODUCT: 237, GUID=2JuXRljVH1lAVD85_X3iM3, NAME=Basic Wall:Generic - 200mm - Filled:199485, Representation: 0x1d55790
+                PRODUCT: 237, GUID=2JuXRljVH1lAVD85_X3iM3, NAME=Basic Wall:Generic - 200mm - Filled:199485, Representation: 0x195b790
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
                     key=220, type=IfcPolyline
-                    end of visitIfcRepresentation
+                  end of visitIfcRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
                     key=229, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 228, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                    visitIfcExtrudedAreaSolid
+                      PLACEMENT pushed : 228, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      Visitor.visitIfcExtrudedAreaSolid: depth=8000, i=0, j=0, k=1, xdim=10000, ydim200
+                        IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=8000, i=0, j=0, k=1, xdim=10000, ydim200
                       PLACEMENT poped
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    end of visitIfcExtrudedAreaSolid
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
+              PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 250, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1856.36, jO=12322.3, kO=0
 
-                PRODUCT: 271, GUID=2JuXRljVH1lAVD85_X3iKy, NAME=Basic Wall:Generic - 200mm - Filled:199554, Representation: 0x1d4ebc0
+                PRODUCT: 271, GUID=2JuXRljVH1lAVD85_X3iKy, NAME=Basic Wall:Generic - 200mm - Filled:199554, Representation: 0x1954bc0
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
                     key=254, type=IfcPolyline
-                    end of visitIfcRepresentation
+                  end of visitIfcRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
                     key=263, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 262, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                    visitIfcExtrudedAreaSolid
+                      PLACEMENT pushed : 262, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      Visitor.visitIfcExtrudedAreaSolid: depth=5000, i=0, j=0, k=1, xdim=20000, ydim200
+                        IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=5000, i=0, j=0, k=1, xdim=20000, ydim200
                       PLACEMENT poped
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    end of visitIfcExtrudedAreaSolid
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcOpeningElement()
                   PLACEMENT pushed : 3249, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=6597, jO=-100, kO=1554.21
 
@@ -399,9 +407,10 @@ Visitor.visitIfcSpatialStructureElement()
                       representationtype: SweptSolid
                       Visitor.visitIfcRepresentation
                         key=3242, type=IfcExtrudedAreaSolid
-                        PLACEMENT pushed : 3241, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
+                        visitIfcExtrudedAreaSolid
+                          PLACEMENT pushed : 3241, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
 
-                          Visitor.visitIfcExtrudedAreaSolid: depth=200, i=0, j=0, k=1, xdim=610, ydim406
+                            IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=200, i=0, j=0, k=1, xdim=610, ydim406
 A face cannot be placed outside a product!
 A point cannot be placed outside a product!
 A point cannot be placed outside a product!
@@ -433,10 +442,11 @@ A point cannot be placed outside a product!
 A point cannot be placed outside a product!
 A point cannot be placed outside a product!
                           PLACEMENT poped
-                        end of visitIfcRepresentation
-                      end of visitIfcProductRepresentation
-                    PLACEMENT poped
-                  end of Visitor.visitIfcOpeningElement()
+                        end of visitIfcExtrudedAreaSolid
+                      end of visitIfcRepresentation
+                    end of visitIfcProductRepresentation
+                  PLACEMENT poped
+                end of Visitor.visitIfcOpeningElement()
                 Visitor.visitIfcOpeningElement()
                   PLACEMENT pushed : 3223, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=7877, jO=-100, kO=3030.92
 
@@ -444,9 +454,10 @@ A point cannot be placed outside a product!
                       representationtype: SweptSolid
                       Visitor.visitIfcRepresentation
                         key=3216, type=IfcExtrudedAreaSolid
-                        PLACEMENT pushed : 3215, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
+                        visitIfcExtrudedAreaSolid
+                          PLACEMENT pushed : 3215, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
 
-                          Visitor.visitIfcExtrudedAreaSolid: depth=200, i=0, j=0, k=1, xdim=610, ydim406
+                            IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=200, i=0, j=0, k=1, xdim=610, ydim406
 A face cannot be placed outside a product!
 A point cannot be placed outside a product!
 A point cannot be placed outside a product!
@@ -478,10 +489,11 @@ A point cannot be placed outside a product!
 A point cannot be placed outside a product!
 A point cannot be placed outside a product!
                           PLACEMENT poped
-                        end of visitIfcRepresentation
-                      end of visitIfcProductRepresentation
-                    PLACEMENT poped
-                  end of Visitor.visitIfcOpeningElement()
+                        end of visitIfcExtrudedAreaSolid
+                      end of visitIfcRepresentation
+                    end of visitIfcProductRepresentation
+                  PLACEMENT poped
+                end of Visitor.visitIfcOpeningElement()
                 Visitor.visitIfcOpeningElement()
                   PLACEMENT pushed : 3197, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=9577, jO=-100, kO=1915.7
 
@@ -489,9 +501,10 @@ A point cannot be placed outside a product!
                       representationtype: SweptSolid
                       Visitor.visitIfcRepresentation
                         key=3190, type=IfcExtrudedAreaSolid
-                        PLACEMENT pushed : 3189, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
+                        visitIfcExtrudedAreaSolid
+                          PLACEMENT pushed : 3189, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
 
-                          Visitor.visitIfcExtrudedAreaSolid: depth=200, i=0, j=0, k=1, xdim=610, ydim406
+                            IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=200, i=0, j=0, k=1, xdim=610, ydim406
 A face cannot be placed outside a product!
 A point cannot be placed outside a product!
 A point cannot be placed outside a product!
@@ -523,10 +536,11 @@ A point cannot be placed outside a product!
 A point cannot be placed outside a product!
 A point cannot be placed outside a product!
                           PLACEMENT poped
-                        end of visitIfcRepresentation
-                      end of visitIfcProductRepresentation
-                    PLACEMENT poped
-                  end of Visitor.visitIfcOpeningElement()
+                        end of visitIfcExtrudedAreaSolid
+                      end of visitIfcRepresentation
+                    end of visitIfcProductRepresentation
+                  PLACEMENT poped
+                end of Visitor.visitIfcOpeningElement()
                 Visitor.visitIfcOpeningElement()
                   PLACEMENT pushed : 3171, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=11677, jO=-100, kO=3051.43
 
@@ -534,9 +548,10 @@ A point cannot be placed outside a product!
                       representationtype: SweptSolid
                       Visitor.visitIfcRepresentation
                         key=3164, type=IfcExtrudedAreaSolid
-                        PLACEMENT pushed : 3163, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
+                        visitIfcExtrudedAreaSolid
+                          PLACEMENT pushed : 3163, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
 
-                          Visitor.visitIfcExtrudedAreaSolid: depth=200, i=0, j=0, k=1, xdim=610, ydim406
+                            IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=200, i=0, j=0, k=1, xdim=610, ydim406
 A face cannot be placed outside a product!
 A point cannot be placed outside a product!
 A point cannot be placed outside a product!
@@ -568,10 +583,11 @@ A point cannot be placed outside a product!
 A point cannot be placed outside a product!
 A point cannot be placed outside a product!
                           PLACEMENT poped
-                        end of visitIfcRepresentation
-                      end of visitIfcProductRepresentation
-                    PLACEMENT poped
-                  end of Visitor.visitIfcOpeningElement()
+                        end of visitIfcExtrudedAreaSolid
+                      end of visitIfcRepresentation
+                    end of visitIfcProductRepresentation
+                  PLACEMENT poped
+                end of Visitor.visitIfcOpeningElement()
                 Visitor.visitIfcOpeningElement()
                   PLACEMENT pushed : 3145, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=13677, jO=-100, kO=2115.67
 
@@ -579,9 +595,10 @@ A point cannot be placed outside a product!
                       representationtype: SweptSolid
                       Visitor.visitIfcRepresentation
                         key=3138, type=IfcExtrudedAreaSolid
-                        PLACEMENT pushed : 3137, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
+                        visitIfcExtrudedAreaSolid
+                          PLACEMENT pushed : 3137, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
 
-                          Visitor.visitIfcExtrudedAreaSolid: depth=200, i=0, j=0, k=1, xdim=610, ydim406
+                            IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=200, i=0, j=0, k=1, xdim=610, ydim406
 A face cannot be placed outside a product!
 A point cannot be placed outside a product!
 A point cannot be placed outside a product!
@@ -613,10 +630,11 @@ A point cannot be placed outside a product!
 A point cannot be placed outside a product!
 A point cannot be placed outside a product!
                           PLACEMENT poped
-                        end of visitIfcRepresentation
-                      end of visitIfcProductRepresentation
-                    PLACEMENT poped
-                  end of Visitor.visitIfcOpeningElement()
+                        end of visitIfcExtrudedAreaSolid
+                      end of visitIfcRepresentation
+                    end of visitIfcProductRepresentation
+                  PLACEMENT poped
+                end of Visitor.visitIfcOpeningElement()
                 Visitor.visitIfcOpeningElement()
                   PLACEMENT pushed : 3119, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=16137, jO=-100, kO=2797.04
 
@@ -624,9 +642,10 @@ A point cannot be placed outside a product!
                       representationtype: SweptSolid
                       Visitor.visitIfcRepresentation
                         key=3112, type=IfcExtrudedAreaSolid
-                        PLACEMENT pushed : 3111, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
+                        visitIfcExtrudedAreaSolid
+                          PLACEMENT pushed : 3111, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
 
-                          Visitor.visitIfcExtrudedAreaSolid: depth=200, i=0, j=0, k=1, xdim=610, ydim406
+                            IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=200, i=0, j=0, k=1, xdim=610, ydim406
 A face cannot be placed outside a product!
 A point cannot be placed outside a product!
 A point cannot be placed outside a product!
@@ -658,10 +677,11 @@ A point cannot be placed outside a product!
 A point cannot be placed outside a product!
 A point cannot be placed outside a product!
                           PLACEMENT poped
-                        end of visitIfcRepresentation
-                      end of visitIfcProductRepresentation
-                    PLACEMENT poped
-                  end of Visitor.visitIfcOpeningElement()
+                        end of visitIfcExtrudedAreaSolid
+                      end of visitIfcRepresentation
+                    end of visitIfcProductRepresentation
+                  PLACEMENT poped
+                end of Visitor.visitIfcOpeningElement()
                 Visitor.visitIfcOpeningElement()
                   PLACEMENT pushed : 3089, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=4042.5, jO=-100, kO=0
 
@@ -669,9 +689,10 @@ A point cannot be placed outside a product!
                       representationtype: SweptSolid
                       Visitor.visitIfcRepresentation
                         key=3082, type=IfcExtrudedAreaSolid
-                        PLACEMENT pushed : 3081, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
+                        visitIfcExtrudedAreaSolid
+                          PLACEMENT pushed : 3081, iEX=0, jEX=0, kEX=1, iEZ=0, jEZ=1, kEZ=0, iO=0, jO=0, kO=0
 
-                          Visitor.visitIfcExtrudedAreaSolid: depth=200, i=0, j=0, k=1, xdim=915, ydim2134
+                            IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=200, i=0, j=0, k=1, xdim=915, ydim2134
 A face cannot be placed outside a product!
 A point cannot be placed outside a product!
 A point cannot be placed outside a product!
@@ -703,276 +724,390 @@ A point cannot be placed outside a product!
 A point cannot be placed outside a product!
 A point cannot be placed outside a product!
                           PLACEMENT poped
-                        end of visitIfcRepresentation
-                      end of visitIfcProductRepresentation
-                    PLACEMENT poped
-                  end of Visitor.visitIfcOpeningElement()
+                        end of visitIfcExtrudedAreaSolid
+                      end of visitIfcRepresentation
+                    end of visitIfcProductRepresentation
+                  PLACEMENT poped
+                end of Visitor.visitIfcOpeningElement()
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
+              PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 284, iEX=-1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1956.36, jO=-7577.66, kO=0
 
-                PRODUCT: 305, GUID=2JuXRljVH1lAVD85_X3iKL, NAME=Basic Wall:Generic - 200mm - Filled:199595, Representation: 0x1d3d0a0
+                PRODUCT: 305, GUID=2JuXRljVH1lAVD85_X3iKL, NAME=Basic Wall:Generic - 200mm - Filled:199595, Representation: 0x19430a0
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
                     key=288, type=IfcPolyline
-                    end of visitIfcRepresentation
+                  end of visitIfcRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
                     key=297, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 296, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                    visitIfcExtrudedAreaSolid
+                      PLACEMENT pushed : 296, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      Visitor.visitIfcExtrudedAreaSolid: depth=3000, i=0, j=0, k=1, xdim=9800, ydim200
+                        IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=3000, i=0, j=0, k=1, xdim=9800, ydim200
                       PLACEMENT poped
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    end of visitIfcExtrudedAreaSolid
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
+              PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 318, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-2006.36, jO=-7577.66, kO=-3500
 
-                PRODUCT: 345, GUID=005Zuk9110axXeKE0kulOg, NAME=Basic Wall:Foundation - 300mm Concrete:200122, Representation: 0x1d57770
+                PRODUCT: 345, GUID=005Zuk9110axXeKE0kulOg, NAME=Basic Wall:Foundation - 300mm Concrete:200122, Representation: 0x195d770
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
                     key=322, type=IfcPolyline
-                    end of visitIfcRepresentation
+                  end of visitIfcRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
                     key=331, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 330, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                    visitIfcExtrudedAreaSolid
+                      PLACEMENT pushed : 330, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      Visitor.visitIfcExtrudedAreaSolid: depth=3500, i=0, j=0, k=1, xdim=13700, ydim300
+                        IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=3500, i=0, j=0, k=1, xdim=13700, ydim300
                       PLACEMENT poped
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    end of visitIfcExtrudedAreaSolid
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
+              PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 375, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=11543.6, jO=-7427.66, kO=-3500
 
-                PRODUCT: 396, GUID=005Zuk9110axXeKE0kulMy, NAME=Basic Wall:Foundation - 300mm Concrete:200236, Representation: 0x1d2e860
+                PRODUCT: 396, GUID=005Zuk9110axXeKE0kulMy, NAME=Basic Wall:Foundation - 300mm Concrete:200236, Representation: 0x1934860
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
                     key=379, type=IfcPolyline
-                    end of visitIfcRepresentation
+                  end of visitIfcRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
                     key=388, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 387, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                    visitIfcExtrudedAreaSolid
+                      PLACEMENT pushed : 387, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      Visitor.visitIfcExtrudedAreaSolid: depth=3500, i=0, j=0, k=1, xdim=10100, ydim300
+                        IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=3500, i=0, j=0, k=1, xdim=10100, ydim300
                       PLACEMENT poped
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    end of visitIfcExtrudedAreaSolid
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
+              PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 409, iEX=-1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=11393.6, jO=2522.34, kO=-3500
 
-                PRODUCT: 447, GUID=005Zuk9110axXeKE0kulKY, NAME=Basic Wall:Foundation - 300mm Concrete:200370, Representation: 0x1d2de80
+                PRODUCT: 447, GUID=005Zuk9110axXeKE0kulKY, NAME=Basic Wall:Foundation - 300mm Concrete:200370, Representation: 0x1933e80
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
                     key=413, type=IfcPolyline
-                    end of visitIfcRepresentation
+                  end of visitIfcRepresentation
                   representationtype: Clipping
                   Visitor.visitIfcRepresentation
                     key=439, type=IfcBooleanClippingResult
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    visitIfcBooleanClippingResult
+                    end of visitIfcBooleanClippingResult
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
+              PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 461, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-1856.36, jO=2372.34, kO=-3500
 
-                PRODUCT: 499, GUID=005Zuk9110axXeKE0kulLc, NAME=Basic Wall:Foundation - 300mm Concrete:200438, Representation: 0x1df72b0
+                PRODUCT: 499, GUID=005Zuk9110axXeKE0kulLc, NAME=Basic Wall:Foundation - 300mm Concrete:200438, Representation: 0x19fd2b0
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
                     key=465, type=IfcPolyline
-                    end of visitIfcRepresentation
+                  end of visitIfcRepresentation
                   representationtype: Clipping
                   Visitor.visitIfcRepresentation
                     key=491, type=IfcBooleanClippingResult
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    visitIfcBooleanClippingResult
+                    end of visitIfcBooleanClippingResult
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
+              PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 512, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11756.4, jO=-1537.66, kO=0
 
-                PRODUCT: 539, GUID=1JmC8d7t19Ve0s7aURIkgZ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201319, Representation: 0x1df7e40
+                PRODUCT: 539, GUID=1JmC8d7t19Ve0s7aURIkgZ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201319, Representation: 0x19fde40
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
                     key=516, type=IfcPolyline
-                    end of visitIfcRepresentation
+                  end of visitIfcRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
                     key=525, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 524, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                    visitIfcExtrudedAreaSolid
+                      PLACEMENT pushed : 524, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      Visitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=2900, ydim80
+                        IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=4000, i=0, j=0, k=1, xdim=2900, ydim80
                       PLACEMENT poped
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    end of visitIfcExtrudedAreaSolid
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
+              PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 591, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-8896.36, jO=-1497.66, kO=0
 
-                PRODUCT: 612, GUID=1JmC8d7t19Ve0s7aURIkl9, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201485, Representation: 0x1d3f470
+                PRODUCT: 612, GUID=1JmC8d7t19Ve0s7aURIkl9, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201485, Representation: 0x1945470
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
                     key=595, type=IfcPolyline
-                    end of visitIfcRepresentation
+                  end of visitIfcRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
                     key=604, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 603, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                    visitIfcExtrudedAreaSolid
+                      PLACEMENT pushed : 603, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      Visitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=3280, ydim80
+                        IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=4000, i=0, j=0, k=1, xdim=3280, ydim80
                       PLACEMENT poped
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    end of visitIfcExtrudedAreaSolid
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
+              PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 625, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-8856.36, jO=1742.34, kO=0
 
-                PRODUCT: 646, GUID=1JmC8d7t19Ve0s7aURIkje, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201644, Representation: 0x1df9100
+                PRODUCT: 646, GUID=1JmC8d7t19Ve0s7aURIkje, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201644, Representation: 0x19ff100
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
                     key=629, type=IfcPolyline
-                    end of visitIfcRepresentation
+                  end of visitIfcRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
                     key=638, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 637, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                    visitIfcExtrudedAreaSolid
+                      PLACEMENT pushed : 637, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      Visitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=3380, ydim80
+                        IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=4000, i=0, j=0, k=1, xdim=3380, ydim80
                       PLACEMENT poped
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    end of visitIfcExtrudedAreaSolid
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
+              PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 659, iEX=0, jEX=-1, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-5516.36, jO=1702.34, kO=0
 
-                PRODUCT: 680, GUID=1JmC8d7t19Ve0s7aURIkiJ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201687, Representation: 0x1df9d60
+                PRODUCT: 680, GUID=1JmC8d7t19Ve0s7aURIkiJ, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201687, Representation: 0x19ffd60
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
                     key=663, type=IfcPolyline
-                    end of visitIfcRepresentation
+                  end of visitIfcRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
                     key=672, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 671, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                    visitIfcExtrudedAreaSolid
+                      PLACEMENT pushed : 671, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      Visitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=2200, ydim80
+                        IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=4000, i=0, j=0, k=1, xdim=2200, ydim80
                       PLACEMENT poped
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    end of visitIfcExtrudedAreaSolid
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
+              PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWallStandardCase
               PLACEMENT pushed : 693, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-5476.36, jO=-457.655, kO=0
 
-                PRODUCT: 714, GUID=1JmC8d7t19Ve0s7aURIkpV, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201755, Representation: 0x1dfa9c0
+                PRODUCT: 714, GUID=1JmC8d7t19Ve0s7aURIkpV, NAME=Basic Wall:Interior - 79mm Partition (1-hr):201755, Representation: 0x1a009c0
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: Curve2D
                   Visitor.visitIfcRepresentation
                     key=697, type=IfcPolyline
-                    end of visitIfcRepresentation
+                  end of visitIfcRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
                     key=706, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 705, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
+                    visitIfcExtrudedAreaSolid
+                      PLACEMENT pushed : 705, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                      Visitor.visitIfcExtrudedAreaSolid: depth=4000, i=0, j=0, k=1, xdim=3520, ydim80
+                        IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=4000, i=0, j=0, k=1, xdim=3520, ydim80
                       PLACEMENT poped
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    end of visitIfcExtrudedAreaSolid
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
+              PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcSlab
               PLACEMENT pushed : 727, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                PRODUCT: 765, GUID=3Pfsc0h6P61v2EycUD0gyu, NAME=Floor:Wood Joist 220mm - Wood Finish:201909, Representation: 0x1dfb7a0
+                PRODUCT: 765, GUID=3Pfsc0h6P61v2EycUD0gyu, NAME=Floor:Wood Joist 220mm - Wood Finish:201909, Representation: 0x1a017a0
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
                     key=751, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 750, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=-1, iO=-7031.36, jO=3047.34, kO=0
+                    visitIfcExtrudedAreaSolid
+                      PLACEMENT pushed : 750, iEX=0, jEX=1, kEX=0, iEZ=0, jEZ=0, kEZ=-1, iO=-7031.36, jO=3047.34, kO=0
 
+                        IfcExtrudedAreaSolid->IfcArbitraryClosedProfileDef: depth=255
+
+
+!!!!EXTRUSION: x1=-4545,x1new=-4545, y1-4725, y1new=-4725, x2=9275, x2new=9275, y2=-4725, y2new=-4725
+
+
+!!!!EXTRUSION: x1=9275,x1new=9275, y1-4725, y1new=-4725, x2=9275, x2new=9275, y2=5075, y2new=5075
+
+
+!!!!EXTRUSION: x1=9275,x1new=9275, y15075, y1new=5075, x2=-3465, x2new=-3465, y2=5075, y2new=5075
+
+
+!!!!EXTRUSION: x1=-3465,x1new=-3465, y15075, y1new=5075, x2=-3465, x2new=-3465, y2=1555, y2new=1555
+
+
+!!!!EXTRUSION: x1=-3465,x1new=-3465, y11555, y1new=1555, x2=-1265, x2new=-1265, y2=1555, y2new=1555
+
+
+!!!!EXTRUSION: x1=-1265,x1new=-1265, y11555, y1new=1555, x2=-1265, x2new=-1265, y2=-1905, y2new=-1905
+
+
+!!!!EXTRUSION: x1=-1265,x1new=-1265, y1-1905, y1new=-1905, x2=-4545, x2new=-4545, y2=-1905, y2new=-1905
+
+
+!!!!EXTRUSION: x1=-4545,x1new=-4545, y1-1905, y1new=-1905, x2=-4545, x2new=-4545, y2=-4725, y2new=-4725
+
+
+!!!!EXTRUSION: x1=-4545,x1new=-4545, y1-4725, y1new=-4725, x2=-4545, x2new=-4545, y2=-4725, y2new=-4725
                       PLACEMENT poped
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    end of visitIfcExtrudedAreaSolid
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
+              PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcCovering
               PLACEMENT pushed : 924, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                PRODUCT: 964, GUID=3Pfsc0h6P61v2EycUD0gmv, NAME=Compound Ceiling:600 x 600mm grid:202676, Representation: 0x1d54280
+                PRODUCT: 964, GUID=3Pfsc0h6P61v2EycUD0gmv, NAME=Compound Ceiling:600 x 600mm grid:202676, Representation: 0x195a280
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
                     key=950, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 949, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-6858.58, jO=-1799.88, kO=2600
+                    visitIfcExtrudedAreaSolid
+                      PLACEMENT pushed : 949, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-6858.58, jO=-1799.88, kO=2600
 
+                        IfcExtrudedAreaSolid->IfcArbitraryClosedProfileDef: depth=52
+
+
+!!!!EXTRUSION: x1=-4897.78,x1new=-4897.78, y1-5677.78, y1new=-5677.78, x2=4902.22, x2new=4902.22, y2=-5677.78, y2new=-5677.78
+
+
+!!!!EXTRUSION: x1=4902.22,x1new=4902.22, y1-5677.78, y1new=-5677.78, x2=4902.22, x2new=4902.22, y2=1302.22, y2new=1302.22
+
+
+!!!!EXTRUSION: x1=4902.22,x1new=4902.22, y11302.22, y1new=1302.22, x2=1382.22, x2new=1382.22, y2=1302.22, y2new=1302.22
+
+
+!!!!EXTRUSION: x1=1382.22,x1new=1382.22, y11302.22, y1new=1302.22, x2=1302.22, x2new=1302.22, y2=1302.22, y2new=1302.22
+
+
+!!!!EXTRUSION: x1=1302.22,x1new=1302.22, y11302.22, y1new=1302.22, x2=1302.22, x2new=1302.22, y2=3502.22, y2new=3502.22
+
+
+!!!!EXTRUSION: x1=1302.22,x1new=1302.22, y13502.22, y1new=3502.22, x2=-1997.78, x2new=-1997.78, y2=3502.22, y2new=3502.22
+
+
+!!!!EXTRUSION: x1=-1997.78,x1new=-1997.78, y13502.22, y1new=3502.22, x2=-1997.78, x2new=-1997.78, y2=222.222, y2new=222.222
+
+
+!!!!EXTRUSION: x1=-1997.78,x1new=-1997.78, y1222.222, y1new=222.222, x2=-4897.78, x2new=-4897.78, y2=222.222, y2new=222.222
+
+
+!!!!EXTRUSION: x1=-4897.78,x1new=-4897.78, y1222.222, y1new=222.222, x2=-4897.78, x2new=-4897.78, y2=-5677.78, y2new=-5677.78
+
+
+!!!!EXTRUSION: x1=-4897.78,x1new=-4897.78, y1-5677.78, y1new=-5677.78, x2=-4897.78, x2new=-4897.78, y2=-5677.78, y2new=-5677.78
                       PLACEMENT poped
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    end of visitIfcExtrudedAreaSolid
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
+              PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcCovering
               PLACEMENT pushed : 1009, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=0, jO=0, kO=0
 
-                PRODUCT: 1041, GUID=3Pfsc0h6P61v2EycUD0g8r, NAME=Compound Ceiling:600 x 600mm grid:203192, Representation: 0x1d58440
+                PRODUCT: 1041, GUID=3Pfsc0h6P61v2EycUD0g8r, NAME=Compound Ceiling:600 x 600mm grid:203192, Representation: 0x195e440
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: SweptSolid
                   Visitor.visitIfcRepresentation
                     key=1033, type=IfcExtrudedAreaSolid
-                    PLACEMENT pushed : 1032, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-7031.36, jO=-1962.66, kO=2600
+                    visitIfcExtrudedAreaSolid
+                      PLACEMENT pushed : 1032, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-7031.36, jO=-1962.66, kO=2600
 
+                        IfcExtrudedAreaSolid->IfcArbitraryClosedProfileDef: depth=52
+
+
+!!!!EXTRUSION: x1=-4725,x1new=-4725, y1-5515, y1new=-5515, x2=5075, x2new=5075, y2=-5515, y2new=-5515
+
+
+!!!!EXTRUSION: x1=5075,x1new=5075, y1-5515, y1new=-5515, x2=5075, x2new=5075, y2=1465, y2new=1465
+
+
+!!!!EXTRUSION: x1=5075,x1new=5075, y11465, y1new=1465, x2=1475, x2new=1475, y2=1465, y2new=1465
+
+
+!!!!EXTRUSION: x1=1475,x1new=1475, y11465, y1new=1465, x2=1475, x2new=1475, y2=3665, y2new=3665
+
+
+!!!!EXTRUSION: x1=1475,x1new=1475, y13665, y1new=3665, x2=-1825, x2new=-1825, y2=3665, y2new=3665
+
+
+!!!!EXTRUSION: x1=-1825,x1new=-1825, y13665, y1new=3665, x2=-1825, x2new=-1825, y2=385, y2new=385
+
+
+!!!!EXTRUSION: x1=-1825,x1new=-1825, y1385, y1new=385, x2=-4725, x2new=-4725, y2=385, y2new=385
+
+
+!!!!EXTRUSION: x1=-4725,x1new=-4725, y1385, y1new=385, x2=-4725, x2new=-4725, y2=-5515, y2new=-5515
+
+
+!!!!EXTRUSION: x1=-4725,x1new=-4725, y1-5515, y1new=-5515, x2=-4725, x2new=-4725, y2=-5515, y2new=-5515
                       PLACEMENT poped
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                    end of visitIfcExtrudedAreaSolid
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
+              PLACEMENT poped
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcDoor
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWindow
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcWindow
@@ -983,30 +1118,30 @@ A point cannot be placed outside a product!
               Visitor.visitIfcRelContainedInSpatialStructure() item: IfcFurnishingElement
               PLACEMENT pushed : 2824, iEX=1, jEX=0, kEX=0, iEZ=0, jEZ=0, kEZ=1, iO=-11420.9, jO=10660.3, kO=0
 
-                PRODUCT: 2826, GUID=3Pfsc0h6P61v2EycUD0gSW, NAME=M_Desk:1525 x 762mm Student:203949, Representation: 0x1e00320
+                PRODUCT: 2826, GUID=3Pfsc0h6P61v2EycUD0gSW, NAME=M_Desk:1525 x 762mm Student:203949, Representation: 0x1a06320
 
                 Visitor.visitIfcProductRepresentation
                   representationtype: MappedRepresentation
                   Visitor.visitIfcRepresentation
                     key=2816, type=IfcMappedItem
-                    end of visitIfcRepresentation
-                  end of visitIfcProductRepresentation
+                  end of visitIfcRepresentation
+                end of visitIfcProductRepresentation
                 Visitor.visitIfcObjectDefinition
                 end of Visitor.visitIfcObjectDefinition
-                PLACEMENT poped
-              end of Visitor.visitIfcRelContainedInSpatialStructure()
+              PLACEMENT poped
+            end of Visitor.visitIfcRelContainedInSpatialStructure()
             Visitor.visitIfcObjectDefinition
             end of Visitor.visitIfcObjectDefinition
-            PLACEMENT poped
-          end of Visitor.visitIfcSpatialStructureElement()
+          PLACEMENT poped
+        end of Visitor.visitIfcSpatialStructureElement()
         end of Visitor.visitIfcRelAggregates
         end of Visitor.visitIfcObjectDefinition
-        PLACEMENT poped
-      end of Visitor.visitIfcSpatialStructureElement()
+      PLACEMENT poped
+    end of Visitor.visitIfcSpatialStructureElement()
     end of Visitor.visitIfcRelAggregates
     end of Visitor.visitIfcObjectDefinition
-    PLACEMENT poped
-  end of Visitor.visitIfcSpatialStructureElement()
+  PLACEMENT poped
+end of Visitor.visitIfcSpatialStructureElement()
 end of Visitor.visitIfcRelAggregates
 end of Visitor.visitIfcObjectDefinition
 

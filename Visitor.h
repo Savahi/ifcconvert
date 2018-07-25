@@ -90,6 +90,7 @@ namespace IfcConvert {
         virtual bool visitIfcProfileDef(ifc2x3::IfcProfileDef *value);
         virtual bool visitIfcSweptAreaSolid(ifc2x3::IfcSweptAreaSolid *value);
         virtual bool visitIfcExtrudedAreaSolid(ifc2x3::IfcExtrudedAreaSolid *value);
+        virtual bool visitIfcBooleanClippingResult(ifc2x3::IfcBooleanClippingResult *value);
         /* The end of "Mine" */
 
         /*!
@@ -165,7 +166,9 @@ namespace IfcConvert {
     	Builder* _builder;
         bool _fatherIsOpeningEl;
 
-        void buildExtrudedArea( double depth, double xDim, double yDim, double i, double j, double k );
+        void buildRectangleProfileDef( double depth, double i, double j, double k, double xDim, double yDim );
+        void buildArbitraryClosedProfileDef( double depth, double i, double j, double k, 
+            std::vector<double>& x, std::vector<double>& y );
     };
 
 } // End of namespace Spider3d

@@ -57,12 +57,12 @@ struct ExportedMaterial {
 
 
 static const char *cpInputFileKey = "IfcFile";
-static const char *cpOutputPathKey = "OutputPath";
+static const char *cpOutputPathKey = "TextFilesDir";
 static int loadIni( const char *configFile, std::map<std::string, std::string>& configParameters );
 
 static const char *cpFileOper = "oper.txt";
 static const char *cpFileMat = "mat.txt";
-static const char *cpFileMod = "mod.txt";
+static const char *cpFileMod = "model.txt";
 static const char *cpFileOperMat = "oper_mat.txt";
 
 int main(int argc, char **argv)
@@ -190,8 +190,19 @@ int main(int argc, char **argv)
         return 0;
     }
 
+    // ****************************************************************************************************************************
     // Writing operations...
-    fsOper << "Level\t'Code\tName\tDPH\tType\tVolPlan\tUnit\tPrior\tAsapStart\tAsapFin\tFactStart\tFactFin\tDurPlanD\tDurPlan\tModel" << std::endl;
+    
+    // Iterating through all the products to split out ones with and without "children" 
+    for( int i = 0 ; i < builder.products.size()-1 ; i++ ) {
+        Product* pi = &builder.products[i];
+        if( pi->hierarchy >= builder.products[i+1].hierarchy ) {
+            pi->firstChild = -1;
+        } else {
+            pi->firstChild = i+1;
+        }
+    }
+    fsOper << "Level\tCode\tName\tDPH\tType\tVolPlan\tUnit\tPrior\tAsapStart\tAsapFin\tFactStart\tFactFin\tDurPlanD\tDurPlan\tModel" << std::endl;
     for( int i = 0 ; i < builder.products.size() ; i++ ) {
         Product* p = &builder.products[i];
 
@@ -203,7 +214,10 @@ int main(int argc, char **argv)
                 p->name.assign( unnamed.begin(), unnamed.end() );
             }
         } 
-        fsOper << p->hierarchy << "\t" << p->id << "\t" << p->name << "\t\t\t\t\t\t\t\t\t\t\t\t" << p->id << std::endl;
+        if( p->firstChild != -1 ) {
+            fsOper << p->hierarchy;
+        } 
+        fsOper << "\t" << p->id << "\t" << p->name << "\t\t\t\t\t\t\t\t\t\t\t\t" << p->id << std::endl;
     }    
     fsOper.close();
 
@@ -224,7 +238,7 @@ int main(int argc, char **argv)
             fsMod << "<facet>";            
             Face* f = &m->faces[iM];
             for( int iP = 0 ; iP < f->points.size() ; iP++ ) {
-                Point* p = &f->points[i];
+                Point* p = &f->points[iP];
                 fsMod << "<point>" << p->x << "," << p->y << "," << p->z << "</point>";
             }
             fsMod << "</facet>";
@@ -293,15 +307,19 @@ static int loadIni( const char *configFile, std::map<std::string, std::string>& 
     std::ifstream infile( configFile );
     std::string line;
 
-    while( std::getline( infile, line ) )   {
-        std::istringstream iss_line( line );
-        std::string key;
-        if( std::getline( iss_line, key, '=' ) ) {
-            std::string value;
-            if( std::getline(iss_line, value ) ) {
-                configParameters[key] = value;
+    if( infile.is_open() ) {
+        while( std::getline( infile, line ) )   {
+            std::istringstream iss_line( line );
+            std::string key;
+            if( std::getline( iss_line, key, '=' ) ) {
+                std::string value;
+                if( std::getline(iss_line, value ) ) {
+                    configParameters[key] = value;
+                }
             }
         }
+        infile.close();
+        return 0;
     }
-    return 0;
+    return -1;
 }

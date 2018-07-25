@@ -162,6 +162,7 @@ namespace IfcConvert {
 
     bool Visitor::visitIfcRelDecomposes(ifc2x3::IfcRelDecomposes *value) {
         std::cout << "visitIfcRelDecomposes()!\n";
+        return true;
     }
 
     bool Visitor::visitIfcRelAggregates(ifc2x3::IfcRelAggregates *value)
@@ -219,6 +220,7 @@ namespace IfcConvert {
             _builder->popPlacement();
             _builder->changeProductHierarchy(-1);
         }
+        return true;
     }
 
     bool Visitor::visitIfcProduct(ifc2x3::IfcProduct *value)
@@ -412,6 +414,8 @@ namespace IfcConvert {
     }
 
     bool Visitor::visitIfcExtrudedAreaSolid(ifc2x3::IfcExtrudedAreaSolid *value) {
+        _builder->printIfcHierarchy(  "visitIfcExtrudedAreaSolid", 1 );
+
         _builder->pushPlacement(value->getPosition());
 
         ifc2x3::IfcDirection *extrudedDirection = value->getExtrudedDirection();
@@ -422,6 +426,44 @@ namespace IfcConvert {
             if( sweptArea ) {
                 if( sweptArea->getType().getName() == "IfcRectangleProfileDef" ) {
                     ifc2x3::IfcRectangleProfileDef *rectangleProfileDef = (ifc2x3::IfcRectangleProfileDef *)sweptArea;
+                    double xDim = rectangleProfileDef->getXDim();
+                    double yDim = rectangleProfileDef->getYDim();
+                    std::stringstream ss;
+                    ss << "IfcExtrudedAreaSolid->IfcRectangleProfileDef: depth=" << depth;
+                    ss << ", i=" << ijk[0] << ", j=" << ijk[1] << ", k=" << ijk[2];
+                    ss << ", xdim=" << xDim << ", ydim" << yDim; 
+                    _builder->printIfcHierarchy(  ss.str(), 0 );
+
+                    // Storing the dimensions of the product for future use...
+                    Product* p = _builder->getCurrentProduct();
+                    if( p != NULL ) {
+                        p->geometryType.assign("IfcRectangleProfileDef"); 
+                        p->length = xDim; p->width = yDim; p->height = depth;
+                    }
+                    
+                    buildRectangleProfileDef( depth, ijk[0], ijk[1], ijk[2], xDim, yDim );
+                }               
+                if( sweptArea->getType().getName() == "IfcArbitraryClosedProfileDef" ) {
+                    ifc2x3::IfcArbitraryClosedProfileDef *arbitraryClosedProfileDef = (ifc2x3::IfcArbitraryClosedProfileDef *)sweptArea;
+                    ifc2x3::IfcCurve *curve = arbitraryClosedProfileDef->getOuterCurve();
+                    if( curve->type() == "IfcPolyline") {
+                        std::vector<double> x, y;
+
+                        ifc2x3::IfcPolyline *polyline = (ifc2x3::IfcPolyline *)curve;
+                        ifc2x3::List_IfcCartesianPoint_2_n points = polyline->getPoints();
+                        ifc2x3::List_IfcCartesianPoint_2_n::iterator iter = points.begin();
+                        for( ; iter != points.end() ; ++iter ) {
+                            ifc2x3::List_IfcLengthMeasure_1_3 coordinates = (*iter)->getCoordinates();
+                            x.push_back(coordinates[0]);
+                            y.push_back(coordinates[1]);
+                        }
+                        std::stringstream ss;
+                        ss << "IfcExtrudedAreaSolid->IfcArbitraryClosedProfileDef: depth=" << depth;
+                        _builder->printIfcHierarchy(  ss.str(), 0 );                        
+    
+                        buildArbitraryClosedProfileDef( depth, ijk[0], ijk[1], ijk[2], x, y );
+                    }
+                    /*
                     double xDim = rectangleProfileDef->getXDim();
                     double yDim = rectangleProfileDef->getYDim();
                     std::stringstream ss;
@@ -437,14 +479,26 @@ namespace IfcConvert {
                         p->length = xDim; p->width = yDim; p->height = depth;
                     }
                     
-                    buildExtrudedArea( depth, xDim, yDim, ijk[0], ijk[1], ijk[2] );
+                    buildRectangleProfileDef( depth, xDim, yDim, ijk[0], ijk[1], ijk[2] );
+                    */
                 }
             }
         }
 
         _builder->popPlacement();
+
+        _builder->printIfcHierarchy(  "end of visitIfcExtrudedAreaSolid", -1 );
         return true;
     }
+
+    bool Visitor::visitIfcBooleanClippingResult(ifc2x3::IfcBooleanClippingResult *value) {
+        _builder->printIfcHierarchy(  "visitIfcBooleanClippingResult", 1 );
+        ifc2x3::IfcBooleanOperand* operand1 = value->getFirstOperand(); 
+        ifc2x3::IfcBooleanOperand* operand2 = value->getSecondOperand();
+        ifc2x3::IfcBooleanOperator op = value->getOperator();
+        _builder->printIfcHierarchy(  "end of visitIfcBooleanClippingResult", -1 );
+    }
+
 
     bool Visitor::visitIfcFacetedBrep(ifc2x3::IfcFacetedBrep *value)
     {
@@ -536,7 +590,7 @@ namespace IfcConvert {
         return true;
     }
 
-    void Visitor::buildExtrudedArea( double depth, double xDim, double yDim, double i, double j, double k ) {
+    void Visitor::buildRectangleProfileDef( double depth, double i, double j, double k, double xDim, double yDim ) {
         
         double depthSquared = depth * depth;
         if( !(depthSquared > 0.0) ) {
@@ -600,4 +654,47 @@ namespace IfcConvert {
         _builder->addPoint(x1new,y2new,znew);
     }
 
+
+    void Visitor::buildArbitraryClosedProfileDef( double depth, double i, double j, double k, 
+        std::vector<double>& x, std::vector<double>& y ) {
+        
+        double depthSquared = depth * depth;
+        if( !(depthSquared > 0.0) ) {
+            return;
+        }
+        double depthE = i*i + j*j + k*k;
+        if( !(depthE > 0.0) ) {
+            return;
+        }
+        double a = sqrt(depthSquared / depthE);
+
+        int maxCounter = x.size()-1;
+        for( int counter = 0 ; counter <= maxCounter ; counter++ ) {
+            double x1 = x[counter];
+            double y1 = y[counter];
+            double x2, y2;
+            if( counter == maxCounter ) {
+                x2 = x[0];
+                y2 = y[0];
+            } else {                
+                x2 = x[counter+1];
+                y2 = y[counter+1];
+            }
+            double x1new = i * a + x1;
+            double x2new = i * a + x2;
+            double y1new = j * a + y1;
+            double y2new = j * a + y2;
+            
+            std::cout << "\n\n!!!!EXTRUSION: x1=" << x1 << ",x1new=" << x1new << ", y1" << y1 << ", y1new=" << y1new;
+            std::cout << ", x2=" << x2 << ", x2new=" << x2new << ", y2=" << y2 << ", y2new=" << y2new << std::endl;
+
+            double z = 0;
+            double znew = k * a + z;
+            _builder->addFace();
+            _builder->addPoint(x1,y1,z);
+            _builder->addPoint(x2,y2,z);
+            _builder->addPoint(x2new,y2new,znew);
+            _builder->addPoint(x1new,y1new,znew);
+        }
+    }
 } // End of namespace Spider3d

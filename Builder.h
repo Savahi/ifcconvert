@@ -62,9 +62,10 @@ namespace IfcConvert {
 		std::wstring name;
 		std::string ifcType;
 		int hierarchy;
+		int firstChild;
 
 		Product( std::wstring id, std::wstring name, std::string ifcType, int productHierarchy ) : 
-			length(0), width(0), height(0), geometryType("") 
+			length(0), width(0), height(0), geometryType(""), firstChild(-1) 
 		{
 			this->id = id;
 			this->name = name;
@@ -164,6 +165,9 @@ namespace IfcConvert {
 
 		void printIfcHierarchy( std::string str, int changeHierarchy=0, bool endOfLine=true )
 		{
+			if( changeHierarchy < 0 ) {
+				this->ifcHierarchy  += changeHierarchy;
+		    }
 		    for( int i = 0 ; i < this->ifcHierarchy  ; i++ ) {
 		        std::cout << "  ";
 		    }
@@ -171,7 +175,9 @@ namespace IfcConvert {
 		    if( endOfLine ) {
 		        std::cout << std::endl;
 		    }
-			this->ifcHierarchy  += changeHierarchy;
+			if( changeHierarchy > 0 ) {
+				this->ifcHierarchy  += changeHierarchy;
+		    }		    
 		}
 
 		int readUnits( ifc2x3::ExpressDataSet* ExpressDataSet ); 

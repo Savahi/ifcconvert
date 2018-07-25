@@ -164,5 +164,6 @@ namespace IfcConvert {
 	            }
 	        } 
 	    }
+	    return 0;
 	}
 }
